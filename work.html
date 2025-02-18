@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lian - Work Experience</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#2D3047',
+        secondary: '#E8E9F3'
+      }
+    }
+  }
+}
+</script>
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+</style>
+</head>
+<body class="bg-white text-primary">
+<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="index.html" class="text-xl font-medium">Lian</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="nav-link text-sm hover:text-primary transition-colors">HOME</a>
+        <a href="bio.html" class="nav-link text-sm hover:text-primary transition-colors">BIO</a>
+        <a href="research.html" class="nav-link text-sm hover:text-primary transition-colors">RESEARCH</a>
+        <a href="work.html" class="nav-link text-sm hover:text-primary transition-colors">WORK</a>
+        <a href="cv.html" class="nav-link text-sm hover:text-primary transition-colors">CV</a>
+        <a href="contact.html" class="nav-link text-sm hover:text-primary transition-colors">CONTACT</a>
+        <a href="other.html" class="nav-link text-sm hover:text-primary transition-colors">OTHER</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-32 pb-16 min-h-screen">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl">
+      <h1 class="text-3xl font-extralight tracking-wide mb-16">Work Experience</h1>
+      
+      <div class="space-y-16 mb-20 max-w-[100%]">
+        <!-- HiDream.ai -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">HiDream.ai (Shanghai,China)</h2>
+              <span class="text-sm font-light text-neutral-500">2024.6-2024.9</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">AI Product Manager Intern</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Model Optimization</h3>
+              <p class="text-base font-light text-neutral-700">
+                Utilized deep learning frameworks in PyTorch to train generative models for the localized cross-border e-commerce product HiDream.Integrated text, image, and video data for multimodal data fusion.
+                Improved image generation quality, video smoothness, model comprehension, and content accuracy.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Growth</h3>
+              <p class="text-base font-light text-neutral-700">
+                Designed and integrated AI redrawing, AI similarity drawing, and de-noising features through competitive analysis and user demand research.Achieved daily active creation user growth of 10,000+/month.
+                Optimized content display formats and validated market strategies using A/B testing.
+                Increased user browsing time by 25% year-on-year and 30-day user retention rate by 38.8%.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ByteDance Algorithm -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">ByteDance (Shanghai,China)</h2>
+              <span class="text-sm font-light text-neutral-500">2024.3-2024.6</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">Algorithm Product Manager Intern</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Algorithm Optimization</h3>
+              <p class="text-base font-light text-neutral-700">
+                Served the 3C category using Naive Bayes models and multivariate regression analysis for dynamic pricing strategy optimization.Monitored real-time user behavior data (e.g., purchase history, browsing patterns).
+                Identified key drivers of promotional activities through data mining techniques.
+                Achieved a 76% increase in average daily ROI for brands.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Growth</h3>
+              <p class="text-base font-light text-neutral-700">
+                Collaborated with 38 top merchants.Developed user profiles using K-means clustering analysis and machine learning algorithms to identify potential high-value user groups.
+                Designed and implemented a personalized recommendation system, increasing conversion rates by 35% and driving brand sales growth.Continuously iterated operational strategies through user feedback and behavioral data analysis.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ByteDance Business Analysis -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">ByteDance (Shanghai,China)</h2>
+              <span class="text-sm font-light text-neutral-500">2023.12-2024.3</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">Business Analysis Intern</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Data Visualization</h3>
+              <p class="text-base font-light text-neutral-700">
+                Developed B-end fee rate strategies for the 3C digital category.
+                Utilized regression analysis, time series forecasting, and decision tree models to analyze merchant operations, dynamic sales, and GMV share.Provided timely improvement suggestions.
+                Identified sales pain points through predictive modeling, resulting in a 60% year-on-year decrease in high-rate fees.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Research</h3>
+              <p class="text-base font-light text-neutral-700">
+                Combined qualitative (industry reports, macro/meso-level enterprise research) and quantitative research methods (user interviews, surveys) to collect user feedback and understand customer needs.
+                Built dynamic data dashboards using Aeolus, Power BI, and Tableau for real-time sales metric monitoring.
+                Drove a 413% year-on-year GMV growth for related brands.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Little Voice -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Little Voice (Shanghai,China)</h2>
+              <span class="text-sm font-light text-neutral-500">2023.9-2024.12</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">User Operations Intern</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Flow Matrix</h3>
+              <p class="text-base font-light text-neutral-700">
+                Build a diversified flow matrix through Xiaohongshu&Tictok live broadcasting, develop standardized user activation SOPs, effectively guide flow to private domains to improve user retention rate by 30%.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Growth</h3>
+              <p class="text-base font-light text-neutral-700">
+                Plan IP positioning, build SOP for course selling and paid consultation, optimize content strategy through A/B testing, optimize user experience,achieve user growth of 10% per month and turnover of 8w+.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yukuaidi -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Yukuaidi (Shanghai,China)</h2>
+              <span class="text-sm font-light text-neutral-500">2023.9-2024.12</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">Brand Creative Intern</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Brand planning</h3>
+              <p class="text-base font-light text-neutral-700">
+                Responsible for the China social media of luxury women's clothing Loro Piana, 3C audio Devialet and perfume brand Caron, successfully output 200+content with an average readership of 20,000+.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Holiday marketing</h3>
+              <p class="text-base font-light text-neutral-700">
+                Based on market research and analysis, planning the Chinese New Year marketing campaigns for Versace and Helena Rubinstein, achieving a 30% increase in brand awareness and a 25% increase in user engagement.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Placement Optimization</h3>
+              <p class="text-base font-light text-neutral-700">
+                Analyzed client Devialet's monthly social media data and collaborated on the brand's content operation strategy for 2024, resulting in a 40% increase in social media interaction rate.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bluefocus -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Bluefocus (Beijing,China)</h2>
+              <span class="text-sm font-light text-neutral-500">2023.5-2024.9</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">Marketing Intern</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Content Planning</h3>
+              <p class="text-base font-light text-neutral-700">
+                Develop and implement content strategy on dual micro-platforms for luxury agent Yingtong Group (covering 50+ brands such as Van Cleef & Arpels, Versace, Coach, etc.), boost content readership by 3k+.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Placement optimization</h3>
+              <p class="text-base font-light text-neutral-700">
+                Monitor the effect of advertisement placement, analyze key indicators, through data-driven strategy adjustment, the average monthly exposure reached 80k+ times, exceeding target achievement rate by 130%.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="py-8 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+    <p>&copy; 2024 Lian. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html> 

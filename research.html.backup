@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lian - Research</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#2D3047',
+        secondary: '#E8E9F3'
+      }
+    }
+  }
+}
+</script>
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+</style>
+</head>
+<body class="bg-white text-primary">
+<!-- 导航栏部分与 bio.html 相同 -->
+<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="index.html" class="text-xl font-medium">Lian</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="nav-link text-sm hover:text-primary transition-colors">HOME</a>
+        <a href="bio.html" class="nav-link text-sm hover:text-primary transition-colors">BIO</a>
+        <a href="research.html" class="nav-link text-sm hover:text-primary transition-colors">RESEARCH</a>
+        <a href="work.html" class="nav-link text-sm hover:text-primary transition-colors">WORK</a>
+        <a href="cv.html" class="nav-link text-sm hover:text-primary transition-colors">CV</a>
+        <a href="contact.html" class="nav-link text-sm hover:text-primary transition-colors">CONTACT</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-32 pb-16 min-h-screen">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl">
+      <h1 class="text-3xl font-extralight tracking-wide mb-16">Research Projects</h1>
+      
+      <div class="space-y-16 mb-20 max-w-[100%]">
+        <!-- HipGo Project -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <!-- 标题和Logo部分 -->
+          <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center space-x-4">
+              <img 
+                src="images/hipgo/logo.png" 
+                alt="HipGo Logo" 
+                class="w-10 h-10 rounded-full object-cover"
+              >
+              <div>
+                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">HipGo</h2>
+                <p class="text-sm font-light text-neutral-600 mt-1">Mobile WeChat Intervention for PAO Care</p>
+              </div>
+            </div>
+            <span class="text-sm font-light text-neutral-500">2024.12-now</span>
+          </div>
+
+          <!-- 内容和轮播的两列布局 - 调整间距和对齐 -->
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <!-- 左侧：项目介绍 - 精简内容 -->
+            <div class="space-y-6 pr-2">
+              <!-- Project Overview -->
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Project Overview</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    As a DDH patient myself, I discovered the high prevalence yet low awareness of this condition among young women during my pre-surgery research. This personal experience led me to identify critical gaps in current post-PAO care.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    <a href="https://www.douban.com/group/topic/318172104/?start=0&_i=9805471zkS-gC-" 
+                       class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                      Through extensive patient community research
+                    </a>, I developed HipGo as a personalized mobile intervention that integrates pain management, rehabilitation guidance, and psychological support, addressing the unique challenges faced by DDH patients throughout their recovery journey.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Technical Implementation -->
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Implementation</h3>
+                <div class="grid grid-cols-1 gap-4">
+                  <div>
+                    <h4 class="text-base font-medium text-neutral-700">AI-Powered Pain Management</h4>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Fine-tuned BERT model for pain description analysis (3.2k labeled clinical records)</li>
+                      <li class="text-base font-light text-neutral-700">SVG-based visual pain mapping with touch/voice multimodal input</li>
+                      <li class="text-base font-light text-neutral-700">Real-time pain pattern recognition with 94% accuracy</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 class="text-base font-medium text-neutral-700">Clinical Data Integration</h4>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Collaborated with orthopedic specialists for pathway design</li>
+                      <li class="text-base font-light text-neutral-700">Standardized data collection protocol (WOMAC & VAS scales)</li>
+                      <li class="text-base font-light text-neutral-700">Interactive visualization dashboard for clinical monitoring</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 class="text-base font-medium text-neutral-700">Adaptive Support System</h4>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">ML-driven exercise adjustment based on pain & progress data</li>
+                      <li class="text-base font-light text-neutral-700">Automated risk assessment with clinical threshold alerts</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Clinical Validation -->
+              <div class="space-y-2">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Clinical Validation</h3>
+                <p class="text-base font-light text-neutral-700">
+                  Currently in Phase II trials at First Affiliated Hospital of GZUCM, with weekly clinical reviews and iterative refinement based on surgeon feedback. Initial data shows significant improvement in pain management efficacy (35%) and patient compliance (42%).
+                </p>
+              </div>
+            </div>
+
+            <!-- 右侧：功能界面轮播 - 调整位置和大小 -->
+            <div class="flex justify-end items-center h-full">
+              <div class="relative w-[260px] h-[520px] rounded-[36px] overflow-hidden bg-white shadow-[0_0_40px_-15px_rgba(0,0,0,0.15)] transform group-hover:scale-[1.02] transition-all duration-500">
+                <!-- 轮播内容 -->
+                <div class="carousel relative w-full h-full">
+                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out">
+                    <img src="images/hipgo/1.png" alt="HipGo Interface 1" class="w-full h-full object-cover">
+                  </div>
+                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out opacity-0">
+                    <img src="images/hipgo/2.png" alt="HipGo Interface 2" class="w-full h-full object-cover">
+                  </div>
+                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out opacity-0">
+                    <img src="images/hipgo/3.png" alt="HipGo Interface 3" class="w-full h-full object-cover">
+                  </div>
+                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out opacity-0">
+                    <img src="images/hipgo/4.png" alt="HipGo Interface 4" class="w-full h-full object-cover">
+                  </div>
+                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out opacity-0">
+                    <img src="images/hipgo/5.png" alt="HipGo Interface 5" class="w-full h-full object-cover">
+                  </div>
+                </div>
+
+                <!-- 添加微妙的内阴影效果 -->
+                <div class="absolute inset-0 pointer-events-none shadow-inner"></div>
+                
+                <!-- 添加轻微的光泽效果 -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-50 pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shadows of Recognition Project -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Shadows of Recognition</h2>
+              <span class="text-sm font-light text-neutral-500">2024.9-now</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">Augmenting Episodic Memory & Social Connection in Aging via Adaptive, Agent-Mediated HCI</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Project Goals</h3>
+              <p class="text-base font-light leading-relaxed text-neutral-700 tracking-wide">
+                Current HCI interventions for age-related cognitive decline often lack personalized adaptation and fail to address the critical link between episodic memory and social engagement. This project explores the potential of an agent-mediated system to augment both, leveraging a memory album paradigm and eye-tracking-guided training.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Technical Components</h3>
+              <p class="text-base font-light leading-relaxed text-neutral-700 tracking-wide">
+                Integrated a searchable "memory album" (user-uploaded photos with face-api.js for local face recognition), an adaptive agent providing personalized training schedules, and an eye-tracking module that guides attention to salient facial features into a WeChat Mini Program. Implemented FIE-based training with CNN transfer learning to enhance recognition flexibility.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Cognitive and Neural Assessment</h3>
+              <p class="text-base font-light leading-relaxed text-neutral-700 tracking-wide">
+                Conducting a longitudinal study employing cognitive (TICS) and affective (GDS-15, UCLA Loneliness Scale) measures to assess changes in memory performance and social connectedness. Multimodal MRI data will provide insights into the neural correlates of training-induced plasticity.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Multimodal Sleep Monitoring System Project -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Multimodal Sleep Monitoring System</h2>
+              <span class="text-sm font-light text-neutral-500">2024.8-now</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">Based Sleep Onset Detection for Automated Music Control</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Technical Contributions</h3>
+              <p class="text-base font-light leading-relaxed text-neutral-700 tracking-wide">
+                Pioneered multimodal sensor fusion (IMU+PPG+Audio: 49.75% accuracy) and a 12-layer U-Net for sleep stage analysis. Enabled continuous 8-hour data analysis, boosting REM recognition by 39% (128-min window) through novel accelerometer/PPG signal processing.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Key Achievements</h3>
+              <p class="text-base font-light leading-relaxed text-neutral-700 tracking-wide">
+                Developed and implemented a multimodal sleep onset detection algorithm and a deep learning-based sleep stage analysis model, significantly improving consumer sleep tracker performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="py-8 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+    <p>&copy; 2024 Lian. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.carousel');
+  const items = carousel.querySelectorAll('.carousel-item');
+  const dots = document.querySelectorAll('.carousel button');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    items.forEach(item => item.style.opacity = '0');
+    dots.forEach(dot => dot.classList.replace('bg-emerald-600', 'bg-neutral-300'));
+    
+    items[index].style.opacity = '1';
+    dots[index].classList.replace('bg-neutral-300', 'bg-emerald-600');
+  }
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % items.length;
+    showSlide(currentIndex);
+  }, 3000);
+});
+</script>
+</body>
+</html> 
