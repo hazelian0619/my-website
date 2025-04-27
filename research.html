@@ -104,7 +104,7 @@ body {
                     Metapher explores the intersection of computational linguistics, privacy-preserving AI, and poetic expression. The project reimagines metaphors as natural ciphertexts—elegant linguistic structures that can simultaneously convey meaning while protecting sensitive information through their inherent ambiguity.
                   </p>
                   <p class="text-base font-light leading-relaxed text-neutral-700">
-                    This framework provides a novel approach to privacy-enhancing technology that maintains both semantic richness and human interpretability, unlike traditional cryptographic methods that sacrifice expressiveness for security. <a href="/Metapher as ciphertext.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full Research Paper (PDF)</a>
+                    This framework provides a novel approach to privacy-enhancing technology that maintains both semantic richness and human interpretability, unlike traditional cryptographic methods that sacrifice expressiveness for security. <a href="Metaphor_as_Semantic_Encryption__Zero_Knowledge_Proof_Using_Dream_of_the_Red_Chamber_as_an_Example.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full Research Paper (PDF)</a>
                   </p>
                 </div>
               </div>
@@ -545,7 +545,8 @@ document.addEventListener('DOMContentLoaded', function() {
   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
   
   // 修改PDF文件路径，使用相对路径
-  const pdfUrl = 'Metaphor_as_Semantic_Encryption__Zero_Knowledge_Proof_Using_Dream_of_the_Red_Chamber_as_an_Example.pdf';
+  const pdfUrl = 'Metapher as ciphertext.pdf';
+  const fullPdfUrl = 'Metaphor_as_Semantic_Encryption__Zero_Knowledge_Proof_Using_Dream_of_the_Red_Chamber_as_an_Example.pdf';
   const container = document.getElementById('pdf-thumbnails');
   const hoverPreview = document.getElementById('pdf-hover-preview');
   const hoverPreviewImg = document.getElementById('hover-preview-img');
@@ -666,7 +667,7 @@ document.addEventListener('DOMContentLoaded', function() {
           
           // 点击缩略图打开PDF
           thumbContainer.addEventListener('click', function() {
-            window.open(pdfUrl + '#page=' + pageNum, '_blank');
+            window.open(fullPdfUrl + '#page=' + pageNum, '_blank');
           });
         });
       });
