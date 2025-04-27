@@ -169,7 +169,7 @@ body {
                   <!-- 备用PDF链接 -->
                   <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback">
                     <p class="text-sm text-gray-600 mb-2">您也可以直接查看完整PDF文档：</p>
-                    <a href="Metapher as ciphertext.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                    <a href="Metaphor_as_Semantic_Encryption__Zero_Knowledge_Proof_Using_Dream_of_the_Red_Chamber_as_an_Example.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
                       <svg class="w-4 h-4 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
                       </svg>
@@ -179,11 +179,14 @@ body {
                 </div>
                 
                 <!-- 悬浮预览窗口 -->
-                <div id="pdf-hover-preview" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200" style="width: 400px; height: auto;">
+                <div id="pdf-hover-preview" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200 transform transition-all duration-300 origin-center" style="width: 500px; height: auto;">
                   <div class="w-full flex flex-col">
-                    <div class="mb-2 text-xs text-emerald-700 font-medium" id="hover-preview-title">Page Preview</div>
+                    <div class="mb-2 flex justify-between items-center">
+                      <span class="text-xs text-emerald-700 font-medium" id="hover-preview-title">Page Preview</span>
+                      <span class="text-xs text-gray-500">点击查看完整PDF</span>
+                    </div>
                     <div class="w-full flex justify-center items-center bg-gray-50 rounded p-2">
-                      <img src="" alt="PDF页面预览" id="hover-preview-img" class="max-w-full max-h-[500px] object-contain" />
+                      <img src="" alt="PDF页面预览" id="hover-preview-img" class="max-w-full max-h-[600px] object-contain" />
                     </div>
                   </div>
                 </div>
@@ -542,7 +545,7 @@ document.addEventListener('DOMContentLoaded', function() {
   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
   
   // 修改PDF文件路径，使用相对路径
-  const pdfUrl = 'Metapher as ciphertext.pdf';
+  const pdfUrl = 'Metaphor_as_Semantic_Encryption__Zero_Knowledge_Proof_Using_Dream_of_the_Red_Chamber_as_an_Example.pdf';
   const container = document.getElementById('pdf-thumbnails');
   const hoverPreview = document.getElementById('pdf-hover-preview');
   const hoverPreviewImg = document.getElementById('hover-preview-img');
@@ -581,11 +584,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // 生成每页的缩略图
     for (let pageNum = 1; pageNum <= numPages; pageNum++) {
       pdf.getPage(pageNum).then(function(page) {
-        const viewport = page.getViewport({ scale: 0.3 });
+        // 保持原始纵横比的视口
+        const originalViewport = page.getViewport({ scale: 1.0 });
+        const containerWidth = 230; // 容器宽度
+        
+        // 计算缩放因子以适应容器宽度同时保持纵横比
+        const scale = containerWidth / originalViewport.width;
+        const viewport = page.getViewport({ scale: scale });
         
         // 创建缩略图容器
         const thumbContainer = document.createElement('div');
-        thumbContainer.className = 'relative w-[230px] rounded-lg border border-gray-200 hover:border-emerald-500 transition-all duration-300 hover:shadow-md cursor-pointer bg-white overflow-hidden';
+        thumbContainer.className = 'relative w-[230px] rounded-lg border border-gray-200 hover:border-emerald-500 transition-all duration-300 hover:shadow-md cursor-pointer bg-white overflow-hidden transform hover:scale-105 transition-transform duration-300';
         thumbContainer.dataset.page = pageNum;
         
         // 创建画布
@@ -615,28 +624,38 @@ document.addEventListener('DOMContentLoaded', function() {
           thumbContainer.addEventListener('mouseenter', function(e) {
             // 创建高清预览
             pdf.getPage(pageNum).then(function(page) {
-              const viewport = page.getViewport({ scale: 0.8 });
+              // 使用更高的缩放因子以获得更清晰的预览
+              const previewViewport = page.getViewport({ scale: 1.5 });
               const canvas = document.createElement('canvas');
               const context = canvas.getContext('2d');
-              canvas.width = viewport.width;
-              canvas.height = viewport.height;
+              canvas.width = previewViewport.width;
+              canvas.height = previewViewport.height;
               
               const renderContext = {
                 canvasContext: context,
-                viewport: viewport
+                viewport: previewViewport,
+                // 启用抗锯齿和高质量渲染
+                intent: 'display',
+                renderInteractiveForms: false,
+                enableWebGL: true
               };
               
               page.render(renderContext).promise.then(function() {
-                hoverPreviewImg.src = canvas.toDataURL();
+                hoverPreviewImg.src = canvas.toDataURL('image/jpeg', 0.95);
                 
                 // 更新标题显示页码
-                document.getElementById('hover-preview-title').textContent = `Page ${pageNum} Preview`;
+                document.getElementById('hover-preview-title').textContent = `第 ${pageNum} 页预览`;
                 
                 // 计算位置并显示预览
                 const rect = thumbContainer.getBoundingClientRect();
                 hoverPreview.style.left = (rect.right + 20) + 'px';
                 hoverPreview.style.top = (window.scrollY + rect.top - 100) + 'px';
                 hoverPreview.classList.remove('hidden');
+                // 添加放大动画效果
+                hoverPreview.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                  hoverPreview.style.transform = 'scale(1)';
+                }, 300);
               });
             });
           });
