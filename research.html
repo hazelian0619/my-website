@@ -166,6 +166,16 @@ body {
                   <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails">
                     <!-- PDF缩略图将通过JavaScript动态加载 -->
                   </div>
+                  <!-- 备用PDF链接 -->
+                  <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback">
+                    <p class="text-sm text-gray-600 mb-2">您也可以直接查看完整PDF文档：</p>
+                    <a href="Metapher as ciphertext.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                      <svg class="w-4 h-4 mr-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                      </svg>
+                      打开PDF文档
+                    </a>
+                  </div>
                 </div>
                 
                 <!-- 悬浮预览窗口 -->
@@ -531,15 +541,39 @@ document.addEventListener('DOMContentLoaded', function() {
   // 设置PDF.js工作路径
   pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
   
-  const pdfUrl = '/Metapher as ciphertext.pdf';
+  // 修改PDF文件路径，使用相对路径
+  const pdfUrl = 'Metapher as ciphertext.pdf';
   const container = document.getElementById('pdf-thumbnails');
   const hoverPreview = document.getElementById('pdf-hover-preview');
   const hoverPreviewImg = document.getElementById('hover-preview-img');
+  const loadingElement = document.querySelector('#pdf-container .text-sm');
   
-  // 加载PDF文档
-  pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
+  // 添加详细的错误处理
+  function handleError(error) {
+    console.error('Error loading PDF:', error);
+    if (loadingElement) {
+      loadingElement.innerHTML = '<div class="text-red-500">无法加载PDF预览</div><div class="text-xs text-gray-500 mt-2">错误信息: ' + error.message + '</div>';
+    } else {
+      const errorMsg = document.createElement('div');
+      errorMsg.className = 'text-red-500 text-center p-4';
+      errorMsg.textContent = '无法加载PDF预览';
+      container.appendChild(errorMsg);
+    }
+    
+    // 显示备用PDF链接
+    document.getElementById('pdf-fallback').classList.remove('hidden');
+  }
+  
+  // 加载PDF文档 - 添加更多错误处理
+  pdfjsLib.getDocument({
+    url: pdfUrl,
+    cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/cmaps/',
+    cMapPacked: true,
+  }).promise.then(function(pdf) {
     // 清除加载信息
-    document.querySelector('#pdf-container .text-sm').remove();
+    if (loadingElement) {
+      loadingElement.remove();
+    }
     
     // 获取页数
     const numPages = pdf.numPages;
@@ -618,13 +652,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     }
-  }).catch(function(error) {
-    console.error('Error loading PDF:', error);
-    const errorMsg = document.createElement('div');
-    errorMsg.className = 'text-red-500 text-center p-4';
-    errorMsg.textContent = '无法加载PDF，请稍后再试';
-    container.appendChild(errorMsg);
-  });
+  }).catch(handleError);
 });
 </script>
 </body>
