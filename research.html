@@ -70,6 +70,112 @@ body {
       <h1 class="text-3xl font-extralight tracking-wide mb-16">Research Projects</h1>
       
       <div class="space-y-16 mb-20 max-w-[100%]">
+        <!-- Metapher Project -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <!-- 标题和Logo部分 -->
+          <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center space-x-4">
+              <img 
+                src="images/metapher/logo.png" 
+                alt="Metapher Logo" 
+                class="w-10 h-10 rounded-full object-cover"
+              >
+              <div>
+                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Metapher</h2>
+                <p class="text-sm font-light text-neutral-600 mt-1">Privacy-Preserving Poetic NLP Framework</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-light text-emerald-600 mb-1">Project Lead & Algorithm Architect</p>
+              <span class="text-sm font-light text-neutral-500">2025.1-2025.4</span>
+            </div>
+          </div>
+
+          <!-- 内容和轮播的两列布局 -->
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <!-- 左侧：项目介绍 -->
+            <div class="space-y-6 pr-2">
+              <!-- Project Overview -->
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Project Overview</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    Metapher explores the intersection of computational linguistics, privacy-preserving AI, and poetic expression. The project reimagines metaphors as natural ciphertexts—elegant linguistic structures that can simultaneously convey meaning while protecting sensitive information through their inherent ambiguity.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    This framework provides a novel approach to privacy-enhancing technology that maintains both semantic richness and human interpretability, unlike traditional cryptographic methods that sacrifice expressiveness for security. <a href="/Metapher as ciphertext.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full Research Paper (PDF)</a>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Technical Implementation -->
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Implementation</h3>
+                <div class="grid grid-cols-1 gap-4">
+                  <div>
+                    <h4 class="text-base font-medium text-neutral-700">Metaphorical Embedding System</h4>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Developed dual-space embedding architecture mapping literal concepts to metaphorical representations</li>
+                      <li class="text-base font-light text-neutral-700">Implemented adversarial training pipeline to balance semantic preservation and privacy protection</li>
+                      <li class="text-base font-light text-neutral-700">Achieved 87% semantic retention with 92% privacy preservation against state-of-the-art NLP attacks</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 class="text-base font-medium text-neutral-700">Context-Aware Transformation Engine</h4>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Created parameterized metaphor generation system with controllable abstraction levels</li>
+                      <li class="text-base font-light text-neutral-700">Built fine-tuned LLM for contextually appropriate metaphorical transformations</li>
+                      <li class="text-base font-light text-neutral-700">Established semantic reversal mechanism for authorized interpretation</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 class="text-base font-medium text-neutral-700">Evaluation Framework</h4>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Designed novel metrics combining linguistic aesthetics with information security properties</li>
+                      <li class="text-base font-light text-neutral-700">Conducted comprehensive evaluation against modern ML-based text analysis tools</li>
+                      <li class="text-base font-light text-neutral-700">Validated system through cross-cultural interpretation studies with 78% cross-cultural coherence</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Applications & Impact -->
+              <div class="space-y-2">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Applications & Impact</h3>
+                <p class="text-base font-light text-neutral-700">
+                  Successfully deployed in sensitive communication contexts including healthcare data sharing and creative writing preservation. The system enables a new paradigm of "readable privacy" where protected communications maintain literary quality and emotional resonance while safeguarding specific details through metaphorical obfuscation. Currently being extended to multilingual applications and personalized privacy preferences.
+                </p>
+              </div>
+            </div>
+
+            <!-- 右侧：功能界面展示 -->
+            <div class="flex justify-end items-center h-full">
+              <div class="relative w-[260px] h-[520px] rounded-[36px] overflow-hidden bg-white shadow-[0_0_40px_-15px_rgba(0,0,0,0.15)] transform group-hover:scale-[1.02] transition-all duration-500">
+                <!-- 轮播内容占位 -->
+                <div class="carousel-metapher relative w-full h-full">
+                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out">
+                    <img src="images/metapher/1.jpg" alt="Metapher Interface 1" class="w-full h-full object-cover">
+                  </div>
+                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out opacity-0">
+                    <img src="images/metapher/2.jpg" alt="Metapher Interface 2" class="w-full h-full object-cover">
+                  </div>
+                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out opacity-0">
+                    <img src="images/metapher/3.jpg" alt="Metapher Interface 3" class="w-full h-full object-cover">
+                  </div>
+                </div>
+
+                <!-- 添加微妙的内阴影效果 -->
+                <div class="absolute inset-0 pointer-events-none shadow-inner"></div>
+                
+                <!-- 添加轻微的光泽效果 -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-50 pointer-events-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         <!-- HipGo Project -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <!-- 标题和Logo部分 -->
@@ -308,112 +414,6 @@ body {
             </div>
           </div>
         </div>
-
-        <!-- Metapher Project -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <!-- 标题和Logo部分 -->
-          <div class="flex items-center justify-between mb-8">
-            <div class="flex items-center space-x-4">
-              <img 
-                src="images/metapher/logo.png" 
-                alt="Metapher Logo" 
-                class="w-10 h-10 rounded-full object-cover"
-              >
-              <div>
-                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Metapher</h2>
-                <p class="text-sm font-light text-neutral-600 mt-1">Privacy-Preserving Poetic NLP Framework</p>
-              </div>
-            </div>
-            <div class="text-right">
-              <p class="text-sm font-light text-emerald-600 mb-1">Project Lead & Algorithm Architect</p>
-              <span class="text-sm font-light text-neutral-500">2025.1-2025.4</span>
-            </div>
-          </div>
-
-          <!-- 内容和轮播的两列布局 -->
-          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
-            <!-- 左侧：项目介绍 -->
-            <div class="space-y-6 pr-2">
-              <!-- Project Overview -->
-              <div class="space-y-3">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Project Overview</h3>
-                <div class="space-y-4">
-                  <p class="text-base font-light leading-relaxed text-neutral-700">
-                    Metapher explores the intersection of computational linguistics, privacy-preserving AI, and poetic expression. The project reimagines metaphors as natural ciphertexts—elegant linguistic structures that can simultaneously convey meaning while protecting sensitive information through their inherent ambiguity.
-                  </p>
-                  <p class="text-base font-light leading-relaxed text-neutral-700">
-                    This framework provides a novel approach to privacy-enhancing technology that maintains both semantic richness and human interpretability, unlike traditional cryptographic methods that sacrifice expressiveness for security.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Technical Implementation -->
-              <div class="space-y-4">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Implementation</h3>
-                <div class="grid grid-cols-1 gap-4">
-                  <div>
-                    <h4 class="text-base font-medium text-neutral-700">Metaphorical Embedding System</h4>
-                    <ul class="mt-2 space-y-1 list-disc pl-4">
-                      <li class="text-base font-light text-neutral-700">Developed dual-space embedding architecture mapping literal concepts to metaphorical representations</li>
-                      <li class="text-base font-light text-neutral-700">Implemented adversarial training pipeline to balance semantic preservation and privacy protection</li>
-                      <li class="text-base font-light text-neutral-700">Achieved 87% semantic retention with 92% privacy preservation against state-of-the-art NLP attacks</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 class="text-base font-medium text-neutral-700">Context-Aware Transformation Engine</h4>
-                    <ul class="mt-2 space-y-1 list-disc pl-4">
-                      <li class="text-base font-light text-neutral-700">Created parameterized metaphor generation system with controllable abstraction levels</li>
-                      <li class="text-base font-light text-neutral-700">Built fine-tuned LLM for contextually appropriate metaphorical transformations</li>
-                      <li class="text-base font-light text-neutral-700">Established semantic reversal mechanism for authorized interpretation</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 class="text-base font-medium text-neutral-700">Evaluation Framework</h4>
-                    <ul class="mt-2 space-y-1 list-disc pl-4">
-                      <li class="text-base font-light text-neutral-700">Designed novel metrics combining linguistic aesthetics with information security properties</li>
-                      <li class="text-base font-light text-neutral-700">Conducted comprehensive evaluation against modern ML-based text analysis tools</li>
-                      <li class="text-base font-light text-neutral-700">Validated system through cross-cultural interpretation studies with 78% cross-cultural coherence</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Applications & Impact -->
-              <div class="space-y-2">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Applications & Impact</h3>
-                <p class="text-base font-light text-neutral-700">
-                  Successfully deployed in sensitive communication contexts including healthcare data sharing and creative writing preservation. The system enables a new paradigm of "readable privacy" where protected communications maintain literary quality and emotional resonance while safeguarding specific details through metaphorical obfuscation. Currently being extended to multilingual applications and personalized privacy preferences.
-                </p>
-              </div>
-            </div>
-
-            <!-- 右侧：功能界面展示 -->
-            <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[36px] overflow-hidden bg-white shadow-[0_0_40px_-15px_rgba(0,0,0,0.15)] transform group-hover:scale-[1.02] transition-all duration-500">
-                <!-- 轮播内容占位 -->
-                <div class="carousel relative w-full h-full">
-                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out">
-                    <img src="images/metapher/1.jpg" alt="Metapher Interface 1" class="w-full h-full object-cover">
-                  </div>
-                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out opacity-0">
-                    <img src="images/metapher/2.jpg" alt="Metapher Interface 2" class="w-full h-full object-cover">
-                  </div>
-                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out opacity-0">
-                    <img src="images/metapher/3.jpg" alt="Metapher Interface 3" class="w-full h-full object-cover">
-                  </div>
-                </div>
-
-                <!-- 添加微妙的内阴影效果 -->
-                <div class="absolute inset-0 pointer-events-none shadow-inner"></div>
-                
-                <!-- 添加轻微的光泽效果 -->
-                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-50 pointer-events-none"></div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -427,6 +427,24 @@ body {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Metapher 轮播
+  const metapherCarousel = document.querySelector('.carousel-metapher');
+  if (metapherCarousel) {
+    const metapherItems = metapherCarousel.querySelectorAll('.carousel-item');
+    let metapherCurrentIndex = 0;
+
+    function showMetapherSlide(index) {
+      metapherItems.forEach(item => item.style.opacity = '0');
+      metapherItems[index].style.opacity = '1';
+    }
+
+    showMetapherSlide(0);
+    setInterval(() => {
+      metapherCurrentIndex = (metapherCurrentIndex + 1) % metapherItems.length;
+      showMetapherSlide(metapherCurrentIndex);
+    }, 3000);
+  }
+
   // HipGo 轮播
   const hipgoCarousel = document.querySelector('.carousel');
   if (hipgoCarousel) {
