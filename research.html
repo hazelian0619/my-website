@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
 <script>
 tailwind.config = {
   theme: {
@@ -152,25 +153,30 @@ body {
 
             <!-- 右侧：功能界面展示 -->
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[36px] overflow-hidden bg-white shadow-[0_0_40px_-15px_rgba(0,0,0,0.15)] transform group-hover:scale-[1.02] transition-all duration-500">
-                <!-- 轮播内容占位 -->
-                <div class="carousel-metapher relative w-full h-full">
-                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out">
-                    <img src="images/metapher/1.jpg" alt="Metapher Interface 1" class="w-full h-full object-cover">
+              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
+                <!-- PDF预览区域 -->
+                <div class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container">
+                  <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
+                    <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>PDF预览加载中...</span>
                   </div>
-                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out opacity-0">
-                    <img src="images/metapher/2.jpg" alt="Metapher Interface 2" class="w-full h-full object-cover">
-                  </div>
-                  <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out opacity-0">
-                    <img src="images/metapher/3.jpg" alt="Metapher Interface 3" class="w-full h-full object-cover">
+                  <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails">
+                    <!-- PDF缩略图将通过JavaScript动态加载 -->
                   </div>
                 </div>
-
-                <!-- 添加微妙的内阴影效果 -->
-                <div class="absolute inset-0 pointer-events-none shadow-inner"></div>
                 
-                <!-- 添加轻微的光泽效果 -->
-                <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent opacity-50 pointer-events-none"></div>
+                <!-- 悬浮预览窗口 -->
+                <div id="pdf-hover-preview" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200" style="width: 400px; height: auto;">
+                  <div class="w-full flex flex-col">
+                    <div class="mb-2 text-xs text-emerald-700 font-medium" id="hover-preview-title">Page Preview</div>
+                    <div class="w-full flex justify-center items-center bg-gray-50 rounded p-2">
+                      <img src="" alt="PDF页面预览" id="hover-preview-img" class="max-w-full max-h-[500px] object-contain" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -516,6 +522,109 @@ document.addEventListener('DOMContentLoaded', function() {
       showSlidesSlide(slidesCurrentIndex);
     }, 4000);
   }
+});
+</script>
+
+<!-- PDF处理脚本 -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // 设置PDF.js工作路径
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+  
+  const pdfUrl = '/Metapher as ciphertext.pdf';
+  const container = document.getElementById('pdf-thumbnails');
+  const hoverPreview = document.getElementById('pdf-hover-preview');
+  const hoverPreviewImg = document.getElementById('hover-preview-img');
+  
+  // 加载PDF文档
+  pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
+    // 清除加载信息
+    document.querySelector('#pdf-container .text-sm').remove();
+    
+    // 获取页数
+    const numPages = pdf.numPages;
+    
+    // 生成每页的缩略图
+    for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+      pdf.getPage(pageNum).then(function(page) {
+        const viewport = page.getViewport({ scale: 0.3 });
+        
+        // 创建缩略图容器
+        const thumbContainer = document.createElement('div');
+        thumbContainer.className = 'relative w-[230px] rounded-lg border border-gray-200 hover:border-emerald-500 transition-all duration-300 hover:shadow-md cursor-pointer bg-white overflow-hidden';
+        thumbContainer.dataset.page = pageNum;
+        
+        // 创建画布
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        canvas.className = 'mx-auto';
+        
+        // 添加页码标签
+        const pageLabel = document.createElement('div');
+        pageLabel.className = 'absolute bottom-1 right-2 bg-white/80 text-xs px-2 py-0.5 rounded-full text-emerald-700 font-light';
+        pageLabel.textContent = `Page ${pageNum}`;
+        
+        thumbContainer.appendChild(canvas);
+        thumbContainer.appendChild(pageLabel);
+        container.appendChild(thumbContainer);
+        
+        // 渲染页面到画布
+        const renderContext = {
+          canvasContext: context,
+          viewport: viewport
+        };
+        
+        page.render(renderContext).promise.then(function() {
+          // 缩略图鼠标事件
+          thumbContainer.addEventListener('mouseenter', function(e) {
+            // 创建高清预览
+            pdf.getPage(pageNum).then(function(page) {
+              const viewport = page.getViewport({ scale: 0.8 });
+              const canvas = document.createElement('canvas');
+              const context = canvas.getContext('2d');
+              canvas.width = viewport.width;
+              canvas.height = viewport.height;
+              
+              const renderContext = {
+                canvasContext: context,
+                viewport: viewport
+              };
+              
+              page.render(renderContext).promise.then(function() {
+                hoverPreviewImg.src = canvas.toDataURL();
+                
+                // 更新标题显示页码
+                document.getElementById('hover-preview-title').textContent = `Page ${pageNum} Preview`;
+                
+                // 计算位置并显示预览
+                const rect = thumbContainer.getBoundingClientRect();
+                hoverPreview.style.left = (rect.right + 20) + 'px';
+                hoverPreview.style.top = (window.scrollY + rect.top - 100) + 'px';
+                hoverPreview.classList.remove('hidden');
+              });
+            });
+          });
+          
+          thumbContainer.addEventListener('mouseleave', function() {
+            hoverPreview.classList.add('hidden');
+          });
+          
+          // 点击缩略图打开PDF
+          thumbContainer.addEventListener('click', function() {
+            window.open(pdfUrl + '#page=' + pageNum, '_blank');
+          });
+        });
+      });
+    }
+  }).catch(function(error) {
+    console.error('Error loading PDF:', error);
+    const errorMsg = document.createElement('div');
+    errorMsg.className = 'text-red-500 text-center p-4';
+    errorMsg.textContent = '无法加载PDF，请稍后再试';
+    container.appendChild(errorMsg);
+  });
 });
 </script>
 </body>
