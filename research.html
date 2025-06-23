@@ -121,36 +121,38 @@ body {
               </div>
             </div>
 
-            <!-- 右侧：双PDF预览布局 -->
-            <div class="flex flex-col justify-start items-center space-y-6">
-              <!-- 论文PDF预览 -->
-              <div class="relative w-[260px] h-[360px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
-                <div class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-rl-paper">
+            <!-- 右侧：PDF预览 -->
+            <div class="flex justify-end items-center h-full">
+              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
+                <div class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-rl">
                   <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
-                    <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                    <span>Paper Loading...</span>
+                    <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>PDF Preview Loading...</span>
                   </div>
-                  <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-rl-paper"></div>
-                  <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-rl-paper">
-                     <a href="LRD-IIRL-Paper.pdf" target="_blank" class="text-sm text-emerald-600 hover:underline">View Full Paper</a>
+                  <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-rl">
+                  </div>
+                  <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-rl">
+                    <p class="text-sm text-gray-600 mb-2">You can also view the full PDF directly:</p>
+                    <a href="LRD-IIRL-Slides.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                      Open PDF
+                    </a>
                   </div>
                 </div>
-                <div id="pdf-hover-preview-rl-paper" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200"><img src="" alt="PDF page preview" id="hover-preview-img-rl-paper" class="max-w-full max-h-[600px] object-contain" /></div>
-              </div>
-
-              <!-- 幻灯片PDF预览 -->
-              <div class="relative w-[260px] h-[146px] rounded-[12px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
-                <div class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-rl-slides">
-                   <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
-                    <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
-                    <span>Slides Loading...</span>
-                   </div>
-                   <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-rl-slides"></div>
-                    <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-rl-slides">
-                      <a href="LRD-IIRL-Slides.pdf" target="_blank" class="text-sm text-emerald-600 hover:underline">View Full Slides</a>
-                   </div>
-                 </div>
-                  <div id="pdf-hover-preview-rl-slides" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200"><img src="" alt="PDF page preview" id="hover-preview-img-rl-slides" class="max-w-full max-h-[600px] object-contain" /></div>
+                
+                <div id="pdf-hover-preview-rl" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200 transform transition-all duration-300 origin-center" style="width: 500px; height: auto;">
+                  <div class="w-full flex flex-col">
+                    <div class="mb-2 flex justify-between items-center">
+                      <span class="text-xs text-emerald-700 font-medium" id="hover-preview-title-rl">Page Preview</span>
+                      <span class="text-xs text-gray-500">Click to view the full PDF</span>
+                    </div>
+                    <div class="w-full flex justify-center items-center bg-gray-50 rounded p-2">
+                      <img src="" alt="PDF page preview" id="hover-preview-img-rl" class="max-w-full max-h-[600px] object-contain" />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -641,26 +643,15 @@ document.addEventListener('DOMContentLoaded', function() {
     hoverTitleId: 'hover-preview-title-cultural'
   });
 
-  // Setup for RL Project Paper
-  setupPdfViewer({
-    pdfUrl: 'LRD-IIRL-Paper.pdf',
-    containerId: 'pdf-container-rl-paper',
-    thumbnailsId: 'pdf-thumbnails-rl-paper',
-    fallbackId: 'pdf-fallback-rl-paper',
-    hoverPreviewId: 'pdf-hover-preview-rl-paper',
-    hoverImgId: 'hover-preview-img-rl-paper',
-    hoverTitleId: 'hover-preview-title-rl-paper'
-  });
-  
-  // Setup for RL Project Slides
+  // Setup for RL Project PDF
   setupPdfViewer({
     pdfUrl: 'LRD-IIRL-Slides.pdf',
-    containerId: 'pdf-container-rl-slides',
-    thumbnailsId: 'pdf-thumbnails-rl-slides',
-    fallbackId: 'pdf-fallback-rl-slides',
-    hoverPreviewId: 'pdf-hover-preview-rl-slides',
-    hoverImgId: 'hover-preview-img-rl-slides',
-    hoverTitleId: 'hover-preview-title-rl-slides'
+    containerId: 'pdf-container-rl',
+    thumbnailsId: 'pdf-thumbnails-rl',
+    fallbackId: 'pdf-fallback-rl',
+    hoverPreviewId: 'pdf-hover-preview-rl',
+    hoverImgId: 'hover-preview-img-rl',
+    hoverTitleId: 'hover-preview-title-rl'
   });
 });
 </script>
