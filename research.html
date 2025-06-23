@@ -287,28 +287,102 @@ body {
           </div>
         </div>
 
-        <!-- Multimodal Sleep Monitoring System Project -->
+        <!-- Chinese in the Global South Project -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="space-y-6">
-            <div class="flex justify-between items-baseline">
-              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Multimodal Sleep Monitoring System</h2>
-              <div class="text-right">
-                <p class="text-sm font-light text-emerald-600 mb-1">Technical Researcher</p>
-                <span class="text-sm font-light text-neutral-500">2024.8-now</span>
+          <!-- 标题部分 -->
+          <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center space-x-4">
+              <!-- Logo is omitted -->
+              <div>
+                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Chinese in the Global South: A Cultural Inquiry</h2>
+                <p class="text-sm font-light text-neutral-600 mt-1">Identity, Performance, and Digital Media in a Cross-Cultural Context</p>
               </div>
             </div>
-            <p class="text-sm font-light text-neutral-600 italic">Based Sleep Onset Detection for Automated Music Control</p>
-            
-            <div class="space-y-4">
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Technical Contributions</h3>
-              <p class="text-base font-light leading-relaxed text-neutral-700 tracking-wide">
-                Pioneered multimodal sensor fusion (IMU+PPG+Audio: 49.75% accuracy) and a 12-layer U-Net for sleep stage analysis. Enabled continuous 8-hour data analysis, boosting REM recognition by 39% (128-min window) through novel accelerometer/PPG signal processing.
-              </p>
+            <div class="text-right">
+              <p class="text-sm font-light text-emerald-600 mb-1">Cultural Researcher</p>
+              <span class="text-sm font-light text-neutral-500">2023.10 - 2023.12</span>
+            </div>
+          </div>
 
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Key Achievements</h3>
-              <p class="text-base font-light leading-relaxed text-neutral-700 tracking-wide">
-                Developed and implemented a multimodal sleep onset detection algorithm and a deep learning-based sleep stage analysis model, significantly improving consumer sleep tracker performance.
-              </p>
+          <!-- 内容和PDF预览的两列布局 -->
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <!-- 左侧：项目介绍 -->
+            <div class="space-y-6 pr-2">
+              <!-- Project Overview -->
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Project Overview</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    This research investigates the complex construction of cultural identity among Chinese nationals in the "Global South," focusing on how digital media—particularly vlogs—are used for cultural self-representation.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    Adopting a dual lens of aesthetics and politics, the project explores how identity is negotiated, performed, and disseminated within this unique cross-cultural context. It examines identity not just as a form of self-actualization but as a strategic response to the challenges of globalization. <a href="Chinese-in-Third-World.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full Research Paper (PDF)</a>.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Methodology -->
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Theoretical Framework &amp; Methodology</h3>
+                <div class="grid grid-cols-1 gap-4">
+                  <div>
+                    <h4 class="text-base font-medium text-neutral-700">Dramaturgical Analysis</h4>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Applied Erving Goffman's theory to analyze vlogs as a "front stage" where creators perform a curated version of their lives to construct an idealized cultural image.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 class="text-base font-medium text-neutral-700">Digital Ethnography</h4>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Examined audience engagement as "cultural labor" that co-creates meaning and fosters virtual aesthetic communities.</li>
+                      <li class="text-base font-light text-neutral-700">Conducted qualitative analysis of vlog content and user interactions to deconstruct visual landscapes and cultural narratives.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Significance & Contribution -->
+              <div class="space-y-2">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Significance &amp; Contribution</h3>
+                <p class="text-base font-light text-neutral-700">
+                  This project contributes a nuanced perspective to Chinese cultural studies from a Global South vantage point, highlighting the dynamic and fluid nature of contemporary diasporic identity. It reveals the critical role of digital media in shaping cultural narratives and provides an empirical basis for understanding identity politics in the age of digital globalization.
+                </p>
+              </div>
+            </div>
+
+            <!-- 右侧：PDF预览 -->
+            <div class="flex justify-end items-center h-full">
+              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
+                <div class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-cultural">
+                  <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
+                    <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>PDF Preview Loading...</span>
+                  </div>
+                  <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-cultural">
+                  </div>
+                  <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-cultural">
+                    <p class="text-sm text-gray-600 mb-2">You can also view the full PDF directly:</p>
+                    <a href="Chinese-in-Third-World.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                      Open PDF
+                    </a>
+                  </div>
+                </div>
+                
+                <div id="pdf-hover-preview-cultural" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200 transform transition-all duration-300 origin-center" style="width: 500px; height: auto;">
+                  <div class="w-full flex flex-col">
+                    <div class="mb-2 flex justify-between items-center">
+                      <span class="text-xs text-emerald-700 font-medium" id="hover-preview-title-cultural">Page Preview</span>
+                      <span class="text-xs text-gray-500">Click to view the full PDF</span>
+                    </div>
+                    <div class="w-full flex justify-center items-center bg-gray-50 rounded p-2">
+                      <img src="" alt="PDF page preview" id="hover-preview-img-cultural" class="max-w-full max-h-[600px] object-contain" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -365,72 +439,50 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- PDF处理脚本 -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  // 设置PDF.js工作路径
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
-  
-  // 修改PDF文件路径，使用相对路径
-  const pdfUrl = 'Metapher as ciphertext.pdf';
-  const fullPdfUrl = 'Metaphor_as_Semantic_Encryption__Zero_Knowledge_Proof_Using_Dream_of_the_Red_Chamber_as_an_Example.pdf';
-  const container = document.getElementById('pdf-thumbnails');
-  const hoverPreview = document.getElementById('pdf-hover-preview');
-  const hoverPreviewImg = document.getElementById('hover-preview-img');
-  const loadingElement = document.querySelector('#pdf-container .text-sm');
-  
-  // 添加详细的错误处理
+function setupPdfViewer(options) {
+  const { pdfUrl, containerId, thumbnailsId, fallbackId, hoverPreviewId, hoverImgId, hoverTitleId } = options;
+
+  const container = document.getElementById(thumbnailsId);
+  if (!container) return; // Exit if the container for this PDF doesn't exist on the page
+
+  const hoverPreview = document.getElementById(hoverPreviewId);
+  const hoverPreviewImg = document.getElementById(hoverImgId);
+  const hoverPreviewTitle = document.getElementById(hoverTitleId);
+  const loadingElement = document.querySelector(`#${containerId} .text-sm`);
+
   function handleError(error) {
-    console.error('Error loading PDF:', error);
+    console.error(`Error loading PDF (${pdfUrl}):`, error);
     if (loadingElement) {
-      loadingElement.innerHTML = '<div class="text-red-500">无法加载PDF预览</div><div class="text-xs text-gray-500 mt-2">错误信息: ' + error.message + '</div>';
-    } else {
-      const errorMsg = document.createElement('div');
-      errorMsg.className = 'text-red-500 text-center p-4';
-      errorMsg.textContent = '无法加载PDF预览';
-      container.appendChild(errorMsg);
+      loadingElement.innerHTML = `<div class="text-red-500">Could not load PDF preview</div>`;
     }
-    
-    // 显示备用PDF链接
-    document.getElementById('pdf-fallback').classList.remove('hidden');
+    const fallbackElement = document.getElementById(fallbackId);
+    if (fallbackElement) fallbackElement.classList.remove('hidden');
   }
-  
-  // 加载PDF文档 - 添加更多错误处理
+
   pdfjsLib.getDocument({
     url: pdfUrl,
     cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/cmaps/',
     cMapPacked: true,
   }).promise.then(function(pdf) {
-    // 清除加载信息
-    if (loadingElement) {
-      loadingElement.remove();
-    }
+    if (loadingElement) loadingElement.remove();
     
-    // 获取页数
-    const numPages = pdf.numPages;
-    
-    // 生成每页的缩略图
-    for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
       pdf.getPage(pageNum).then(function(page) {
-        // 保持原始纵横比的视口
         const originalViewport = page.getViewport({ scale: 1.0 });
-        const containerWidth = 230; // 容器宽度
-        
-        // 计算缩放因子以适应容器宽度同时保持纵横比
+        const containerWidth = 230;
         const scale = containerWidth / originalViewport.width;
         const viewport = page.getViewport({ scale: scale });
         
-        // 创建缩略图容器
         const thumbContainer = document.createElement('div');
         thumbContainer.className = 'relative w-[230px] rounded-lg border border-gray-200 hover:border-emerald-500 transition-all duration-300 hover:shadow-md cursor-pointer bg-white overflow-hidden transform hover:scale-105 transition-transform duration-300';
         thumbContainer.dataset.page = pageNum;
         
-        // 创建画布
         const canvas = document.createElement('canvas');
         const context = canvas.getContext('2d');
         canvas.width = viewport.width;
         canvas.height = viewport.height;
         canvas.className = 'mx-auto';
         
-        // 添加页码标签
         const pageLabel = document.createElement('div');
         pageLabel.className = 'absolute bottom-1 right-2 bg-white/80 text-xs px-2 py-0.5 rounded-full text-emerald-700 font-light';
         pageLabel.textContent = `Page ${pageNum}`;
@@ -439,49 +491,29 @@ document.addEventListener('DOMContentLoaded', function() {
         thumbContainer.appendChild(pageLabel);
         container.appendChild(thumbContainer);
         
-        // 渲染页面到画布
-        const renderContext = {
-          canvasContext: context,
-          viewport: viewport
-        };
+        const renderContext = { canvasContext: context, viewport: viewport };
         
         page.render(renderContext).promise.then(function() {
-          // 缩略图鼠标事件
           thumbContainer.addEventListener('mouseenter', function(e) {
-            // 创建高清预览
             pdf.getPage(pageNum).then(function(page) {
-              // 使用更高的缩放因子以获得更清晰的预览
               const previewViewport = page.getViewport({ scale: 1.5 });
-              const canvas = document.createElement('canvas');
-              const context = canvas.getContext('2d');
-              canvas.width = previewViewport.width;
-              canvas.height = previewViewport.height;
+              const previewCanvas = document.createElement('canvas');
+              const previewContext = previewCanvas.getContext('2d');
+              previewCanvas.width = previewViewport.width;
+              previewCanvas.height = previewViewport.height;
               
-              const renderContext = {
-                canvasContext: context,
-                viewport: previewViewport,
-                // 启用抗锯齿和高质量渲染
-                intent: 'display',
-                renderInteractiveForms: false,
-                enableWebGL: true
-              };
+              const previewRenderContext = { canvasContext: previewContext, viewport: previewViewport, intent: 'display', renderInteractiveForms: false, enableWebGL: true };
               
-              page.render(renderContext).promise.then(function() {
-                hoverPreviewImg.src = canvas.toDataURL('image/jpeg', 0.95);
+              page.render(previewRenderContext).promise.then(function() {
+                hoverPreviewImg.src = previewCanvas.toDataURL('image/jpeg', 0.95);
+                hoverPreviewTitle.textContent = `Page ${pageNum} Preview`;
                 
-                // 更新标题显示页码
-                document.getElementById('hover-preview-title').textContent = `第 ${pageNum} 页预览`;
-                
-                // 计算位置并显示预览
                 const rect = thumbContainer.getBoundingClientRect();
                 hoverPreview.style.left = (rect.right + 20) + 'px';
                 hoverPreview.style.top = (window.scrollY + rect.top - 100) + 'px';
                 hoverPreview.classList.remove('hidden');
-                // 添加放大动画效果
                 hoverPreview.style.transform = 'scale(1.05)';
-                setTimeout(() => {
-                  hoverPreview.style.transform = 'scale(1)';
-                }, 300);
+                setTimeout(() => { hoverPreview.style.transform = 'scale(1)'; }, 300);
               });
             });
           });
@@ -490,7 +522,6 @@ document.addEventListener('DOMContentLoaded', function() {
             hoverPreview.classList.add('hidden');
           });
           
-          // 点击缩略图打开PDF
           thumbContainer.addEventListener('click', function() {
             window.open(pdfUrl + '#page=' + pageNum, '_blank');
           });
@@ -498,6 +529,32 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   }).catch(handleError);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
+  
+  // Setup for Metapher PDF
+  setupPdfViewer({
+    pdfUrl: 'Metapher as ciphertext.pdf',
+    containerId: 'pdf-container',
+    thumbnailsId: 'pdf-thumbnails',
+    fallbackId: 'pdf-fallback',
+    hoverPreviewId: 'pdf-hover-preview',
+    hoverImgId: 'hover-preview-img',
+    hoverTitleId: 'hover-preview-title'
+  });
+
+  // Setup for Cultural Studies PDF
+  setupPdfViewer({
+    pdfUrl: 'Chinese-in-Third-World.pdf',
+    containerId: 'pdf-container-cultural',
+    thumbnailsId: 'pdf-thumbnails-cultural',
+    fallbackId: 'pdf-fallback-cultural',
+    hoverPreviewId: 'pdf-hover-preview-cultural',
+    hoverImgId: 'hover-preview-img-cultural',
+    hoverTitleId: 'hover-preview-title-cultural'
+  });
 });
 </script>
 </body>
