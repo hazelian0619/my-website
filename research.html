@@ -334,26 +334,33 @@ body {
               </div>
             </div>
 
-            <!-- 右侧：PDF预览 -->
+            <!-- 右侧：图片纵向滑动预览 -->
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
-                <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
-                  <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                  <span>PDF Preview Loading...</span>
-                </div>
-                <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-bookdone"></div>
-                <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-bookdone">
-                  <p class="text-sm text-gray-600 mb-2">You can also view the full PDF directly:</p>
-                  <a href="files/0908Bookdone.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
-                    Open PDF
-                  </a>
+              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-y-auto bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500 flex flex-col space-y-2 p-2">
+                <!-- BookDone 图片预览 -->
+                <div class="flex flex-col space-y-2 w-full items-center">
+                  <img src="imagespdf/0908Bookdone/0.jpg" class="w-full rounded-md" alt="BookDone 0"/>
+                  <img src="imagespdf/0908Bookdone/1.jpg" class="w-full rounded-md" alt="BookDone 1"/>
+                  <img src="imagespdf/0908Bookdone/2.jpg" class="w-full rounded-md" alt="BookDone 2"/>
+                  <img src="imagespdf/0908Bookdone/3.jpg" class="w-full rounded-md" alt="BookDone 3"/>
+                  <img src="imagespdf/0908Bookdone/4.jpg" class="w-full rounded-md" alt="BookDone 4"/>
+                  <img src="imagespdf/0908Bookdone/5.jpg" class="w-full rounded-md" alt="BookDone 5"/>
+                  <img src="imagespdf/0908Bookdone/6.jpg" class="w-full rounded-md" alt="BookDone 6"/>
+                  <img src="imagespdf/0908Bookdone/7.jpg" class="w-full rounded-md" alt="BookDone 7"/>
+                  <img src="imagespdf/0908Bookdone/8.jpg" class="w-full rounded-md" alt="BookDone 8"/>
+                  <img src="imagespdf/0908Bookdone/9.jpg" class="w-full rounded-md" alt="BookDone 9"/>
+                  <img src="imagespdf/0908Bookdone/10.jpg" class="w-full rounded-md" alt="BookDone 10"/>
+                  <img src="imagespdf/0908Bookdone/11.jpg" class="w-full rounded-md" alt="BookDone 11"/>
+                  <img src="imagespdf/0908Bookdone/12.jpg" class="w-full rounded-md" alt="BookDone 12"/>
+                  <img src="imagespdf/0908Bookdone/13.jpg" class="w-full rounded-md" alt="BookDone 13"/>
+                  <img src="imagespdf/0908Bookdone/14.jpg" class="w-full rounded-md" alt="BookDone 14"/>
+                  <img src="imagespdf/0908Bookdone/15.jpg" class="w-full rounded-md" alt="BookDone 15"/>
+                  <img src="imagespdf/0908Bookdone/16.jpg" class="w-full rounded-md" alt="BookDone 16"/>
+                  <img src="imagespdf/0908Bookdone/17.jpg" class="w-full rounded-md" alt="BookDone 17"/>
+                  <img src="imagespdf/0908Bookdone/18.jpg" class="w-full rounded-md" alt="BookDone 18"/>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       
