@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lian - Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#2D3047',
+secondary: '#E8E9F3'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+scroll-behavior: smooth;
+overflow: hidden;
+}
+html {
+scroll-behavior: smooth;
+}
+a {
+cursor: pointer;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 0;
+width: 0;
+height: 2px;
+background-color: #2D3047;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.section-fade {
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.6s ease-out;
+}
+.section-fade.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.project-card {
+transition: all 0.3s ease;
+}
+.project-card:hover {
+transform: translateY(-4px);
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+bottom: -2px;
+left: 0;
+width: 0;
+height: 1px;
+background-color: currentColor;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+</style>
+</head>
+<body class="bg-white text-primary">
+<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<a href="../pages/index.html" class="text-xl font-medium">Lian</a>
+<div class="hidden md:flex space-x-8">
+<a href="../pages/index.html" class="nav-link text-sm hover:text-primary transition-colors">HOME</a>
+<a href="../pages/bio.html" class="nav-link text-sm hover:text-primary transition-colors">BIO</a>
+<a href="../pages/research.html" class="nav-link text-sm hover:text-primary transition-colors">RESEARCH</a>
+<a href="../pages/work.html" class="nav-link text-sm hover:text-primary transition-colors">WORK</a>
+<a href="../pages/cv.html" class="nav-link text-sm hover:text-primary transition-colors">CV</a>
+<a href="../pages/contact.html" class="nav-link text-sm hover:text-primary transition-colors">CONTACT</a>
+<a href="../pages/other.html" class="nav-link text-sm hover:text-primary transition-colors">OTHER</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</div>
+</nav>
+<main class="h-screen flex items-center">
+<section id="home" class="w-full">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex">
+    <!-- 左侧图片保持不变 -->
+    <div class="w-1/2 flex items-center justify-center">
+      <div class="w-2/5">
+        <img src="../public/images/avatar.jpg" alt="Profile" class="w-full h-auto object-cover"/>
+      </div>
+    </div>
+    
+    <!-- 右侧信息 -->
+    <div class="w-1/2 flex flex-col justify-center pl-16 group hover:bg-neutral-50 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+      <h1 class="text-2xl font-extralight tracking-[0.15em] mb-10 text-neutral-800 group-hover:text-emerald-700 transition-colors">Lian</h1>
+      
+      <div class="space-y-1 mb-10">
+        <p class="text-base font-light text-neutral-800">MPhil Student in Artificial Intelligence</p>
+        <p class="text-sm font-extralight text-neutral-600">INFO Hub / AI Thrust</p>
+        <p class="text-sm font-extralight text-neutral-600">Hong Kong University of Science and Technology</p>
+      </div>
+      
+      <!-- 研究方向 -->
+      <div class="mb-12">
+        <p class="text-xs font-light tracking-wide text-neutral-500 mb-4">Research Interests</p>
+        <div class="space-y-2">
+          <div class="flex items-center space-x-2">
+            <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+            <p class="text-sm font-light text-neutral-700">Medical AI & Vision</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+            <p class="text-sm font-light text-neutral-700">Graph Intelligence</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+            <p class="text-sm font-light text-neutral-700">Social Computing</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 技术能力 -->
+      <div class="mb-12">
+        <p class="text-xs font-light tracking-wide text-neutral-500 mb-4">Technical Expertise</p>
+        <div class="space-y-2">
+          <div class="flex items-center space-x-2">
+            <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+            <p class="text-sm font-light text-neutral-700">Computer Vision | Medical Imaging | Graph ML</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+            <p class="text-sm font-light text-neutral-700">PyTorch/TensorFlow | Network Analysis | NLP</p>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="w-1 h-1 bg-emerald-600 rounded-full"></span>
+            <p class="text-sm font-light text-neutral-700">Multimodal AI | Social Computing | HCI Research</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 导航按钮 -->
+      <div class="flex space-x-6">
+        <a href="../pages/bio.html" class="px-6 py-2 text-[11px] tracking-[0.2em] border border-neutral-300 text-neutral-600 hover:border-neutral-600 transition-all duration-300 uppercase">
+          Biography
+        </a>
+        <a href="../pages/research.html" class="px-6 py-2 text-[11px] tracking-[0.2em] border border-neutral-300 text-neutral-600 hover:border-neutral-600 transition-all duration-300 uppercase">
+          Research
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="py-8 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+<p>&copy; 2024 Lian. All rights reserved.</p>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.nav-link');
+const observerOptions = {
+root: null,
+rootMargin: '0px',
+threshold: 0.1
+};
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+const id = entry.target.getAttribute('id');
+navLinks.forEach(link => {
+if (link.getAttribute('href') === `#${id}`) {
+link.classList.add('text-primary');
+} else {
+link.classList.remove('text-primary');
+}
+});
+}
+});
+}, observerOptions);
+sections.forEach(section => {
+section.classList.add('section-fade');
+observer.observe(section);
+});
+const mobileMenuButton = document.querySelector('button');
+const nav = document.querySelector('nav div div:last-child');
+mobileMenuButton.addEventListener('click', () => {
+nav.classList.toggle('hidden');
+});
+});
+</script>
+</body>
+</html>

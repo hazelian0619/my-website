@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lian - Work Experience</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#2D3047',
+        secondary: '#E8E9F3'
+      }
+    }
+  }
+}
+</script>
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+</style>
+</head>
+<body class="bg-white text-primary">
+<nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="../pages/index.html" class="text-xl font-medium">Lian</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="../pages/index.html" class="nav-link text-sm hover:text-primary transition-colors">HOME</a>
+        <a href="../pages/bio.html" class="nav-link text-sm hover:text-primary transition-colors">BIO</a>
+        <a href="../pages/research.html" class="nav-link text-sm hover:text-primary transition-colors">RESEARCH</a>
+        <a href="../pages/work.html" class="nav-link text-sm hover:text-primary transition-colors">WORK</a>
+        <a href="../pages/cv.html" class="nav-link text-sm hover:text-primary transition-colors">CV</a>
+        <a href="../pages/contact.html" class="nav-link text-sm hover:text-primary transition-colors">CONTACT</a>
+        <a href="../pages/other.html" class="nav-link text-sm hover:text-primary transition-colors">OTHER</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pt-32 pb-16 min-h-screen">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl">
+      <h1 class="text-3xl font-extralight tracking-wide mb-16">Work Experience</h1>
+      
+      <div class="space-y-16">
+        <!-- HKUST Smart Campus Initiative -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="flex justify-between items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">HKUST Smart Campus Initiative (Guangzhou, China)</h2>
+            <span class="text-sm font-light text-neutral-500">2025.5 - 2025.7</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-6">Developer</p>
+          <div class="space-y-4 text-neutral-700">
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">System Architecture &amp; Development</h3>
+              <p class="text-base font-light text-neutral-700 mt-2">
+                - Architected and led the development of the HKUST Smart Campus Mini Program, an end-to-end platform for real-time energy monitoring.<br>
+                - Implemented a dynamic, multi-chart visualization dashboard using ECharts, enabling customizable data analysis and reporting.
+              </p>
+            </div>
+            <div class="mt-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Core Features &amp; Technical Leadership</h3>
+              <p class="text-base font-light text-neutral-700 mt-2">
+                - Developed core functional modules including a real-time alarm center and SSO user authentication, translating complex requirements into robust technical solutions.<br>
+                - Established and managed an agile development workflow on GitHub, overseeing code quality through feature branching, pull requests, and issue tracking.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-12 border-gray-100">
+
+        <!-- HiDream.ai -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">HiDream.ai (Shanghai,China)</h2>
+              <span class="text-sm font-light text-neutral-500">2024.6-2024.9</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">AI Product Manager Intern</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Model Optimization</h3>
+              <p class="text-base font-light text-neutral-700">
+                Utilized deep learning frameworks in PyTorch to train generative models for the localized cross-border e-commerce product HiDream.Integrated text, image, and video data for multimodal data fusion.
+                Improved image generation quality, video smoothness, model comprehension, and content accuracy.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Growth</h3>
+              <p class="text-base font-light text-neutral-700">
+                Designed and integrated AI redrawing, AI similarity drawing, and de-noising features through competitive analysis and user demand research.Achieved daily active creation user growth of 10,000+/month.
+                Optimized content display formats and validated market strategies using A/B testing.
+                Increased user browsing time by 25% year-on-year and 30-day user retention rate by 38.8%.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ByteDance Algorithm -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">ByteDance (Shanghai,China)</h2>
+              <span class="text-sm font-light text-neutral-500">2024.3-2024.6</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">Algorithm Product Manager Intern</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Algorithm Optimization</h3>
+              <p class="text-base font-light text-neutral-700">
+                Served the 3C category using Naive Bayes models and multivariate regression analysis for dynamic pricing strategy optimization.Monitored real-time user behavior data (e.g., purchase history, browsing patterns).
+                Identified key drivers of promotional activities through data mining techniques.
+                Achieved a 76% increase in average daily ROI for brands.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Growth</h3>
+              <p class="text-base font-light text-neutral-700">
+                Collaborated with 38 top merchants.Developed user profiles using K-means clustering analysis and machine learning algorithms to identify potential high-value user groups.
+                Designed and implemented a personalized recommendation system, increasing conversion rates by 35% and driving brand sales growth.Continuously iterated operational strategies through user feedback and behavioral data analysis.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ByteDance Business Analysis -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex justify-between items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">ByteDance (Shanghai,China)</h2>
+              <span class="text-sm font-light text-neutral-500">2023.12-2024.3</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">Business Analysis Intern</p>
+            
+            <div class="space-y-4">
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Data Visualization</h3>
+              <p class="text-base font-light text-neutral-700">
+                Developed B-end fee rate strategies for the 3C digital category.
+                Utilized regression analysis, time series forecasting, and decision tree models to analyze merchant operations, dynamic sales, and GMV share.Provided timely improvement suggestions.
+                Identified sales pain points through predictive modeling, resulting in a 60% year-on-year decrease in high-rate fees.
+              </p>
+
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Research</h3>
+              <p class="text-base font-light text-neutral-700">
+                Combined qualitative (industry reports, macro/meso-level enterprise research) and quantitative research methods (user interviews, surveys) to collect user feedback and understand customer needs.
+                Built dynamic data dashboards using Aeolus, Power BI, and Tableau for real-time sales metric monitoring.
+                Drove a 413% year-on-year GMV growth for related brands.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="my-12 border-gray-100">
+
+        <!-- Little Voice -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="flex justify-between items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Little Voice (Shanghai, China)</h2>
+            <span class="text-sm font-light text-neutral-500">2023.9 - 2023.12</span>
+            </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-6">User Operations Intern</p>
+          <div class="space-y-4 text-neutral-700">
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Flow Matrix</h3>
+              <p class="text-base font-light text-neutral-700 mt-2">
+                Build a diversified flow matrix through Xiaohongshu & Tiktok live broadcasting, develop standardized user activation SOPs, effectively guide flow to private domains to improve user retention rate by 30%.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Growth</h3>
+              <p class="text-base font-light text-neutral-700 mt-2">
+                Plan IP positioning, build SOP for course selling and paid consultation, optimize content strategy through A/B testing, optimize user experience, achieve user growth of 10% per month and turnover of 8w+.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yukuaidi -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="flex justify-between items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Yukuaidi (Shanghai, China)</h2>
+            <span class="text-sm font-light text-neutral-500">2023.9 - 2023.12</span>
+            </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-6">Brand Creative Intern</p>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px,280px] gap-[8px] items-start">
+            <!-- 左侧：项目介绍 -->
+            <div class="space-y-4 text-neutral-700 pr-2">
+              <div>
+                <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Brand Planning</h3>
+                <p class="text-base font-light text-neutral-700 mt-2">
+                  Responsible for the China social media of luxury women's clothing Loro Piana, 3C audio Devialet and perfume brand Caron, successfully output 200+ content with an average readership of 20,000+.
+                  <a href="public/files/work/DEVIALET.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full Devialet Report (PDF)</a>
+                </p>
+              </div>
+              <div>
+                <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Holiday Marketing</h3>
+                <p class="text-base font-light text-neutral-700 mt-2">
+                Based on market research and analysis, planning the Chinese New Year marketing campaigns for Versace and Helena Rubinstein, achieving a 30% increase in brand awareness and a 25% increase in user engagement.
+                <a href="public/files/work/Versace2024.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full Versace CNY Proposal (PDF)</a>
+              </p>
+              </div>
+              <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Placement Optimization</h3>
+                <p class="text-base font-light text-neutral-700 mt-2">
+                Analyzed client Devialet's monthly social media data and collaborated on the brand's content operation strategy for 2024, resulting in a 40% increase in social media interaction rate.
+                <a href="public/files/work/DEVIALET.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full Devialet Social Media Report (PDF)</a>
+              </p>
+              </div>
+            </div>
+
+            <!-- 右侧：图片纵向滑动预览（Versace） -->
+            <div class="flex justify-end items-center h-full">
+              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-y-auto bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500 flex flex-col space-y-2 p-2">
+                <div class="flex flex-col space-y-2 w-full items-center">
+                  <img src="../imagespdf/Versace2024/0.jpg" class="w-full rounded-md" alt="Versace 0"/>
+                  <img src="../imagespdf/Versace2024/1.jpg" class="w-full rounded-md" alt="Versace 1"/>
+                  <img src="../imagespdf/Versace2024/2.jpg" class="w-full rounded-md" alt="Versace 2"/>
+                  <img src="../imagespdf/Versace2024/3.jpg" class="w-full rounded-md" alt="Versace 3"/>
+                  <img src="../imagespdf/Versace2024/4.jpg" class="w-full rounded-md" alt="Versace 4"/>
+                  <img src="../imagespdf/Versace2024/5.jpg" class="w-full rounded-md" alt="Versace 5"/>
+                  <img src="../imagespdf/Versace2024/6.jpg" class="w-full rounded-md" alt="Versace 6"/>
+                  <img src="../imagespdf/Versace2024/7.jpg" class="w-full rounded-md" alt="Versace 7"/>
+                  <img src="../imagespdf/Versace2024/8.jpg" class="w-full rounded-md" alt="Versace 8"/>
+                  <img src="../imagespdf/Versace2024/9.jpg" class="w-full rounded-md" alt="Versace 9"/>
+                  <img src="../imagespdf/Versace2024/10.jpg" class="w-full rounded-md" alt="Versace 10"/>
+                  <img src="../imagespdf/Versace2024/11.jpg" class="w-full rounded-md" alt="Versace 11"/>
+                  <img src="../imagespdf/Versace2024/12.jpg" class="w-full rounded-md" alt="Versace 12"/>
+                  <img src="../imagespdf/Versace2024/13.jpg" class="w-full rounded-md" alt="Versace 13"/>
+                  <img src="../imagespdf/Versace2024/14.jpg" class="w-full rounded-md" alt="Versace 14"/>
+                </div>
+              </div>
+            </div>
+
+            <!-- 右侧：图片纵向滑动预览（DEVIALET） -->
+            <div class="flex justify-end items-center h-full">
+              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-y-auto bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500 flex flex-col space-y-2 p-2">
+                <div class="flex flex-col space-y-2 w-full items-center">
+                  <img src="../imagespdf/DEVIALET/0.jpg" class="w-full rounded-md" alt="DEVIALET 0"/>
+                  <img src="../imagespdf/DEVIALET/1.jpg" class="w-full rounded-md" alt="DEVIALET 1"/>
+                  <img src="../imagespdf/DEVIALET/2.jpg" class="w-full rounded-md" alt="DEVIALET 2"/>
+                  <img src="../imagespdf/DEVIALET/3.jpg" class="w-full rounded-md" alt="DEVIALET 3"/>
+                  <img src="../imagespdf/DEVIALET/4.jpg" class="w-full rounded-md" alt="DEVIALET 4"/>
+                  <img src="../imagespdf/DEVIALET/5.jpg" class="w-full rounded-md" alt="DEVIALET 5"/>
+                  <img src="../imagespdf/DEVIALET/6.jpg" class="w-full rounded-md" alt="DEVIALET 6"/>
+                  <img src="../imagespdf/DEVIALET/7.jpg" class="w-full rounded-md" alt="DEVIALET 7"/>
+                  <img src="../imagespdf/DEVIALET/8.jpg" class="w-full rounded-md" alt="DEVIALET 8"/>
+                  <img src="../imagespdf/DEVIALET/9.jpg" class="w-full rounded-md" alt="DEVIALET 9"/>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bluefocus -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="flex justify-between items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Bluefocus (Beijing, China)</h2>
+            <span class="text-sm font-light text-neutral-500">2023.5 - 2023.9</span>
+            </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-6">Marketing Intern</p>
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <div class="space-y-4 text-neutral-700 pr-2">
+              <div>
+                <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Content Planning</h3>
+                <p class="text-base font-light text-neutral-700 mt-2">
+                  Develop and implement content strategy on dual micro-platforms for luxury agent Yingtong Group (covering 50+ brands such as Van Cleef & Arpels, Versace, Coach, etc.), boost content readership by 3k+.
+                  <a href="public/files/work/HR2023.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full HR CNY Proposal (PDF)</a>
+                </p>
+              </div>
+              <div>
+                <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Placement Optimization</h3>
+                <p class="text-base font-light text-neutral-700 mt-2">
+                  Monitor the effect of advertisement placement, analyze key indicators, through data-driven strategy adjustment, the average monthly exposure reached 80k+ times, exceeding target achievement rate by 130%.
+                </p>
+              </div>
+            </div>
+            <div class="flex justify-end items-center h-full">
+              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-y-auto bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500 flex flex-col space-y-2 p-2">
+                <div class="flex flex-col space-y-2 w-full items-center">
+                  <img src="../imagespdf/HR2023/0.jpg" class="w-full rounded-md" alt="HR2023 0"/>
+                  <img src="../imagespdf/HR2023/1.jpg" class="w-full rounded-md" alt="HR2023 1"/>
+                  <img src="../imagespdf/HR2023/2.jpg" class="w-full rounded-md" alt="HR2023 2"/>
+                  <img src="../imagespdf/HR2023/3.jpg" class="w-full rounded-md" alt="HR2023 3"/>
+                  <img src="../imagespdf/HR2023/4.jpg" class="w-full rounded-md" alt="HR2023 4"/>
+                  <img src="../imagespdf/HR2023/5.jpg" class="w-full rounded-md" alt="HR2023 5"/>
+                  <img src="../imagespdf/HR2023/6.jpg" class="w-full rounded-md" alt="HR2023 6"/>
+                  <img src="../imagespdf/HR2023/7.jpg" class="w-full rounded-md" alt="HR2023 7"/>
+                  <img src="../imagespdf/HR2023/8.jpg" class="w-full rounded-md" alt="HR2023 8"/>
+                  <img src="../imagespdf/HR2023/9.jpg" class="w-full rounded-md" alt="HR2023 9"/>
+                  <img src="../imagespdf/HR2023/10.jpg" class="w-full rounded-md" alt="HR2023 10"/>
+                  <img src="../imagespdf/HR2023/11.jpg" class="w-full rounded-md" alt="HR2023 11"/>
+                  <img src="../imagespdf/HR2023/12.jpg" class="w-full rounded-md" alt="HR2023 12"/>
+                  <img src="../imagespdf/HR2023/13.jpg" class="w-full rounded-md" alt="HR2023 13"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="py-8 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-gray-500">
+    <p>&copy; 2024 Lian. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html> 
