@@ -90,6 +90,12 @@ transition: width 0.3s ease;
 .nav-link:hover::after {
 width: 100%;
 }
+.avatar-container:hover .avatar-main {
+opacity: 0;
+}
+.avatar-container:hover .avatar-hover {
+opacity: 1;
+}
 </style>
 </head>
 <body class="bg-white text-primary">
@@ -117,9 +123,9 @@ width: 100%;
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex">
     <!-- 左侧图片保持不变 -->
     <div class="w-1/2 flex items-center justify-center">
-      <div class="w-2/5 relative group/avatar">
-        <img src="public/images/avatar.jpg" alt="Profile" class="w-full h-auto object-cover transition-opacity duration-500 ease-in-out group-hover/avatar:opacity-0"/>
-        <img src="public/images/self2.jpg" alt="Professional Profile" class="absolute inset-0 w-full h-auto object-cover opacity-0 transition-opacity duration-500 ease-in-out group-hover/avatar:opacity-100"/>
+      <div class="w-2/5 relative avatar-container">
+        <img src="public/images/avatar.jpg" alt="Profile" class="w-full h-auto object-cover transition-opacity duration-500 ease-in-out avatar-main"/>
+        <img src="public/images/self2.jpg" alt="Professional Profile" class="absolute inset-0 w-full h-auto object-cover opacity-0 transition-opacity duration-500 ease-in-out avatar-hover"/>
       </div>
     </div>
     
