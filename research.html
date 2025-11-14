@@ -142,38 +142,49 @@ body {
             </div>
           </div>
 
-          <div class="space-y-6 pr-2">
-            <div class="space-y-3">
-              <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
-              <div class="space-y-4">
-                <p class="text-base font-light leading-relaxed text-neutral-700">
-                  Exposed the gap between utility-centric automation and care ethics in home contexts; defined belief-aware user state, human factors constraints, and privacy-first sensing as foundations for compassionate interaction.
-                </p>
-                <p class="text-base font-light leading-relaxed text-neutral-700">
-                  <span class="font-medium">Status:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">In Progress</span> | <span class="text-neutral-600">Code available upon request</span>
-                </p>
-              </div>
-            </div>
-
-            <div class="space-y-4">
-              <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Execution</h3>
-              <div class="grid grid-cols-1 gap-4">
-                <div>
-                  <ul class="mt-2 space-y-1 list-disc pl-4">
-                    <li class="text-base font-light text-neutral-700">Human factors engineering analysis, structured interviews, and interaction experiment design</li>
-                    <li class="text-base font-light text-neutral-700">Multimodal affect recognition across vision/speech/touch with edge-first fusion</li>
-                    <li class="text-base font-light text-neutral-700">Coordinated motion/voice/light/tactile policies, consent-aware proxemics</li>
-                    <li class="text-base font-light text-neutral-700">SDK scenario APIs for reliable deployment</li>
-                  </ul>
+          <!-- Two-column layout with image on the right (mirrors sections below) -->
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <!-- Left: content -->
+            <div class="space-y-6 pr-2">
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    Home companion robots must understand people, not just tasks. We model belief-aware user state and adopt privacy-first sensing to learn long-horizon emotional patterns and care preferences through daily, consented interactions—aligning robot behavior via IRL rather than one-shot supervision to match the long-term nature of personality formation.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    <span class="font-medium">Status:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">In Progress</span> | <span class="text-neutral-600">Code available upon request</span>
+                  </p>
                 </div>
               </div>
+
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Execution</h3>
+                <div class="grid grid-cols-1 gap-4">
+                  <div>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Synthetic-to-real pipeline: Smallville (23 agents + 1 human + 1 robot) generates 60–100 days of nightly interactions (“How was your day?” + free dialog); Big Five (BFI-44) for pre/post ground truth</li>
+                      <li class="text-base font-light text-neutral-700">Multimodal affect pipeline across text/actions/facial cues/prosody with correlation-weighted late fusion for daily labels</li>
+                      <li class="text-base font-light text-neutral-700">Temporal representation via weekly sliding windows + EWMA baseline; BiLSTM+attention builds 54×1024 state embeddings</li>
+                      <li class="text-base font-light text-neutral-700">Value alignment with IRL to infer user reward and robot persona; consent-aware policies and edge-first privacy</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Validation and Impact</h3>
+                <p class="text-base font-light text-neutral-700">
+                  Targeted alignment checks with BFI correlations (pre r&gt;0.75; post r&gt;0.85), ablations showing &gt;5% over text-only baselines; Wizard-of-Oz and home-like pilots to assess trust, dignity, and safe handovers; commercialization path scoped for home, eldercare, and education.
+                </p>
+              </div>
             </div>
 
-            <div class="space-y-2">
-              <h3 class="text-lg font-light text-emerald-600 tracking-wide">Validation and Impact</h3>
-              <p class="text-base font-light text-neutral-700">
-                Wizard-of-Oz and hallway studies feeding feature iteration; home-like pilots to assess trust, perceived dignity, and safe handover behaviors; commercialization path scoped across home, eldercare, and education.
-              </p>
+            <!-- Right: image (kept narrow like sections below) -->
+            <div class="flex justify-end items-center h-full">
+              <div class="relative w-[260px] rounded-[16px] overflow-hidden bg-white border border-gray-200 shadow-sm transform group-hover:scale-[1.02] transition-all duration-500">
+                <img src="assets/images/6241239c-5883-436f-bfc7-e1d07a073de6.png" alt="Care-Centered HRI schematic" class="w-full h-auto object-cover">
+              </div>
             </div>
           </div>
         </div>
