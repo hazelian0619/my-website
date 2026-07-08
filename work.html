@@ -6,6 +6,7 @@
 <title>Lian - Work Experience</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tailwind.local.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
@@ -52,9 +53,10 @@ body {
       <a href="index.html" class="text-xl font-medium">Lian</a>
       <div class="hidden md:flex space-x-8">
         <a href="index.html" class="nav-link text-sm hover:text-primary transition-colors">HOME</a>
-        <a href="bio.html" class="nav-link text-sm hover:text-primary transition-colors">BIO</a>
-        <a href="research.html" class="nav-link text-sm hover:text-primary transition-colors">RESEARCH</a>
+        <a href="projects.html" class="nav-link text-sm hover:text-primary transition-colors">PROJECTS</a>
         <a href="work.html" class="nav-link text-sm hover:text-primary transition-colors">WORK</a>
+        <a href="research.html" class="nav-link text-sm hover:text-primary transition-colors">RESEARCH</a>
+        <a href="bio.html" class="nav-link text-sm hover:text-primary transition-colors">BIO</a>
         <a href="cv.html" class="nav-link text-sm hover:text-primary transition-colors">CV</a>
         <a href="contact.html" class="nav-link text-sm hover:text-primary transition-colors">CONTACT</a>
         <a href="other.html" class="nav-link text-sm hover:text-primary transition-colors">OTHER</a>
@@ -69,85 +71,126 @@ body {
       <h1 class="text-3xl font-extralight tracking-wide mb-16">Work Experience</h1>
 
       <div class="space-y-16">
-        <!-- Yulingzhikong -->
+        <!-- Qianshu Wenyi -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex justify-between items-baseline mb-4">
-            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Yulingzhikong (Canton, China)</h2>
-            <span class="text-sm font-light text-neutral-500">2025.4 - now</span>
+          <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Qianshu Wenyi Technology (Canton, China)</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.5 - 2026.8</span>
           </div>
-          <p class="text-sm font-light text-neutral-600 italic mb-6">Human-Robot Interaction Intern</p>
-          <div class="space-y-4 text-neutral-700">
+          <p class="text-sm font-light text-neutral-600 italic mb-6">Medical AI FDE Engineer</p>
+          <div class="space-y-5 text-neutral-700">
             <div>
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Human factors–driven HRI design</h3>
-              <p class="text-base font-light text-neutral-700 mt-2">
-                Human factors engineering analysis, structured user interviews, interaction experiment design; translate multimodal affective computing requirements into interaction flows, feedback policies, latency budgets, privacy constraints; align edge–cloud deployment and modular hardware interfaces for reliable home use.
-              </p>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Medical record QC solution</h3>
+              <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Interviewed 10+ hospital stakeholders and converted terminal medical-record QC workflows into product fields, status models, and demo paths.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Modeled case status, defect adjudication, rule evidence, scoring, responsible doctor, rectification deadline, review trace, and report output.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Delivered page structure, field model, product spec, and development plan for presales demos and R&amp;D alignment.</li>
+              </ul>
             </div>
-            <div class="mt-4">
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Product iteration and commercialization</h3>
-              <p class="text-base font-light text-neutral-700 mt-2">
-                Drive feature iteration from prototype to pilot with tactile end‑effectors and SDK APIs; run scenario validation across home/eldercare/education, codify go‑to‑market hypotheses, partnership readiness, monetization checkpoints.
-              </p>
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">AI medical record QC product</h3>
+              <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Built and deployed a browser-based AI QC product covering AI screening, manual review, doctor rectification, recovery review, score recalculation, and final release.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Linked each defect to evidence, rule clause, deduction standard, AI judgment, human decision, and operation logs.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Connected reviewer actions to score changes, A/B/C grading, downgrade defects, and report templates. <a href="https://hazelian0619.github.io/qc-v2/" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Product</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Canchen Technology -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Canchen Technology (Shenzhen, China)</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.2 - 2026.5</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-6">Multi-Agent Product Developer</p>
+          <div class="space-y-5 text-neutral-700">
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Rare Disease Agent</h3>
+              <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Designed tool routing for case parsing, HPO extraction, ontology retrieval, candidate ranking, evidence aggregation, and structured reporting.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Planned RAG over HPO, OMIM, Orphanet, PubMed, linking phenotype, disease, gene, and literature evidence.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Defined state objects for case_summary, phenotype_package, candidate_list, evidence_bundle, audit_notes, and final_report.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">MedrixAI Scientist multi-agent research platform</h3>
+              <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Contributed PaperAgent and GraphAgent workflows for literature review, scientific writing, figure generation, knowledge-base Q&amp;A, and clinical case analysis.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Built Chat + Workspace + Right Panel interaction patterns with Reasoning, References, Results, and Files surfaces.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Planned knowledge-base reuse for PDFs, meeting recordings, Feishu docs, chat records, and research files. <a href="https://scientist.medrixai.com/workspace" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">Open Workspace</a></li>
+              </ul>
             </div>
           </div>
         </div>
 
         <hr class="my-12 border-gray-100">
 
-        <!-- HiDream.ai -->
+        <!-- ByteDance -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <div class="space-y-6">
-            <div class="flex justify-between items-baseline">
-              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">HiDream.ai (Shanghai, China)</h2>
-              <span class="text-sm font-light text-neutral-500">2024.6-2024.9</span>
+            <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">ByteDance (Shanghai, China)</h2>
+              <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2023.12 - 2024.6</span>
             </div>
-            <p class="text-sm font-light text-neutral-600 italic">Product Growth Intern</p>
+            <p class="text-sm font-light text-neutral-600 italic">Strategy Product Intern · Data Analyst</p>
 
-            <div class="space-y-4">
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Product Growth</h3>
-              <p class="text-base font-light text-neutral-700">
-                Launched AI redrawing and similarity matching features post competitive analysis. Drove 10,000+ monthly active creator acquisition through feature integration. Executed A/B testing framework validating content display optimizations. Delivered 25% YoY browsing time increase, 38.8% retention improvement.
-              </p>
-
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Business Analysis</h3>
-              <p class="text-base font-light text-neutral-700">
-                Analyzed competitor pricing strategies across 8 AI creative platforms using web scraping tools. Collected user feedback from 500+ surveys identifying top pain points in content generation workflow. Built Excel dashboards tracking daily user engagement metrics (session duration, feature adoption rates).
-              </p>
+            <div class="space-y-5 text-neutral-700">
+              <div>
+                <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Strategy product</h3>
+                <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                  <li class="text-base font-light text-neutral-700 leading-relaxed">Built tiered SKU portfolio strategies for 3C categories, balancing traffic SKUs, hero SKUs, profit SKUs, gifts, and installment incentives. Brand daily ROI increased 76%.</li>
+                  <li class="text-base font-light text-neutral-700 leading-relaxed">Executed back-to-school and 618 campaigns for 38 merchants; used hourly GPM racing to recover traffic under competitor price pressure. Conversion increased 35%, brand sales grew 212%.</li>
+                  <li class="text-base font-light text-neutral-700 leading-relaxed">Cleaned after-sales data and extracted high-frequency pain points such as OCR recognition and keyboard switch feel, feeding product-page visualization and live-demo SOP improvements.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Data analysis</h3>
+                <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                  <li class="text-base font-light text-neutral-700 leading-relaxed">Decomposed B-side merchant profit structures and promoted channel-exclusive SKUs to isolate price comparison. High fee-rate exposure decreased 60% year over year.</li>
+                  <li class="text-base font-light text-neutral-700 leading-relaxed">Reweighted ad allocation by inventory depth, delivery reliability, and historical ROI, improving traffic efficiency under budget constraints.</li>
+                  <li class="text-base font-light text-neutral-700 leading-relaxed">Built Aeolus / Power BI real-time dashboards for inventory and price-risk monitoring during Double 12, supporting timely stock-lock, delisting, and campaign-intensity adjustments. Related brand GMV grew 413% year over year.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- ByteDance -->
+        <!-- HiDream.ai -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <div class="space-y-6">
-            <div class="flex justify-between items-baseline">
-              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">ByteDance (Shanghai, China)</h2>
-              <span class="text-sm font-light text-neutral-500">2023.12-2024.6</span>
+            <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">HiDream.ai (Shanghai, China)</h2>
+              <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2024.6 - 2024.9</span>
             </div>
-            <p class="text-sm font-light text-neutral-600 italic">E-commerce Product Intern</p>
+            <p class="text-sm font-light text-neutral-600 italic">AI E-commerce Product Intern</p>
 
-            <div class="space-y-4">
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Product Optimization</h3>
-              <p class="text-base font-light text-neutral-700">
-                Served the 3C category using Naive Bayes models and multivariate regression for dynamic pricing strategy optimization. Monitored real-time user behavior data (e.g., purchase history, browsing patterns). Identified key drivers of promotional activities through data mining. Achieved a 76% increase in average daily ROI for brands.
-              </p>
-
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Growth</h3>
-              <p class="text-base font-light text-neutral-700">
-                Collaborated with 38 top merchants, using clustering to identify potential high-value user groups. Designed and implemented a personalized recommendation system, increasing conversion rates by 35% and driving brand sales growth. Continuously iterated operational strategies through user feedback and behavioral data analysis.
-              </p>
-
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Data Visualization</h3>
-              <p class="text-base font-light text-neutral-700">
-                Developed B-end fee rate strategies for the 3C digital category. Utilized regression analysis, time series forecasting, and decision tree models to analyze merchant operations, dynamic sales, and GMV share. Provided timely improvement suggestions. Identified sales pain points through predictive modeling, resulting in a 60% year-on-year decrease in high-rate fees.
-              </p>
-
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Research</h3>
-              <p class="text-base font-light text-neutral-700">
-                Combined qualitative (industry reports, macro/meso-level enterprise research) and quantitative research methods (user interviews, surveys) to collect user feedback and understand customer needs. Built dynamic data dashboards using Aeolus, Power BI, and Tableau for real-time sales metric monitoring. Drove a 413% year-on-year GMV growth for related brands.
-              </p>
-            </div>
+            <ul class="space-y-1.5 list-disc pl-4 text-neutral-700">
+              <li class="text-base font-light text-neutral-700 leading-relaxed">Led multimodal generation quality evaluation for e-commerce image and video scenarios, defining bad-case taxonomy across lighting, white balance, composition, subject consistency, text alignment, rhythm, and frame consistency.</li>
+              <li class="text-base font-light text-neutral-700 leading-relaxed">Owned training and evaluation sample deduplication, denoising, and quality filtering; built data-selection rules for product images, marketing videos, and localized materials.</li>
+              <li class="text-base font-light text-neutral-700 leading-relaxed">Contributed prompt templates, CFG tuning, negative constraints, and style-control strategies for product display, model shots, scene images, and short-video covers.</li>
+              <li class="text-base font-light text-neutral-700 leading-relaxed">Defined Southeast Asia localization weights for color, clothing, and scene-style terms, reducing underexposure, cultural mismatch, oversharpening, and subject-style drift.</li>
+              <li class="text-base font-light text-neutral-700 leading-relaxed">Converted behavior tracking and bad-case analysis into PRDs for local repainting, style transfer, and image cleanup. Creator DAU increased by 19k+ after launch; browsing time improved 25%, monthly retention improved 38.8%.</li>
+            </ul>
           </div>
+        </div>
+
+        <hr class="my-12 border-gray-100">
+
+        <!-- Yulingzhikong -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Yulingzhikong (Canton, China)</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.6 - 2025.12</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-6">Co-founder · Commercialization</p>
+          <ul class="space-y-1.5 list-disc pl-4 text-neutral-700">
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Led 30+ B-side field interviews and repositioned an emotional companion robot from broad consumer use to higher-value eldercare and special-education scenarios.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Owned seed-round materials including market analysis, business model, financial forecast, and business plan; helped the team secure RMB 4M angel funding.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Modeled BOM and service marginal cost with hardware suppliers, then built hardware-plus-subscription pricing tiers based on willingness-to-pay research.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Built channel relationships with eldercare and rehabilitation institutions, supporting device pre-deployment, user-data collection, and prototype iteration.</li>
+          </ul>
         </div>
 
         <hr class="my-12 border-gray-100">
@@ -252,50 +295,19 @@ body {
           </div>
         </div>
 
-        <!-- Bluefocus -->
+        <!-- Dayi Consulting -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex justify-between items-baseline mb-4">
-            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Bluefocus (Beijing, China)</h2>
-            <span class="text-sm font-light text-neutral-500">2023.5 - 2023.9</span>
-            </div>
-          <p class="text-sm font-light text-neutral-600 italic mb-6">Marketing Intern</p>
-          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
-            <div class="space-y-4 text-neutral-700 pr-2">
-              <div>
-                <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Content Planning</h3>
-                <p class="text-base font-light text-neutral-700 mt-2">
-                  Develop and implement content strategy on dual micro-platforms for luxury agent Yingtong Group (covering 50+ brands such as Van Cleef & Arpels, Versace, Coach, etc.), boost content readership by 3k+.
-                  <a href="files/work/HR2023.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full HR CNY Proposal (PDF)</a>
-                </p>
-              </div>
-              <div>
-                <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Placement Optimization</h3>
-                <p class="text-base font-light text-neutral-700 mt-2">
-                  Monitor the effect of advertisement placement, analyze key indicators, through data-driven strategy adjustment, the average monthly exposure reached 80k+ times, exceeding target achievement rate by 130%.
-                </p>
-              </div>
-            </div>
-            <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-y-auto bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500 flex flex-col space-y-2 p-2">
-                <div class="flex flex-col space-y-2 w-full items-center">
-                  <img src="imagespdf/HR2023/0.jpg" class="w-full rounded-md" alt="HR2023 0"/>
-                  <img src="imagespdf/HR2023/1.jpg" class="w-full rounded-md" alt="HR2023 1"/>
-                  <img src="imagespdf/HR2023/2.jpg" class="w-full rounded-md" alt="HR2023 2"/>
-                  <img src="imagespdf/HR2023/3.jpg" class="w-full rounded-md" alt="HR2023 3"/>
-                  <img src="imagespdf/HR2023/4.jpg" class="w-full rounded-md" alt="HR2023 4"/>
-                  <img src="imagespdf/HR2023/5.jpg" class="w-full rounded-md" alt="HR2023 5"/>
-                  <img src="imagespdf/HR2023/6.jpg" class="w-full rounded-md" alt="HR2023 6"/>
-                  <img src="imagespdf/HR2023/7.jpg" class="w-full rounded-md" alt="HR2023 7"/>
-                  <img src="imagespdf/HR2023/8.jpg" class="w-full rounded-md" alt="HR2023 8"/>
-                  <img src="imagespdf/HR2023/9.jpg" class="w-full rounded-md" alt="HR2023 9"/>
-                  <img src="imagespdf/HR2023/10.jpg" class="w-full rounded-md" alt="HR2023 10"/>
-                  <img src="imagespdf/HR2023/11.jpg" class="w-full rounded-md" alt="HR2023 11"/>
-                  <img src="imagespdf/HR2023/12.jpg" class="w-full rounded-md" alt="HR2023 12"/>
-                  <img src="imagespdf/HR2023/13.jpg" class="w-full rounded-md" alt="HR2023 13"/>
-                </div>
-              </div>
-            </div>
+          <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Dayi Consulting (Beijing, China)</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2023.5 - 2023.8</span>
           </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-6">Industry Research Intern</p>
+          <ul class="space-y-1.5 list-disc pl-4 text-neutral-700">
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Led upstream photovoltaic industry research for GCL Group, focusing on polysilicon and wafer value-chain structure.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Quantified gross-margin distribution, bargaining power, CAGR, and raw-material penetration curves; delivered industry maps and value-chain reports for client decision support.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Analyzed listed-company annual reports to compare ROE, net margin, business model, BOM cost structure, capacity layout, technology reserve, and customer structure.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Modeled the impact of raw-material price fluctuation on operating profit and delivered supply-chain risk-hedging recommendations.</li>
+          </ul>
         </div>
       </div>
     </div>
