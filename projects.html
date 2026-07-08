@@ -6,6 +6,7 @@
 <title>Lian - Projects</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tailwind.local.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
@@ -43,23 +44,197 @@ body {
 .nav-link:hover::after {
   width: 100%;
 }
+.project-preview {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0 22px 60px -36px rgba(15, 23, 42, 0.42);
+}
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #059669;
+  transition: color 0.2s ease;
+}
+.project-link:hover {
+  color: #047857;
+}
+.case-card {
+  border-top: 1px solid #e5e7eb;
+}
+.case-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 500px);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+.evidence-item {
+  border-left: 1px solid #d1d5db;
+  padding-left: 1rem;
+}
+.product-frame {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+.live-preview {
+  position: relative;
+  background: #f8fafc;
+  --frame-scale: 0.62;
+}
+.live-frame {
+  width: calc(100% / var(--frame-scale));
+  height: calc(100% / var(--frame-scale));
+  border: 0;
+  background: #fff;
+  transform: scale(var(--frame-scale));
+  transform-origin: top left;
+}
+.frame-qc {
+  --frame-scale: 0.5;
+}
+.frame-scientist {
+  --frame-scale: 0.54;
+}
+.frame-mind {
+  --frame-scale: 0.58;
+}
+.frame-ambiguity {
+  --frame-scale: 0.68;
+}
+.ambiguity-preview {
+  padding: 1.25rem;
+  background:
+    radial-gradient(circle at 24% 30%, rgba(16, 185, 129, 0.12), transparent 28%),
+    radial-gradient(circle at 74% 24%, rgba(45, 48, 71, 0.08), transparent 26%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+.ambiguity-cloud {
+  position: relative;
+  min-height: 8.5rem;
+  border: 1px solid #e5e7eb;
+  background: rgba(255, 255, 255, 0.72);
+}
+.cloud-word {
+  position: absolute;
+  font-weight: 300;
+  color: #2D3047;
+  white-space: nowrap;
+}
+.cloud-word.emphasis {
+  color: #059669;
+  font-weight: 500;
+}
+.control-line {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.75rem;
+  align-items: center;
+}
+.control-track {
+  height: 0.35rem;
+  border-radius: 999px;
+  background: #e5e7eb;
+  overflow: hidden;
+}
+.control-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #10b981;
+}
+.live-open {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  color: #047857;
+  font-size: 0.75rem;
+  font-weight: 400;
+  box-shadow: 0 12px 28px -20px rgba(15, 23, 42, 0.45);
+}
+.preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mini-program-strip {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  background: #f3faf6;
+}
+.preview-product {
+  aspect-ratio: 16 / 10;
+}
+.preview-mobile-product {
+  aspect-ratio: 16 / 9;
+}
+.preview-interactive-product {
+  aspect-ratio: 16 / 10;
+}
+.workspace-preview {
+  min-height: 310px;
+  background:
+    linear-gradient(90deg, #f6faf8 0 26%, transparent 26%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+.mind-preview-grid {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 1rem;
+  height: 100%;
+}
+@media (max-width: 860px) {
+  .case-grid,
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+  .product-frame {
+    aspect-ratio: 4 / 3;
+  }
+  .preview-mobile-product {
+    aspect-ratio: 4 / 3;
+  }
+  .mind-preview-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .workspace-preview.product-frame {
+    aspect-ratio: auto;
+    min-height: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
 </style>
 </head>
 <body class="bg-white text-primary">
 
-<!-- 导航栏 -->
 <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <a href="index.html" class="text-xl font-medium">Lian</a>
       <div class="hidden md:flex space-x-8">
         <a href="index.html" class="nav-link text-sm hover:text-primary transition-colors">HOME</a>
-        <a href="bio.html" class="nav-link text-sm hover:text-primary transition-colors">BIO</a>
-        <a href="research.html" class="nav-link text-sm hover:text-primary transition-colors">RESEARCH</a>
         <a href="projects.html" class="nav-link text-sm hover:text-primary transition-colors">PROJECTS</a>
         <a href="work.html" class="nav-link text-sm hover:text-primary transition-colors">WORK</a>
+        <a href="research.html" class="nav-link text-sm hover:text-primary transition-colors">RESEARCH</a>
+        <a href="bio.html" class="nav-link text-sm hover:text-primary transition-colors">BIO</a>
         <a href="cv.html" class="nav-link text-sm hover:text-primary transition-colors">CV</a>
-        <a href="contact.html" class="nav-link text-sm hover:text-primary transition-colors">CONTACT</a>
+        <a href="other.html" class="nav-link text-sm hover:text-primary transition-colors">OTHER</a>
       </div>
     </div>
   </div>
@@ -68,16 +243,261 @@ body {
 <main class="pt-32 pb-16 min-h-screen">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
-      <h1 class="text-3xl font-extralight tracking-wide mb-16">Personal Projects</h1>
-      
-      <div class="space-y-16 mb-20">
-        <!-- 这里可以添加你的个人项目 -->
-        <!-- 每个项目可以包含：
-          - 技术栈展示
-          - 项目截图
-          - 开发经历
-          - GitHub 链接等
-        -->
+      <h1 class="text-3xl font-extralight tracking-wide mb-4">Projects</h1>
+      <div class="mb-14"></div>
+
+      <div class="mb-20">
+
+        <article class="case-card group py-12">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+            <h2 class="text-2xl font-light tracking-wide group-hover:text-emerald-700 transition-colors">Qianshu Wenyi Medical Record QC System</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.5 - 2026.8</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-8">FDE product system for terminal medical-record quality control</p>
+
+          <div class="case-grid">
+            <div class="space-y-5 text-neutral-700">
+              <p class="text-base font-light leading-relaxed">
+                Built a medical-record QC product that maps hospital rules into review states, scoring logic, and release workflows.
+              </p>
+              <div class="evidence-grid">
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Workflow</p>
+                  <p class="text-sm font-light leading-relaxed">Import, review, appeal, rectification, re-check, final release.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Frontend</p>
+                  <p class="text-sm font-light leading-relaxed">Vanilla JS case state, defect lists, queues, score updates, logs.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Rules</p>
+                  <p class="text-sm font-light leading-relaxed">Stakeholder interviews -> fields, pages, rule evidence, actions.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Delivery</p>
+                  <p class="text-sm font-light leading-relaxed">Product system for sales review, solution alignment, engineering handoff.</p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Medical AI</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">FDE</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">State Modeling</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Frontend Product</span>
+              </div>
+              <div class="flex flex-wrap gap-4">
+                <a class="project-link" href="https://hazelian0619.github.io/qc-v2/" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"></i><span>Open product</span></a>
+                <a class="project-link" href="https://github.com/hazelian0619/qc-v2" target="_blank" rel="noopener noreferrer"><i class="ri-github-line"></i><span>GitHub repo</span></a>
+              </div>
+            </div>
+            <div class="project-preview product-frame live-preview preview-product frame-qc rounded-[10px] transform group-hover:translate-y-[-2px] transition-all duration-300">
+              <a class="live-open" href="https://hazelian0619.github.io/qc-v2/" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"></i><span>Open</span></a>
+              <iframe class="live-frame" src="https://hazelian0619.github.io/qc-v2/" title="Qianshu Wenyi live QC product preview" loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card group py-12">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+            <h2 class="text-2xl font-light tracking-wide group-hover:text-emerald-700 transition-colors">MedrixAI Scientist Workspace</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.2 - 2026.5</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-8">Agent application workspace for life-science research operations</p>
+
+          <div class="case-grid">
+            <div class="space-y-5 text-neutral-700">
+              <p class="text-base font-light leading-relaxed">
+                Built the agent-facing workspace layer for research tasks: routing, execution state, artifacts, references, and output review.
+              </p>
+              <div class="evidence-grid">
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Routing</p>
+                  <p class="text-sm font-light leading-relaxed">Research intent -> PaperAgent, GraphAgent, clinical, writing, figures.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">State</p>
+                  <p class="text-sm font-light leading-relaxed">Create, running, review, file handoff, empty, recoverable failure.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">UI System</p>
+                  <p class="text-sm font-light leading-relaxed">Chat, workspace nav, right panel, files, references, task cards.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Product</p>
+                  <p class="text-sm font-light leading-relaxed">Loose agent capability -> repeatable flows and component behavior.</p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Agent Application</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Task Routing</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Execution State</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Frontend System</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Life Science AI</span>
+              </div>
+              <a class="project-link" href="https://scientist.medrixai.com/workspace" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"></i><span>Open product</span></a>
+            </div>
+            <div class="project-preview product-frame live-preview preview-product frame-scientist rounded-[10px] transform group-hover:translate-y-[-2px] transition-all duration-300">
+              <a class="live-open" href="https://scientist.medrixai.com/workspace" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"></i><span>Open</span></a>
+              <iframe class="live-frame" src="https://scientist.medrixai.com/workspace" title="MedrixAI Scientist live product preview" loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card group py-12">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+            <h2 class="text-2xl font-light tracking-wide group-hover:text-emerald-700 transition-colors">Medrix Mind Knowledge Workspace</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.2 - 2026.5</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-8">Knowledge workspace for reusable research context</p>
+
+          <div class="case-grid">
+            <div class="space-y-5 text-neutral-700">
+              <p class="text-base font-light leading-relaxed">
+                Designed a knowledge workspace for documents, notes, project files, and downstream AI task context.
+              </p>
+              <div class="evidence-grid">
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">IA</p>
+                  <p class="text-sm font-light leading-relaxed">Capture, organize, retrieve, reuse, hand off.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">UI</p>
+                  <p class="text-sm font-light leading-relaxed">Document surfaces, library states, context panels, navigation.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Context</p>
+                  <p class="text-sm font-light leading-relaxed">Materials -> research, writing, agent tasks, project memory.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Spec</p>
+                  <p class="text-sm font-light leading-relaxed">Product behavior for a technical research workspace.</p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Knowledge Workspace</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Frontend UI/UX</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Document Workflow</span>
+              </div>
+              <a class="project-link" href="https://app.mind.medrixai.com/web" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"></i><span>Open product</span></a>
+            </div>
+            <div class="project-preview product-frame live-preview preview-product frame-mind rounded-[10px] transform group-hover:translate-y-[-2px] transition-all duration-300">
+              <a class="live-open" href="https://app.mind.medrixai.com/web" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"></i><span>Open</span></a>
+              <iframe class="live-frame" src="https://app.mind.medrixai.com/web" title="Medrix Mind live product preview" loading="lazy"></iframe>
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card group py-12">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+            <h2 class="text-2xl font-light tracking-wide group-hover:text-emerald-700 transition-colors">DDH Clinical Assistant Mini Program</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.6 - 2025.9</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-8">Clinical assistant product for DDH/PAO recovery workflows</p>
+
+          <div class="case-grid">
+            <div class="space-y-5 text-neutral-700">
+              <p class="text-base font-light leading-relaxed">
+                Built clinical assistant product logic for DDH/PAO recovery: intake, phase state, visit summary, safety boundary.
+              </p>
+              <div class="evidence-grid">
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">State</p>
+                  <p class="text-sm font-light leading-relaxed">Recovery phase, daily log, checklist, symptoms, follow-up prep.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Assistant</p>
+                  <p class="text-sm font-light leading-relaxed">Guided intake, question framing, visit-summary generation.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Safety</p>
+                  <p class="text-sm font-light leading-relaxed">Non-diagnosis boundary, red-flag escalation, privacy reminders.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Handoff</p>
+                  <p class="text-sm font-light leading-relaxed">Patient tracking -> doctor communication and product validation.</p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Clinical Assistant</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Agent Workflow</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Safety Guardrails</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Mini Program</span>
+              </div>
+            </div>
+            <div class="project-preview product-frame preview-mobile-product rounded-[10px] overflow-hidden transform group-hover:translate-y-[-2px] transition-all duration-300">
+              <img src="images/projects/ddh-mini-program.png" alt="DDH clinical assistant mini-program screens" class="mini-program-strip">
+            </div>
+          </div>
+        </article>
+
+        <article class="case-card group py-12">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+            <h2 class="text-2xl font-light tracking-wide group-hover:text-emerald-700 transition-colors">Ambiguity-Driven Guidance Interactive Product</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.5 - 2025.9</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-8">Interactive AI learning product for productive confusion</p>
+
+          <div class="case-grid">
+            <div class="space-y-5 text-neutral-700">
+              <p class="text-base font-light leading-relaxed">
+                Built an interactive learning product that turns ambiguity into adjustable concept emergence.
+              </p>
+              <div class="evidence-grid">
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Frontend</p>
+                  <p class="text-sm font-light leading-relaxed">wordcloud2.js interface with density, rotation, emergence controls.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Model</p>
+                  <p class="text-sm font-light leading-relaxed">Ambiguity, concept drift, and guided inquiry as visible states.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">State</p>
+                  <p class="text-sm font-light leading-relaxed">Generation, tuning, feedback, repeatable exploration.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Bridge</p>
+                  <p class="text-sm font-light leading-relaxed">Research paper -> usable learning-system interface.</p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Interactive Product</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Learning AI</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Frontend Engineering</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Research Translation</span>
+              </div>
+              <div class="flex flex-wrap gap-4">
+                <a class="project-link" href="https://wordcloud2tester.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"></i><span>Open product</span></a>
+                <a class="project-link" href="https://github.com/hazelian0619/wordcloud2tester" target="_blank" rel="noopener noreferrer"><i class="ri-github-line"></i><span>GitHub repo</span></a>
+              </div>
+            </div>
+            <div class="project-preview product-frame preview-interactive-product ambiguity-preview rounded-[10px] transform group-hover:translate-y-[-2px] transition-all duration-300">
+              <a class="live-open" href="https://wordcloud2tester.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"></i><span>Open</span></a>
+              <div class="ambiguity-cloud rounded-[8px] overflow-hidden mb-4">
+                <span class="cloud-word emphasis" style="left: 34%; top: 38%; font-size: 1.55rem;">ambiguity</span>
+                <span class="cloud-word" style="left: 10%; top: 20%; font-size: 0.95rem; transform: rotate(-8deg);">teacher value</span>
+                <span class="cloud-word" style="left: 62%; top: 18%; font-size: 1rem; transform: rotate(7deg);">guided inquiry</span>
+                <span class="cloud-word" style="left: 18%; top: 62%; font-size: 0.85rem;">concept drift</span>
+                <span class="cloud-word emphasis" style="left: 58%; top: 62%; font-size: 1.1rem;">productive confusion</span>
+                <span class="cloud-word" style="left: 36%; top: 12%; font-size: 0.78rem;">semantic density</span>
+              </div>
+              <div class="space-y-3">
+                <div class="control-line">
+                  <p class="text-xs text-neutral-500">Density</p>
+                  <div class="control-track"><div class="control-fill" style="width: 72%;"></div></div>
+                </div>
+                <div class="control-line">
+                  <p class="text-xs text-neutral-500">Rotation</p>
+                  <div class="control-track"><div class="control-fill" style="width: 48%;"></div></div>
+                </div>
+                <div class="control-line">
+                  <p class="text-xs text-neutral-500">Emergence</p>
+                  <div class="control-track"><div class="control-fill" style="width: 84%;"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
   </div>
@@ -90,4 +510,4 @@ body {
 </footer>
 
 </body>
-</html> 
+</html>
