@@ -45,7 +45,9 @@ transition: width 0.3s ease;
 width: 100%;
 }
 .about-note {
+  margin-left: 1rem;
   max-width: 680px;
+  padding-top: clamp(5.5rem, 10vh, 7rem);
 }
 .about-copy {
   color: #525252;
@@ -89,6 +91,10 @@ width: 100%;
   gap: 0.35rem 1rem;
 }
 @media (max-width: 640px) {
+  .about-note {
+    margin-left: 0;
+    padding-top: 3.5rem;
+  }
   .about-meta {
     grid-template-columns: 1fr;
   }
