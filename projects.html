@@ -105,6 +105,9 @@ body {
 .frame-mind {
   --frame-scale: 0.58;
 }
+.frame-hipgo {
+  --frame-scale: 0.64;
+}
 .frame-ambiguity {
   --frame-scale: 0.64;
 }
@@ -158,7 +161,7 @@ body {
   gap: 1rem;
   height: 100%;
 }
-@media (max-width: 860px) {
+@media (max-width: 960px) {
   .case-grid,
   .evidence-grid {
     grid-template-columns: 1fr;
@@ -378,9 +381,11 @@ body {
                 <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Safety Logic</span>
                 <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Mobile Product</span>
               </div>
+              <a class="project-link" href="https://hipgo-web-demo.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"></i><span>Open product</span></a>
             </div>
-            <div class="project-preview product-frame preview-mobile-product rounded-[10px] overflow-hidden transform group-hover:translate-y-[-2px] transition-all duration-300">
-              <img src="images/projects/ddh-mini-program.png" alt="DDH clinical assistant mini-program screens" class="mini-program-strip">
+            <div class="project-preview product-frame live-preview preview-mobile-product frame-hipgo rounded-[10px] transform group-hover:translate-y-[-2px] transition-all duration-300">
+              <a class="live-open" href="https://hipgo-web-demo.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="ri-external-link-line"></i><span>Open</span></a>
+              <iframe class="live-frame" src="https://hipgo-web-demo.vercel.app/" title="DDH clinical assistant product preview" loading="lazy"></iframe>
             </div>
           </div>
         </article>
