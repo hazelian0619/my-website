@@ -58,7 +58,7 @@ window.siteConfig = {
       },
     ],
     projects: [
-      { title: "Field Notes", type: "Research notebook", description: "A small static tool for collecting observations, links and next questions.", tags: ["HTML", "CSS", "Vanilla JS"], image: "images/metapher/1.jpg", href: "#" },
+      { title: "Field Notes", type: "Research notebook", description: "A small static tool for collecting observations, links and next questions.", tags: ["HTML", "CSS", "Vanilla JS"], image: "images/hipgo/2.jpg", href: "#" },
       { title: "Signal Garden", type: "Data story", description: "A visual essay that turns a messy dataset into a sequence of understandable decisions.", tags: ["Data", "Storytelling"], image: "images/hipgo/1.jpg", href: "#" },
       { title: "Open Briefs", type: "Writing system", description: "Reusable templates for turning research findings into concise public-facing briefs.", tags: ["Docs", "Open source"], image: "images/projects/ddh-mini-program.png", href: "#" },
     ],
