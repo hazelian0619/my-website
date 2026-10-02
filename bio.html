@@ -7,6 +7,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/tailwind.local.css">
+<link rel="stylesheet" href="assets/css/site-responsive.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
@@ -100,13 +101,14 @@ width: 100%;
   }
 }
 </style>
+<script src="assets/js/site-navigation.js" defer></script>
 </head>
-<body class="bg-white text-primary">
+<body class="bg-white text-primary" data-site-page="bio">
 <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <a href="index.html" class="text-xl font-medium">Lian</a>
-      <div class="hidden md:flex space-x-8">
+      <div class="hidden md:flex space-x-8" data-site-desktop-links>
         <a href="index.html" class="nav-link text-sm hover:text-primary transition-colors">HOME</a>
         <a href="projects.html" class="nav-link text-sm hover:text-primary transition-colors">PROJECTS</a>
         <a href="work.html" class="nav-link text-sm hover:text-primary transition-colors">WORK</a>
@@ -115,6 +117,10 @@ width: 100%;
         <a href="cv.html" class="nav-link text-sm hover:text-primary transition-colors">CV</a>
         <a href="other.html" class="nav-link text-sm hover:text-primary transition-colors">OTHER</a>
       </div>
+      <button type="button" class="site-mobile-nav-toggle" data-site-mobile-toggle aria-controls="site-mobile-navigation" aria-expanded="false" aria-label="Open navigation menu">
+        <span class="site-menu-icon" aria-hidden="true"></span>
+        <span class="site-navigation-sr-only">Menu</span>
+      </button>
     </div>
   </div>
 </nav>

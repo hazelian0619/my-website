@@ -1,0 +1,213 @@
+{
+  "pages": 7,
+  "widths": 13,
+  "summaries": [
+    {
+      "page": "index.html",
+      "checked": 13,
+      "passed": 13,
+      "failedWidths": []
+    },
+    {
+      "page": "bio.html",
+      "checked": 13,
+      "passed": 13,
+      "failedWidths": []
+    },
+    {
+      "page": "cv.html",
+      "checked": 13,
+      "passed": 13,
+      "failedWidths": []
+    },
+    {
+      "page": "other.html",
+      "checked": 13,
+      "passed": 13,
+      "failedWidths": []
+    },
+    {
+      "page": "projects.html",
+      "checked": 13,
+      "passed": 13,
+      "failedWidths": []
+    },
+    {
+      "page": "research.html",
+      "checked": 13,
+      "passed": 13,
+      "failedWidths": []
+    },
+    {
+      "page": "work.html",
+      "checked": 13,
+      "passed": 13,
+      "failedWidths": []
+    }
+  ],
+  "interactions": [
+    {
+      "page": "index.html",
+      "opened": {
+        "expanded": "true",
+        "hidden": false,
+        "links": 7,
+        "current": "index.html"
+      },
+      "escapeClosed": {
+        "expanded": "false",
+        "hidden": true,
+        "focusReturned": true
+      },
+      "outsideClosed": {
+        "expanded": "false",
+        "hidden": true
+      },
+      "linkClosed": {
+        "expanded": "false",
+        "hidden": true
+      }
+    },
+    {
+      "page": "bio.html",
+      "opened": {
+        "expanded": "true",
+        "hidden": false,
+        "links": 7,
+        "current": "bio.html"
+      },
+      "escapeClosed": {
+        "expanded": "false",
+        "hidden": true,
+        "focusReturned": true
+      },
+      "outsideClosed": {
+        "expanded": "false",
+        "hidden": true
+      },
+      "linkClosed": {
+        "expanded": "false",
+        "hidden": true
+      }
+    },
+    {
+      "page": "cv.html",
+      "opened": {
+        "expanded": "true",
+        "hidden": false,
+        "links": 7,
+        "current": "cv.html"
+      },
+      "escapeClosed": {
+        "expanded": "false",
+        "hidden": true,
+        "focusReturned": true
+      },
+      "outsideClosed": {
+        "expanded": "false",
+        "hidden": true
+      },
+      "linkClosed": {
+        "expanded": "false",
+        "hidden": true
+      }
+    },
+    {
+      "page": "other.html",
+      "opened": {
+        "expanded": "true",
+        "hidden": false,
+        "links": 7,
+        "current": "other.html"
+      },
+      "escapeClosed": {
+        "expanded": "false",
+        "hidden": true,
+        "focusReturned": true
+      },
+      "outsideClosed": {
+        "expanded": "false",
+        "hidden": true
+      },
+      "linkClosed": {
+        "expanded": "false",
+        "hidden": true
+      }
+    },
+    {
+      "page": "projects.html",
+      "opened": {
+        "expanded": "true",
+        "hidden": false,
+        "links": 7,
+        "current": "projects.html"
+      },
+      "escapeClosed": {
+        "expanded": "false",
+        "hidden": true,
+        "focusReturned": true
+      },
+      "outsideClosed": {
+        "expanded": "false",
+        "hidden": true
+      },
+      "linkClosed": {
+        "expanded": "false",
+        "hidden": true
+      }
+    },
+    {
+      "page": "research.html",
+      "opened": {
+        "expanded": "true",
+        "hidden": false,
+        "links": 7,
+        "current": "research.html"
+      },
+      "escapeClosed": {
+        "expanded": "false",
+        "hidden": true,
+        "focusReturned": true
+      },
+      "outsideClosed": {
+        "expanded": "false",
+        "hidden": true
+      },
+      "linkClosed": {
+        "expanded": "false",
+        "hidden": true
+      }
+    },
+    {
+      "page": "work.html",
+      "opened": {
+        "expanded": "true",
+        "hidden": false,
+        "links": 7,
+        "current": "work.html"
+      },
+      "escapeClosed": {
+        "expanded": "false",
+        "hidden": true,
+        "focusReturned": true
+      },
+      "outsideClosed": {
+        "expanded": "false",
+        "hidden": true
+      },
+      "linkClosed": {
+        "expanded": "false",
+        "hidden": true
+      }
+    }
+  ],
+  "screenshots": [
+    "/tmp/root-site-mobile-evidence/index-320.png",
+    "/tmp/root-site-mobile-evidence/bio-320.png",
+    "/tmp/root-site-mobile-evidence/cv-320.png",
+    "/tmp/root-site-mobile-evidence/other-320.png",
+    "/tmp/root-site-mobile-evidence/projects-320.png",
+    "/tmp/root-site-mobile-evidence/research-320.png",
+    "/tmp/root-site-mobile-evidence/work-320.png"
+  ]
+}

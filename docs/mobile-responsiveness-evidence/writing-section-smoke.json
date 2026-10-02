@@ -1,0 +1,633 @@
+{
+  "browser": "Chrome 154 headless CDP",
+  "section": "Academic & Technical Writing",
+  "results": [
+    {
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "overflow": false,
+      "section": {
+        "left": 0,
+        "right": 320,
+        "width": 320
+      },
+      "heading": {
+        "left": 62,
+        "right": 297,
+        "height": 100
+      },
+      "headingText": "Academic & Technical Writing",
+      "subtitle": "Research Publications & Technical Documentation",
+      "listCount": 2,
+      "lists": [
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 45,
+              "right": 297,
+              "width": 253
+            },
+            {
+              "left": 45,
+              "right": 297,
+              "width": 253
+            },
+            {
+              "left": 45,
+              "right": 297,
+              "width": 253
+            }
+          ]
+        },
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 45,
+              "right": 297,
+              "width": 253
+            },
+            {
+              "left": 45,
+              "right": 297,
+              "width": 253
+            },
+            {
+              "left": 45,
+              "right": 297,
+              "width": 253
+            }
+          ]
+        }
+      ],
+      "sectionScrollWidth": 318,
+      "sectionClientWidth": 318
+    },
+    {
+      "width": 360,
+      "clientWidth": 360,
+      "scrollWidth": 360,
+      "overflow": false,
+      "section": {
+        "left": 0,
+        "right": 360,
+        "width": 360
+      },
+      "heading": {
+        "left": 55,
+        "right": 344,
+        "height": 72
+      },
+      "headingText": "Academic & Technical Writing",
+      "subtitle": "Research Publications & Technical Documentation",
+      "listCount": 2,
+      "lists": [
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 38,
+              "right": 344,
+              "width": 306
+            },
+            {
+              "left": 38,
+              "right": 344,
+              "width": 306
+            },
+            {
+              "left": 38,
+              "right": 344,
+              "width": 306
+            }
+          ]
+        },
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 38,
+              "right": 344,
+              "width": 306
+            },
+            {
+              "left": 38,
+              "right": 344,
+              "width": 306
+            },
+            {
+              "left": 38,
+              "right": 344,
+              "width": 306
+            }
+          ]
+        }
+      ],
+      "sectionScrollWidth": 358,
+      "sectionClientWidth": 358
+    },
+    {
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "section": {
+        "left": 0,
+        "right": 390,
+        "width": 390
+      },
+      "heading": {
+        "left": 55,
+        "right": 374,
+        "height": 72
+      },
+      "headingText": "Academic & Technical Writing",
+      "subtitle": "Research Publications & Technical Documentation",
+      "listCount": 2,
+      "lists": [
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 38,
+              "right": 374,
+              "width": 336
+            },
+            {
+              "left": 38,
+              "right": 374,
+              "width": 336
+            },
+            {
+              "left": 38,
+              "right": 374,
+              "width": 336
+            }
+          ]
+        },
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 38,
+              "right": 374,
+              "width": 336
+            },
+            {
+              "left": 38,
+              "right": 374,
+              "width": 336
+            },
+            {
+              "left": 38,
+              "right": 374,
+              "width": 336
+            }
+          ]
+        }
+      ],
+      "sectionScrollWidth": 388,
+      "sectionClientWidth": 388
+    },
+    {
+      "width": 430,
+      "clientWidth": 430,
+      "scrollWidth": 430,
+      "overflow": false,
+      "section": {
+        "left": 0,
+        "right": 430,
+        "width": 430
+      },
+      "heading": {
+        "left": 55,
+        "right": 375,
+        "height": 52
+      },
+      "headingText": "Academic & Technical Writing",
+      "subtitle": "Research Publications & Technical Documentation",
+      "listCount": 2,
+      "lists": [
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 38,
+              "right": 414,
+              "width": 376
+            },
+            {
+              "left": 38,
+              "right": 414,
+              "width": 376
+            },
+            {
+              "left": 38,
+              "right": 414,
+              "width": 376
+            }
+          ]
+        },
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 38,
+              "right": 414,
+              "width": 376
+            },
+            {
+              "left": 38,
+              "right": 414,
+              "width": 376
+            },
+            {
+              "left": 38,
+              "right": 414,
+              "width": 376
+            }
+          ]
+        }
+      ],
+      "sectionScrollWidth": 428,
+      "sectionClientWidth": 428
+    },
+    {
+      "width": 640,
+      "clientWidth": 640,
+      "scrollWidth": 640,
+      "overflow": false,
+      "section": {
+        "left": 8,
+        "right": 632,
+        "width": 624
+      },
+      "heading": {
+        "left": 74,
+        "right": 395,
+        "height": 52
+      },
+      "headingText": "Academic & Technical Writing",
+      "subtitle": "Research Publications & Technical Documentation",
+      "listCount": 2,
+      "lists": [
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 53,
+              "right": 609,
+              "width": 555
+            },
+            {
+              "left": 53,
+              "right": 609,
+              "width": 555
+            },
+            {
+              "left": 53,
+              "right": 609,
+              "width": 555
+            }
+          ]
+        },
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 53,
+              "right": 609,
+              "width": 555
+            },
+            {
+              "left": 53,
+              "right": 609,
+              "width": 555
+            },
+            {
+              "left": 53,
+              "right": 609,
+              "width": 555
+            }
+          ]
+        }
+      ],
+      "sectionScrollWidth": 622,
+      "sectionClientWidth": 622
+    },
+    {
+      "width": 767,
+      "clientWidth": 767,
+      "scrollWidth": 767,
+      "overflow": false,
+      "section": {
+        "left": 72,
+        "right": 696,
+        "width": 624
+      },
+      "heading": {
+        "left": 145,
+        "right": 466,
+        "height": 52
+      },
+      "headingText": "Academic & Technical Writing",
+      "subtitle": "Research Publications & Technical Documentation",
+      "listCount": 2,
+      "lists": [
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 124,
+              "right": 665,
+              "width": 541
+            },
+            {
+              "left": 124,
+              "right": 665,
+              "width": 541
+            },
+            {
+              "left": 124,
+              "right": 665,
+              "width": 541
+            }
+          ]
+        },
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 124,
+              "right": 665,
+              "width": 541
+            },
+            {
+              "left": 124,
+              "right": 665,
+              "width": 541
+            },
+            {
+              "left": 124,
+              "right": 665,
+              "width": 541
+            }
+          ]
+        }
+      ],
+      "sectionScrollWidth": 622,
+      "sectionClientWidth": 622
+    },
+    {
+      "width": 768,
+      "clientWidth": 768,
+      "scrollWidth": 768,
+      "overflow": false,
+      "section": {
+        "left": 8,
+        "right": 760,
+        "width": 752
+      },
+      "heading": {
+        "left": 83,
+        "right": 403,
+        "height": 52
+      },
+      "headingText": "Academic & Technical Writing",
+      "subtitle": "Research Publications & Technical Documentation",
+      "listCount": 2,
+      "lists": [
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 62,
+              "right": 728,
+              "width": 666
+            },
+            {
+              "left": 62,
+              "right": 728,
+              "width": 666
+            },
+            {
+              "left": 62,
+              "right": 728,
+              "width": 666
+            }
+          ]
+        },
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 62,
+              "right": 728,
+              "width": 666
+            },
+            {
+              "left": 62,
+              "right": 728,
+              "width": 666
+            },
+            {
+              "left": 62,
+              "right": 728,
+              "width": 666
+            }
+          ]
+        }
+      ],
+      "sectionScrollWidth": 750,
+      "sectionClientWidth": 750
+    },
+    {
+      "width": 1024,
+      "clientWidth": 1024,
+      "scrollWidth": 1024,
+      "overflow": false,
+      "section": {
+        "left": 16,
+        "right": 1008,
+        "width": 992
+      },
+      "heading": {
+        "left": 91,
+        "right": 411,
+        "height": 52
+      },
+      "headingText": "Academic & Technical Writing",
+      "subtitle": "Research Publications & Technical Documentation",
+      "listCount": 2,
+      "lists": [
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 70,
+              "right": 976,
+              "width": 906
+            },
+            {
+              "left": 70,
+              "right": 976,
+              "width": 906
+            },
+            {
+              "left": 70,
+              "right": 976,
+              "width": 906
+            }
+          ]
+        },
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 70,
+              "right": 976,
+              "width": 906
+            },
+            {
+              "left": 70,
+              "right": 976,
+              "width": 906
+            },
+            {
+              "left": 70,
+              "right": 976,
+              "width": 906
+            }
+          ]
+        }
+      ],
+      "sectionScrollWidth": 990,
+      "sectionClientWidth": 990
+    },
+    {
+      "width": 1440,
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "overflow": false,
+      "section": {
+        "left": 128,
+        "right": 1312,
+        "width": 1184
+      },
+      "heading": {
+        "left": 203,
+        "right": 523,
+        "height": 52
+      },
+      "headingText": "Academic & Technical Writing",
+      "subtitle": "Research Publications & Technical Documentation",
+      "listCount": 2,
+      "lists": [
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 182,
+              "right": 1280,
+              "width": 1098
+            },
+            {
+              "left": 182,
+              "right": 1280,
+              "width": 1098
+            },
+            {
+              "left": 182,
+              "right": 1280,
+              "width": 1098
+            }
+          ]
+        },
+        {
+          "items": 3,
+          "display": "block",
+          "listStyle": "disc",
+          "markerColor": "rgb(5, 150, 105)",
+          "children": [
+            {
+              "left": 182,
+              "right": 1280,
+              "width": 1098
+            },
+            {
+              "left": 182,
+              "right": 1280,
+              "width": 1098
+            },
+            {
+              "left": 182,
+              "right": 1280,
+              "width": 1098
+            }
+          ]
+        }
+      ],
+      "sectionScrollWidth": 1182,
+      "sectionClientWidth": 1182
+    }
+  ],
+  "screenshots": [
+    "writing-320.png",
+    "writing-390.png",
+    "writing-768.png",
+    "writing-1440.png"
+  ]
+}

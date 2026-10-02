@@ -1,0 +1,33 @@
+@media (max-width: 767px) {
+  [data-research-preview] {
+    width: min(260px, 100%);
+    max-width: 100%;
+    flex-shrink: 1;
+  }
+
+  [data-research-preview][data-research-fixed-height] {
+    height: min(420px, 70vh);
+  }
+
+  [data-research-pdf-scroll],
+  [data-research-image-scroll] {
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+  }
+}
+
+[data-research-pdf-scroll] {
+  scrollbar-gutter: stable;
+}
+
+[id^="pdf-hover-preview"] {
+  max-width: min(500px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+}
+
+@media (hover: none), (pointer: coarse) {
+  [id^="pdf-hover-preview"] {
+    display: none !important;
+  }
+}

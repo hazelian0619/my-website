@@ -11,10 +11,13 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/tailwind.local.css">
+<link rel="stylesheet" href="assets/css/site-responsive.css">
+<link rel="stylesheet" href="assets/css/research-responsive.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js" defer></script>
+<script src="assets/js/research-media.js" defer></script>
 <script>
 tailwind.config = {
   theme: {
@@ -50,6 +53,7 @@ body {
   width: 100%;
 }
 </style>
+<script src="assets/js/site-navigation.js" defer></script>
 </head>
 <body class="bg-white text-primary">
 <!-- 导航栏部分与 bio.html 相同 -->
@@ -57,7 +61,7 @@ body {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <a href="index.html" class="text-xl font-medium">Lian</a>
-      <div class="hidden md:flex space-x-8">
+      <div class="hidden md:flex space-x-8" data-site-desktop-links>
         <a href="index.html" class="nav-link text-sm hover:text-primary transition-colors">HOME</a>
         <a href="projects.html" class="nav-link text-sm hover:text-primary transition-colors">PROJECTS</a>
         <a href="work.html" class="nav-link text-sm hover:text-primary transition-colors">WORK</a>
@@ -66,6 +70,10 @@ body {
         <a href="cv.html" class="nav-link text-sm hover:text-primary transition-colors">CV</a>
         <a href="other.html" class="nav-link text-sm hover:text-primary transition-colors">OTHER</a>
       </div>
+      <button type="button" class="site-mobile-nav-toggle" data-site-mobile-toggle aria-controls="site-mobile-navigation" aria-expanded="false" aria-label="Open navigation menu">
+        <span class="site-menu-icon" aria-hidden="true"></span>
+        <span class="site-navigation-sr-only">Menu</span>
+      </button>
     </div>
   </div>
 </nav>
@@ -183,7 +191,7 @@ body {
 
             <!-- Right: image (kept narrow like sections below) -->
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] rounded-[16px] overflow-hidden bg-white border border-gray-200 shadow-sm transform group-hover:scale-[1.02] transition-all duration-500">
+              <div data-research-preview class="relative w-[260px] rounded-[16px] overflow-hidden bg-white border border-gray-200 shadow-sm transform group-hover:scale-[1.02] transition-all duration-500">
                 <img src="assets/images/6241239c-5883-436f-bfc7-e1d07a073de6.png" alt="Care-Centered HRI schematic" class="w-full h-auto object-cover">
               </div>
             </div>
@@ -248,6 +256,7 @@ body {
                   <div class="relative w-full h-96 rounded-lg overflow-hidden border border-emerald-200">
                     <iframe
                       src="https://wordcloud2tester.vercel.app/"
+                      loading="lazy"
                       width="100%"
                       height="100%"
                       frameborder="0"
@@ -255,6 +264,9 @@ body {
                       title="Interactive Wordcloud for Ambiguity-Driven Guidance Research">
                     </iframe>
                   </div>
+                  <p class="text-sm mt-3">
+                    <a href="https://wordcloud2tester.vercel.app/" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">Open the interactive wordcloud in a new tab</a>
+                  </p>
                   <p class="text-xs text-neutral-500 mt-2">
                     <a href="https://github.com/hazelian0619/wordcloud2tester" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">
                       <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 20 20">
@@ -269,8 +281,8 @@ body {
             </div>
 
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
-                <div class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-ai-women">
+              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height data-research-pdf-card data-research-pdf-state="idle">
+                <div data-research-pdf-scroll class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-ai-women">
                   <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
                     <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -354,8 +366,8 @@ body {
             </div>
 
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
-                <div class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-graphcloud">
+              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height data-research-pdf-card data-research-pdf-state="idle">
+                <div data-research-pdf-scroll class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-graphcloud">
                   <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
                     <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -439,8 +451,8 @@ body {
             </div>
 
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
-                <div class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-hipgo-research">
+              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height data-research-pdf-card data-research-pdf-state="idle">
+                <div data-research-pdf-scroll class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-hipgo-research">
                   <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
                     <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -451,7 +463,7 @@ body {
                   <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-hipgo-research"></div>
                   <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-hipgo-research">
                     <p class="text-sm text-gray-600 mb-2">You can also view the full PDF directly:</p>
-                    <a href="files/academic/HipGO.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                    <a href="files/academic/TBC-DDH.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
                       Open PDF
                     </a>
                   </div>
@@ -524,8 +536,8 @@ body {
             </div>
 
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
-                <div class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-tbc-ddh">
+              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height data-research-pdf-card data-research-pdf-state="idle">
+                <div data-research-pdf-scroll class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-tbc-ddh">
                   <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
                     <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -536,7 +548,7 @@ body {
                   <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-tbc-ddh"></div>
                   <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-tbc-ddh">
                     <p class="text-sm text-gray-600 mb-2">You can also view the full PDF directly:</p>
-                    <a href="files/academic/TBC-DDH.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                    <a href="files/academic/HipGO.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
                       Open PDF
                     </a>
                   </div>
@@ -640,9 +652,9 @@ body {
 
             <!-- 右侧：功能界面展示 -->
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
+              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height data-research-pdf-card data-research-pdf-state="idle">
                 <!-- PDF预览区域 -->
-                <div class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container">
+                <div data-research-pdf-scroll class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container">
                   <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
                     <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -748,7 +760,7 @@ body {
 
             <!-- 右侧：界面展示轮播 -->
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[36px] overflow-hidden bg-white shadow-[0_0_40px_-15px_rgba(0,0,0,0.15)] transform group-hover:scale-[1.02] transition-all duration-500">
+              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[36px] overflow-hidden bg-white shadow-[0_0_40px_-15px_rgba(0,0,0,0.15)] transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height>
                 <div class="carousel relative w-full h-full">
                   <div class="carousel-item absolute w-full h-full transition-all duration-500 ease-in-out">
                     <img src="images/hipgo/1.jpg" alt="HipGo Interface 1" class="w-full h-full object-cover">
@@ -828,28 +840,28 @@ body {
 
             <!-- 右侧：图片纵向滑动预览 -->
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-y-auto bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500 flex flex-col space-y-2 p-2">
+              <div data-research-preview data-research-image-scroll class="relative w-[260px] h-[520px] rounded-[16px] overflow-y-auto bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500 flex flex-col space-y-2 p-2" data-research-fixed-height>
                 <!-- BookDone 图片预览 -->
                 <div class="flex flex-col space-y-2 w-full items-center">
-                  <img src="imagespdf/0908Bookdone/0.jpg" class="w-full rounded-md" alt="BookDone 0"/>
-                  <img src="imagespdf/0908Bookdone/1.jpg" class="w-full rounded-md" alt="BookDone 1"/>
-                  <img src="imagespdf/0908Bookdone/2.jpg" class="w-full rounded-md" alt="BookDone 2"/>
-                  <img src="imagespdf/0908Bookdone/3.jpg" class="w-full rounded-md" alt="BookDone 3"/>
-                  <img src="imagespdf/0908Bookdone/4.jpg" class="w-full rounded-md" alt="BookDone 4"/>
-                  <img src="imagespdf/0908Bookdone/5.jpg" class="w-full rounded-md" alt="BookDone 5"/>
-                  <img src="imagespdf/0908Bookdone/6.jpg" class="w-full rounded-md" alt="BookDone 6"/>
-                  <img src="imagespdf/0908Bookdone/7.jpg" class="w-full rounded-md" alt="BookDone 7"/>
-                  <img src="imagespdf/0908Bookdone/8.jpg" class="w-full rounded-md" alt="BookDone 8"/>
-                  <img src="imagespdf/0908Bookdone/9.jpg" class="w-full rounded-md" alt="BookDone 9"/>
-                  <img src="imagespdf/0908Bookdone/10.jpg" class="w-full rounded-md" alt="BookDone 10"/>
-                  <img src="imagespdf/0908Bookdone/11.jpg" class="w-full rounded-md" alt="BookDone 11"/>
-                  <img src="imagespdf/0908Bookdone/12.jpg" class="w-full rounded-md" alt="BookDone 12"/>
-                  <img src="imagespdf/0908Bookdone/13.jpg" class="w-full rounded-md" alt="BookDone 13"/>
-                  <img src="imagespdf/0908Bookdone/14.jpg" class="w-full rounded-md" alt="BookDone 14"/>
-                  <img src="imagespdf/0908Bookdone/15.jpg" class="w-full rounded-md" alt="BookDone 15"/>
-                  <img src="imagespdf/0908Bookdone/16.jpg" class="w-full rounded-md" alt="BookDone 16"/>
-                  <img src="imagespdf/0908Bookdone/17.jpg" class="w-full rounded-md" alt="BookDone 17"/>
-                  <img src="imagespdf/0908Bookdone/18.jpg" class="w-full rounded-md" alt="BookDone 18"/>
+                  <img src="imagespdf/0908Bookdone/0.jpg" class="w-full rounded-md" alt="BookDone 0" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/1.jpg" class="w-full rounded-md" alt="BookDone 1" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/2.jpg" class="w-full rounded-md" alt="BookDone 2" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/3.jpg" class="w-full rounded-md" alt="BookDone 3" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/4.jpg" class="w-full rounded-md" alt="BookDone 4" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/5.jpg" class="w-full rounded-md" alt="BookDone 5" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/6.jpg" class="w-full rounded-md" alt="BookDone 6" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/7.jpg" class="w-full rounded-md" alt="BookDone 7" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/8.jpg" class="w-full rounded-md" alt="BookDone 8" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/9.jpg" class="w-full rounded-md" alt="BookDone 9" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/10.jpg" class="w-full rounded-md" alt="BookDone 10" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/11.jpg" class="w-full rounded-md" alt="BookDone 11" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/12.jpg" class="w-full rounded-md" alt="BookDone 12" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/13.jpg" class="w-full rounded-md" alt="BookDone 13" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/14.jpg" class="w-full rounded-md" alt="BookDone 14" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/15.jpg" class="w-full rounded-md" alt="BookDone 15" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/16.jpg" class="w-full rounded-md" alt="BookDone 16" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/17.jpg" class="w-full rounded-md" alt="BookDone 17" loading="lazy" decoding="async"/>
+                  <img src="imagespdf/0908Bookdone/18.jpg" class="w-full rounded-md" alt="BookDone 18" loading="lazy" decoding="async"/>
                 </div>
               </div>
             </div>
@@ -941,7 +953,8 @@ body {
 
             <!-- 右侧：PDF预览 -->
             <div class="flex justify-end items-center h-full">
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500">
+              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height data-research-pdf-card data-research-pdf-state="idle">
+                <div id="pdf-container-cultural" data-research-pdf-scroll class="w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50">
                 <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
                   <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -955,6 +968,7 @@ body {
                   <a href="files/academic/Chinese-in-Third-World.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
                     Open PDF
                   </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1010,180 +1024,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!-- PDF处理脚本 -->
-<script>
-function setupPdfViewer(options) {
-  const { pdfUrl, containerId, thumbnailsId, fallbackId, hoverPreviewId, hoverImgId, hoverTitleId } = options;
 
-  const container = document.getElementById(thumbnailsId);
-  if (!container) return; // Exit if the container for this PDF doesn't exist on the page
-
-  const hoverPreview = document.getElementById(hoverPreviewId);
-  const hoverPreviewImg = document.getElementById(hoverImgId);
-  const hoverPreviewTitle = document.getElementById(hoverTitleId);
-  const loadingElement = document.querySelector(`#${containerId} .text-sm`);
-  
-  function handleError(error) {
-    console.error(`Error loading PDF (${pdfUrl}):`, error);
-    if (loadingElement) {
-      loadingElement.innerHTML = `<div class="text-red-500">Could not load PDF preview</div>`;
-    }
-    const fallbackElement = document.getElementById(fallbackId);
-    if (fallbackElement) fallbackElement.classList.remove('hidden');
-  }
-  
-  pdfjsLib.getDocument({
-    url: pdfUrl,
-    cMapUrl: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/cmaps/',
-    cMapPacked: true,
-  }).promise.then(function(pdf) {
-    if (loadingElement) loadingElement.remove();
-    
-    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-      pdf.getPage(pageNum).then(function(page) {
-        const originalViewport = page.getViewport({ scale: 1.0 });
-        const containerWidth = 230;
-        const scale = containerWidth / originalViewport.width;
-        const viewport = page.getViewport({ scale: scale });
-        
-        const thumbContainer = document.createElement('div');
-        thumbContainer.className = 'relative w-[230px] rounded-lg border border-gray-200 hover:border-emerald-500 transition-all duration-300 hover:shadow-md cursor-pointer bg-white overflow-hidden transform hover:scale-105 transition-transform duration-300';
-        thumbContainer.dataset.page = pageNum;
-        
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-        canvas.className = 'mx-auto';
-        
-        const pageLabel = document.createElement('div');
-        pageLabel.className = 'absolute bottom-1 right-2 bg-white/80 text-xs px-2 py-0.5 rounded-full text-emerald-700 font-light';
-        pageLabel.textContent = `Page ${pageNum}`;
-        
-        thumbContainer.appendChild(canvas);
-        thumbContainer.appendChild(pageLabel);
-        container.appendChild(thumbContainer);
-        
-        const renderContext = { canvasContext: context, viewport: viewport };
-        
-        page.render(renderContext).promise.then(function() {
-          thumbContainer.addEventListener('mouseenter', function(e) {
-            pdf.getPage(pageNum).then(function(page) {
-              const previewViewport = page.getViewport({ scale: 1.5 });
-              const previewCanvas = document.createElement('canvas');
-              const previewContext = previewCanvas.getContext('2d');
-              previewCanvas.width = previewViewport.width;
-              previewCanvas.height = previewViewport.height;
-              
-              const previewRenderContext = { canvasContext: previewContext, viewport: previewViewport, intent: 'display', renderInteractiveForms: false, enableWebGL: true };
-              
-              page.render(previewRenderContext).promise.then(function() {
-                hoverPreviewImg.src = previewCanvas.toDataURL('image/jpeg', 0.95);
-                hoverPreviewTitle.textContent = `Page ${pageNum} Preview`;
-                
-                const rect = thumbContainer.getBoundingClientRect();
-                hoverPreview.style.left = (rect.right + 20) + 'px';
-                hoverPreview.style.top = (window.scrollY + rect.top - 100) + 'px';
-                hoverPreview.classList.remove('hidden');
-                hoverPreview.style.transform = 'scale(1.05)';
-                setTimeout(() => { hoverPreview.style.transform = 'scale(1)'; }, 300);
-              });
-            });
-          });
-          
-          thumbContainer.addEventListener('mouseleave', function() {
-            hoverPreview.classList.add('hidden');
-          });
-          
-          thumbContainer.addEventListener('click', function() {
-            window.open(pdfUrl + '#page=' + pageNum, '_blank');
-          });
-        });
-      });
-    }
-  }).catch(handleError);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js';
-  
-  // Setup for Graphcloud PDF (for first project - Ambiguity-Driven Guidance)
-  setupPdfViewer({
-    pdfUrl: 'files/academic/Graphcloud.pdf',
-    containerId: 'pdf-container-ai-women',
-    thumbnailsId: 'pdf-thumbnails-ai-women',
-    fallbackId: 'pdf-fallback-ai-women',
-    hoverPreviewId: 'pdf-hover-preview-ai-women',
-    hoverImgId: 'hover-preview-img-ai-women',
-    hoverTitleId: 'hover-preview-title-ai-women'
-  });
-
-  // Setup for AI & Chinese Liberal Arts Women PDF (for second project - Generative AI)
-  setupPdfViewer({
-    pdfUrl: 'files/academic/AI%20%26Chinese%20Liberal%20Arts%20Women.pdf',
-    containerId: 'pdf-container-graphcloud',
-    thumbnailsId: 'pdf-thumbnails-graphcloud',
-    fallbackId: 'pdf-fallback-graphcloud',
-    hoverPreviewId: 'pdf-hover-preview-graphcloud',
-    hoverImgId: 'hover-preview-img-graphcloud',
-    hoverTitleId: 'hover-preview-title-graphcloud'
-  });
-
-  // Setup for TBC-DDH PDF (correct mapping)
-  setupPdfViewer({
-    pdfUrl: 'files/academic/TBC-DDH.pdf',
-    containerId: 'pdf-container-hipgo-research',
-    thumbnailsId: 'pdf-thumbnails-hipgo-research',
-    fallbackId: 'pdf-fallback-hipgo-research',
-    hoverPreviewId: 'pdf-hover-preview-hipgo-research',
-    hoverImgId: 'hover-preview-img-hipgo-research',
-    hoverTitleId: 'hover-preview-title-hipgo-research'
-  });
-
-  // Setup for HipGO PDF (correct mapping)
-  setupPdfViewer({
-    pdfUrl: 'files/academic/HipGO.pdf',
-    containerId: 'pdf-container-tbc-ddh',
-    thumbnailsId: 'pdf-thumbnails-tbc-ddh',
-    fallbackId: 'pdf-fallback-tbc-ddh',
-    hoverPreviewId: 'pdf-hover-preview-tbc-ddh',
-    hoverImgId: 'hover-preview-img-tbc-ddh',
-    hoverTitleId: 'hover-preview-title-tbc-ddh'
-  });
-
-  // Setup for Metapher PDF
-  setupPdfViewer({
-    pdfUrl: 'metapher-as-ciphertext.pdf',
-    containerId: 'pdf-container',
-    thumbnailsId: 'pdf-thumbnails',
-    fallbackId: 'pdf-fallback',
-    hoverPreviewId: 'pdf-hover-preview',
-    hoverImgId: 'hover-preview-img',
-    hoverTitleId: 'hover-preview-title'
-  });
-
-  // Setup for Cultural Studies PDF
-  setupPdfViewer({
-    pdfUrl: 'files/academic/Chinese-in-Third-World.pdf',
-    containerId: 'pdf-container-cultural',
-    thumbnailsId: 'pdf-thumbnails-cultural',
-    fallbackId: 'pdf-fallback-cultural',
-    hoverPreviewId: 'pdf-hover-preview-cultural',
-    hoverImgId: 'hover-preview-img-cultural',
-    hoverTitleId: 'hover-preview-title-cultural'
-  });
-
-  // Setup for BookDone PDF
-  setupPdfViewer({
-    pdfUrl: 'files/academic/0908Bookdone.pdf',
-    containerId: '',
-    thumbnailsId: 'pdf-thumbnails-bookdone',
-    fallbackId: 'pdf-fallback-bookdone',
-    hoverPreviewId: '',
-    hoverImgId: '',
-    hoverTitleId: ''
-  });
-});
-</script>
 </body>
 </html> 

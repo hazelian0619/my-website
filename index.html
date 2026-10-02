@@ -7,6 +7,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/tailwind.local.css">
+<link rel="stylesheet" href="assets/css/site-responsive.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
@@ -39,7 +40,9 @@ DEFAULT: '8px',
 body {
 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 scroll-behavior: smooth;
-overflow: hidden;
+}
+@media (min-width: 768px) {
+body { overflow: hidden; }
 }
 html {
 scroll-behavior: smooth;
@@ -98,13 +101,14 @@ opacity: 0;
 opacity: 1;
 }
 </style>
+<script src="assets/js/site-navigation.js" defer></script>
 </head>
 <body class="bg-white text-primary">
 <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-16">
 <a href="index.html" class="text-xl font-medium">Lian</a>
-<div class="hidden md:flex space-x-8">
+<div class="hidden md:flex space-x-8" data-site-desktop-links>
 <a href="index.html" class="nav-link text-sm hover:text-primary transition-colors">HOME</a>
 <a href="projects.html" class="nav-link text-sm hover:text-primary transition-colors">PROJECTS</a>
 <a href="work.html" class="nav-link text-sm hover:text-primary transition-colors">WORK</a>
@@ -113,35 +117,46 @@ opacity: 1;
 <a href="cv.html" class="nav-link text-sm hover:text-primary transition-colors">CV</a>
 <a href="other.html" class="nav-link text-sm hover:text-primary transition-colors">OTHER</a>
 </div>
-<button class="md:hidden w-10 h-10 flex items-center justify-center">
-<i class="ri-menu-line text-xl"></i>
-</button>
+  <button type="button" class="site-mobile-nav-toggle" data-site-mobile-toggle aria-controls="site-mobile-navigation" aria-expanded="false" aria-label="Open navigation menu">
+    <span class="site-menu-icon" aria-hidden="true"></span>
+    <span class="site-navigation-sr-only">Menu</span>
+  </button>
 </div>
 </div>
 </nav>
-<main class="h-screen flex items-center">
+<main class="h-screen flex items-center" data-home-main>
 <section id="home" class="w-full">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex">
     <!-- 左侧图片保持不变 -->
-    <div class="w-1/2 flex items-center justify-center">
-      <div class="w-2/5 relative avatar-container">
+    <div class="w-1/2 flex items-center justify-center" data-home-portrait>
+      <div class="w-2/5 relative avatar-container" data-home-avatar>
         <img src="images/avatar.jpg" alt="Profile" class="w-full h-auto object-cover transition-opacity duration-500 ease-in-out avatar-main"/>
         <img src="images/self2.jpg" alt="Professional Profile" class="absolute inset-0 w-full h-auto object-cover opacity-0 transition-opacity duration-500 ease-in-out avatar-hover"/>
       </div>
     </div>
     
     <!-- 右侧信息 -->
-    <div class="w-1/2 flex flex-col justify-center pl-16 group hover:bg-neutral-50 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-      <h1 class="text-2xl font-extralight tracking-[0.15em] mb-10 text-neutral-800 group-hover:text-emerald-700 transition-colors">Lian</h1>
+    <div class="w-1/2 flex flex-col justify-center pl-16 group hover:bg-neutral-50 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600" data-home-content>
+      <h1 class="text-2xl font-extralight tracking-[0.15em] mb-10 text-neutral-800 group-hover:text-emerald-700 transition-colors" data-home-identity>Lian</h1>
       
-      <div class="space-y-1 mb-10">
+      <div class="space-y-1 mb-10" data-home-intro>
         <p class="text-base font-light text-neutral-800">Agent Engineer · FDE · Product Developer</p>
         <p class="text-sm font-extralight text-neutral-600">MPhil in AI, HKUST</p>
         <p class="text-sm font-extralight text-neutral-600 max-w-md pt-3 leading-relaxed">Turning field problems into usable AI products: workflows, prototypes, agent toolchains, and deployment-ready demos.</p>
       </div>
+
+      <!-- Navigation buttons precede the capability groups in the document reading order. -->
+      <div class="flex space-x-6" data-home-actions>
+        <a href="projects.html" class="px-6 py-2 text-[11px] tracking-[0.2em] border border-neutral-300 text-neutral-600 hover:border-neutral-600 transition-all duration-300 uppercase">
+          Projects
+        </a>
+        <a href="research.html" class="px-6 py-2 text-[11px] tracking-[0.2em] border border-neutral-300 text-neutral-600 hover:border-neutral-600 transition-all duration-300 uppercase">
+          Research
+        </a>
+      </div>
       
       <!-- 研究方向 -->
-      <div class="mb-12">
+      <div class="mb-12" data-home-core>
         <p class="text-xs font-light tracking-wide text-neutral-500 mb-4">Core</p>
         <div class="space-y-2">
           <div class="flex items-center space-x-2">
@@ -160,7 +175,7 @@ opacity: 1;
       </div>
 
       <!-- 技术能力 -->
-      <div class="mb-12">
+      <div class="mb-12" data-home-background>
         <p class="text-xs font-light tracking-wide text-neutral-500 mb-4">Product Background</p>
         <div class="space-y-2">
           <div class="flex items-center space-x-2">
@@ -178,15 +193,6 @@ opacity: 1;
         </div>
       </div>
       
-      <!-- 导航按钮 -->
-      <div class="flex space-x-6">
-        <a href="projects.html" class="px-6 py-2 text-[11px] tracking-[0.2em] border border-neutral-300 text-neutral-600 hover:border-neutral-600 transition-all duration-300 uppercase">
-          Projects
-        </a>
-        <a href="research.html" class="px-6 py-2 text-[11px] tracking-[0.2em] border border-neutral-300 text-neutral-600 hover:border-neutral-600 transition-all duration-300 uppercase">
-          Research
-        </a>
-      </div>
     </div>
   </div>
 </section>
@@ -223,11 +229,6 @@ link.classList.remove('text-primary');
 sections.forEach(section => {
 section.classList.add('section-fade');
 observer.observe(section);
-});
-const mobileMenuButton = document.querySelector('button');
-const nav = document.querySelector('nav div div:last-child');
-mobileMenuButton.addEventListener('click', () => {
-nav.classList.toggle('hidden');
 });
 });
 </script>
