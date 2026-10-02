@@ -55,8 +55,8 @@ body {
       <a href="index.html" class="text-xl font-medium">Lian</a>
       <div class="hidden md:flex space-x-8" data-site-desktop-links>
         <a href="index.html" class="nav-link text-sm hover:text-primary transition-colors">HOME</a>
-        <a href="projects.html" class="nav-link text-sm hover:text-primary transition-colors">PROJECTS</a>
         <a href="work.html" class="nav-link text-sm hover:text-primary transition-colors">WORK</a>
+        <a href="projects.html" class="nav-link text-sm hover:text-primary transition-colors">PROJECTS</a>
         <a href="research.html" class="nav-link text-sm hover:text-primary transition-colors">RESEARCH</a>
         <a href="bio.html" class="nav-link text-sm hover:text-primary transition-colors">BIO</a>
         <a href="cv.html" class="nav-link text-sm hover:text-primary transition-colors">CV</a>
@@ -73,14 +73,68 @@ body {
 <main class="pt-32 pb-16 min-h-screen">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
-      <h1 class="text-3xl font-extralight tracking-wide mb-16">Work Experience</h1>
+      <h1 class="text-3xl font-extralight tracking-wide mb-4">Work Experience</h1>
+      <p class="text-base font-light text-neutral-600 mb-16">Agent engineering, FDE delivery, and production hardening.</p>
 
       <div class="space-y-16">
+        <!-- Orient Feeling -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Orient Feeling (Hangzhou, China)</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.9 - Present</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-6">AI Agent Engineer</p>
+          <p class="text-base font-light text-neutral-700 leading-relaxed mb-6">Owned the agent runtime architecture for a sleep-health IoT product from day one: conversational workflows, task orchestration, device control, persistence, and memory.</p>
+          <ul class="space-y-1.5 list-disc pl-4 text-neutral-700">
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Unified analysis, reporting, and deterministic business commands into a single conversational workflow architecture with resumable execution, consolidating previously fragmented pipelines.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Designed a versioned task lifecycle and a two-phase device-control protocol (prepare, confirm, execute): hardware actions stay user-confirmed, conflict-checked, and recoverable when a device call fails mid-flight.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Closed the end-to-end hardware control loop through a public Task API (intent validation, device-capability checks, bounded outbound calls with rate-limit classification), letting the agent safely operate physical sleep devices.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Built the persistence and long-term memory layer (task state, control plans, audit evidence, conversation memory) that survives restarts, with memory reads that degrade gracefully instead of blocking users.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Delivered incremental answer streaming with an explicit failure contract, so chat responses appear as they are produced instead of in one blocking wait.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Hardening the three production analysis flows (health advice, sleep recommendation, and metric advice) for real health-database and LLM integration, grounding every output in cited evidence.</li>
+          </ul>
+        </div>
+
+        <!-- Baidu AI Cloud -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Baidu AI Cloud (Beijing, China)</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.7 - 2026.9</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-6">Medical Industry Strategy FDE</p>
+          <p class="text-base font-light text-neutral-700 leading-relaxed mb-6">Owned industry strategy, the 0-to-1 customer master-data model, and presales analytics for Baidu AI Cloud's medical vertical.</p>
+          <div class="space-y-5 text-neutral-700">
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Industry strategy</h3>
+              <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Designed the interview framework and led 10+ expert interviews to rebuild the medical vertical's strategic read, decomposing leading cloud vendors' revenue mix, customer segments, product lines, and revenue-recognition logic.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Cross-validated internal operating data to set the vertical's customer-segment, product, and resource priorities across three battlegrounds: hospitals, public-health reform, and pharma/medtech/biotech.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Data engineering</h3>
+              <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Designed the 0-to-1 customer master-data model for pharma/medtech/biotech, abstracting legal entities, groups, R&amp;D pipelines, financing/BD, tenders, and sales status into governed core objects.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Defined uniqueness, relationship, and history-traceability rules governing multi-source name collisions, duplicates, and entity conflation.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Orchestrated a multi-agent pipeline covering multi-source collection, entity resolution, relationship recognition, evidence verification, and incremental updates, with quality gates at ingestion.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Presales enablement</h3>
+              <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Connected master data to the internal CRM, fusing R&amp;D, procurement, competitive-migration, and sales-follow-up signals into a single account view.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Built customer-value, demand-window, and opportunity-status scoring calibrated by CRM feedback, distilling a priority-account pool and a sales battle dashboard.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Mapped high-potential accounts' budget sources, decision chains, and competitor footprints against Baidu's compute, data-platform, and MaaS offerings, producing battle cards and visit agendas that turned industry insight into customer meetings and pipeline progress.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <!-- Qianshu Wenyi -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
             <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Qianshu Wenyi Technology (Canton, China)</h2>
-            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.5 - 2026.8</span>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.5 - 2026.7</span>
           </div>
           <p class="text-sm font-light text-neutral-600 italic mb-6">Medical AI FDE Engineer</p>
           <div class="space-y-5 text-neutral-700">
@@ -107,7 +161,7 @@ body {
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
             <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Canchen Technology (Shenzhen, China)</h2>
-            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.2 - 2026.5</span>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.1 - 2026.5</span>
           </div>
           <p class="text-sm font-light text-neutral-600 italic mb-6">Multi-Agent Product Developer</p>
           <div class="space-y-5 text-neutral-700">
@@ -117,6 +171,7 @@ body {
                 <li class="text-base font-light text-neutral-700 leading-relaxed">Designed tool routing for case parsing, HPO extraction, ontology retrieval, candidate ranking, evidence aggregation, and structured reporting.</li>
                 <li class="text-base font-light text-neutral-700 leading-relaxed">Planned evidence linking across HPO, OMIM, Orphanet, and PubMed, connecting phenotype, disease, gene, and literature signals.</li>
                 <li class="text-base font-light text-neutral-700 leading-relaxed">Defined state objects for case_summary, phenotype_package, candidate_list, evidence_bundle, audit_notes, and final_report.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Built an agent evaluation loop covering HPO extraction accuracy, candidate disease recall, evidence citation quality, tool-call success rate, and report iteration.</li>
               </ul>
             </div>
             <div>
@@ -130,7 +185,39 @@ body {
           </div>
         </div>
 
-        <hr class="my-12 border-gray-100">
+        <!-- Yulingzhikong -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
+            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Yulingzhikong (Canton, China)</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.6 - 2025.12</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-6">Co-founder · Commercialization</p>
+          <ul class="space-y-1.5 list-disc pl-4 text-neutral-700">
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Led 30+ B-side field interviews and repositioned an emotional companion robot from broad consumer use to higher-value eldercare and special-education scenarios.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Owned seed-round materials including market analysis, business model, financial forecast, and business plan; helped the team secure RMB 4M angel funding.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Modeled BOM and service marginal cost with hardware suppliers, then built hardware-plus-subscription pricing tiers based on willingness-to-pay research.</li>
+            <li class="text-base font-light text-neutral-700 leading-relaxed">Built channel relationships with eldercare and rehabilitation institutions, supporting device pre-deployment, user-data collection, and product iteration.</li>
+          </ul>
+        </div>
+
+        <!-- HiDream.ai -->
+        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="space-y-6">
+            <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline">
+              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">HiDream.ai (Shanghai, China)</h2>
+              <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2024.6 - 2024.9</span>
+            </div>
+            <p class="text-sm font-light text-neutral-600 italic">AI E-commerce Product Intern</p>
+
+            <ul class="space-y-1.5 list-disc pl-4 text-neutral-700">
+              <li class="text-base font-light text-neutral-700 leading-relaxed">Led multimodal generation quality evaluation for e-commerce image and video scenarios, defining bad-case taxonomy across lighting, white balance, composition, subject consistency, text alignment, rhythm, and frame consistency.</li>
+              <li class="text-base font-light text-neutral-700 leading-relaxed">Owned training and evaluation sample deduplication, denoising, and quality filtering; built data-selection rules for product images, marketing videos, and localized materials.</li>
+              <li class="text-base font-light text-neutral-700 leading-relaxed">Contributed prompt templates, CFG tuning, negative constraints, and style-control strategies for product display, model shots, scene images, and short-video covers.</li>
+              <li class="text-base font-light text-neutral-700 leading-relaxed">Defined Southeast Asia localization weights for color, clothing, and scene-style terms, reducing underexposure, cultural mismatch, oversharpening, and subject-style drift.</li>
+              <li class="text-base font-light text-neutral-700 leading-relaxed">Converted behavior tracking and bad-case analysis into PRDs for local repainting, style transfer, and image cleanup. Creator DAU increased by 19k+ after launch; browsing time improved 25%, monthly retention improved 38.8%.</li>
+            </ul>
+          </div>
+        </div>
 
         <!-- ByteDance -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
@@ -161,159 +248,6 @@ body {
             </div>
           </div>
         </div>
-
-        <!-- HiDream.ai -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="space-y-6">
-            <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline">
-              <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">HiDream.ai (Shanghai, China)</h2>
-              <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2024.6 - 2024.9</span>
-            </div>
-            <p class="text-sm font-light text-neutral-600 italic">AI E-commerce Product Intern</p>
-
-            <ul class="space-y-1.5 list-disc pl-4 text-neutral-700">
-              <li class="text-base font-light text-neutral-700 leading-relaxed">Led multimodal generation quality evaluation for e-commerce image and video scenarios, defining bad-case taxonomy across lighting, white balance, composition, subject consistency, text alignment, rhythm, and frame consistency.</li>
-              <li class="text-base font-light text-neutral-700 leading-relaxed">Owned training and evaluation sample deduplication, denoising, and quality filtering; built data-selection rules for product images, marketing videos, and localized materials.</li>
-              <li class="text-base font-light text-neutral-700 leading-relaxed">Contributed prompt templates, CFG tuning, negative constraints, and style-control strategies for product display, model shots, scene images, and short-video covers.</li>
-              <li class="text-base font-light text-neutral-700 leading-relaxed">Defined Southeast Asia localization weights for color, clothing, and scene-style terms, reducing underexposure, cultural mismatch, oversharpening, and subject-style drift.</li>
-              <li class="text-base font-light text-neutral-700 leading-relaxed">Converted behavior tracking and bad-case analysis into PRDs for local repainting, style transfer, and image cleanup. Creator DAU increased by 19k+ after launch; browsing time improved 25%, monthly retention improved 38.8%.</li>
-            </ul>
-          </div>
-        </div>
-
-        <hr class="my-12 border-gray-100">
-
-        <!-- Yulingzhikong -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
-            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Yulingzhikong (Canton, China)</h2>
-            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.6 - 2025.12</span>
-          </div>
-          <p class="text-sm font-light text-neutral-600 italic mb-6">Co-founder · Commercialization</p>
-          <ul class="space-y-1.5 list-disc pl-4 text-neutral-700">
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Led 30+ B-side field interviews and repositioned an emotional companion robot from broad consumer use to higher-value eldercare and special-education scenarios.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Owned seed-round materials including market analysis, business model, financial forecast, and business plan; helped the team secure RMB 4M angel funding.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Modeled BOM and service marginal cost with hardware suppliers, then built hardware-plus-subscription pricing tiers based on willingness-to-pay research.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Built channel relationships with eldercare and rehabilitation institutions, supporting device pre-deployment, user-data collection, and product iteration.</li>
-          </ul>
-        </div>
-
-        <hr class="my-12 border-gray-100">
-
-        <!-- Little Voice -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex justify-between items-baseline mb-4">
-            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Little Voice (Shanghai, China)</h2>
-            <span class="text-sm font-light text-neutral-500">2023.9 - 2023.12</span>
-            </div>
-          <p class="text-sm font-light text-neutral-600 italic mb-6">User Operations Intern</p>
-          <div class="space-y-4 text-neutral-700">
-            <div>
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Flow Matrix</h3>
-              <p class="text-base font-light text-neutral-700 mt-2">
-                Build a diversified flow matrix through Xiaohongshu & Tiktok live broadcasting, develop standardized user activation SOPs, effectively guide flow to private domains to improve user retention rate by 30%.
-              </p>
-            </div>
-            <div>
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">User Growth</h3>
-              <p class="text-base font-light text-neutral-700 mt-2">
-                Plan IP positioning, build SOP for course selling and paid consultation, optimize content strategy through A/B testing, optimize user experience, achieve user growth of 10% per month and turnover of 8w+.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Yukuaidi -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex justify-between items-baseline mb-4" data-work-header>
-            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Yukuaidi (Shanghai, China)</h2>
-            <span class="text-sm font-light text-neutral-500">2023.9 - 2023.12</span>
-            </div>
-          <p class="text-sm font-light text-neutral-600 italic mb-6">Brand Creative Intern</p>
-          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px,280px] gap-[8px] items-start" data-yukuaidi-grid>
-            <!-- 左侧：项目介绍 -->
-            <div class="space-y-4 text-neutral-700 pr-2" data-yukuaidi-copy>
-              <div>
-                <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Brand Planning</h3>
-                <p class="text-base font-light text-neutral-700 mt-2">
-                  Responsible for the China social media of luxury women's clothing Loro Piana, 3C audio Devialet and perfume brand Caron, successfully output 200+ content with an average readership of 20,000+.
-                  <a href="files/work/DEVIALET.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full Devialet Report (PDF)</a>
-                </p>
-              </div>
-              <div>
-                <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Holiday Marketing</h3>
-                <p class="text-base font-light text-neutral-700 mt-2">
-                Based on market research and analysis, planning the Chinese New Year marketing campaigns for Versace and Helena Rubinstein, achieving a 30% increase in brand awareness and a 25% increase in user engagement.
-                <a href="files/work/Versace2024.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full Versace CNY Proposal (PDF)</a>
-              </p>
-              </div>
-              <div>
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Placement Optimization</h3>
-                <p class="text-base font-light text-neutral-700 mt-2">
-                Analyzed client Devialet's monthly social media data and collaborated on the brand's content operation strategy for 2024, resulting in a 40% increase in social media interaction rate.
-                <a href="files/work/DEVIALET.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Full Devialet Social Media Report (PDF)</a>
-              </p>
-              </div>
-            </div>
-
-            <!-- 右侧：图片纵向滑动预览（Versace） -->
-            <div class="flex justify-end items-center h-full" data-work-preview>
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-y-auto bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500 flex flex-col space-y-2 p-2" data-work-scroll>
-                <div class="flex flex-col space-y-2 w-full items-center">
-                  <img src="imagespdf/Versace2024/0.jpg" class="w-full rounded-md" alt="Versace 0" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/1.jpg" class="w-full rounded-md" alt="Versace 1" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/2.jpg" class="w-full rounded-md" alt="Versace 2" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/3.jpg" class="w-full rounded-md" alt="Versace 3" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/4.jpg" class="w-full rounded-md" alt="Versace 4" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/5.jpg" class="w-full rounded-md" alt="Versace 5" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/6.jpg" class="w-full rounded-md" alt="Versace 6" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/7.jpg" class="w-full rounded-md" alt="Versace 7" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/8.jpg" class="w-full rounded-md" alt="Versace 8" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/9.jpg" class="w-full rounded-md" alt="Versace 9" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/10.jpg" class="w-full rounded-md" alt="Versace 10" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/11.jpg" class="w-full rounded-md" alt="Versace 11" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/12.jpg" class="w-full rounded-md" alt="Versace 12" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/13.jpg" class="w-full rounded-md" alt="Versace 13" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/Versace2024/14.jpg" class="w-full rounded-md" alt="Versace 14" loading="lazy" decoding="async"/>
-                </div>
-              </div>
-            </div>
-
-            <!-- 右侧：图片纵向滑动预览（DEVIALET） -->
-            <div class="flex justify-end items-center h-full" data-work-preview>
-              <div class="relative w-[260px] h-[520px] rounded-[16px] overflow-y-auto bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500 flex flex-col space-y-2 p-2" data-work-scroll>
-                <div class="flex flex-col space-y-2 w-full items-center">
-                  <img src="imagespdf/DEVIALET/0.jpg" class="w-full rounded-md" alt="DEVIALET 0" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/DEVIALET/1.jpg" class="w-full rounded-md" alt="DEVIALET 1" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/DEVIALET/2.jpg" class="w-full rounded-md" alt="DEVIALET 2" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/DEVIALET/3.jpg" class="w-full rounded-md" alt="DEVIALET 3" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/DEVIALET/4.jpg" class="w-full rounded-md" alt="DEVIALET 4" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/DEVIALET/5.jpg" class="w-full rounded-md" alt="DEVIALET 5" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/DEVIALET/6.jpg" class="w-full rounded-md" alt="DEVIALET 6" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/DEVIALET/7.jpg" class="w-full rounded-md" alt="DEVIALET 7" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/DEVIALET/8.jpg" class="w-full rounded-md" alt="DEVIALET 8" loading="lazy" decoding="async"/>
-                  <img src="imagespdf/DEVIALET/9.jpg" class="w-full rounded-md" alt="DEVIALET 9" loading="lazy" decoding="async"/>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Dayi Consulting -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex flex-col gap-2 sm:flex-row sm:justify-between sm:items-baseline mb-4">
-            <h2 class="text-2xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Dayi Consulting (Beijing, China)</h2>
-            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2023.5 - 2023.8</span>
-          </div>
-          <p class="text-sm font-light text-neutral-600 italic mb-6">Industry Research Intern</p>
-          <ul class="space-y-1.5 list-disc pl-4 text-neutral-700">
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Led upstream photovoltaic industry research for GCL Group, focusing on polysilicon and wafer value-chain structure.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Quantified gross-margin distribution, bargaining power, CAGR, and raw-material penetration curves; delivered industry maps and value-chain reports for client decision support.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Analyzed listed-company annual reports to compare ROE, net margin, business model, BOM cost structure, capacity layout, technology reserve, and customer structure.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Modeled the impact of raw-material price fluctuation on operating profit and delivered supply-chain risk-hedging recommendations.</li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -325,4 +259,4 @@ body {
   </div>
 </footer>
 </body>
-</html> 
+</html>

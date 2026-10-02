@@ -205,43 +205,31 @@ body[data-site-page="cv"] [data-cv-preview] iframe {
   border: 0;
 }
 
-/* Work previews use their device-like aspect ratio without a fixed width. */
-body[data-site-page="work"] [data-work-header] {
-  min-width: 0;
-}
-
-body[data-site-page="work"] [data-yukuaidi-grid] {
+/* Earlier-internship previews on the Other page keep their device-like aspect ratio without a fixed width. */
+body[data-site-page="other"] [data-earlier-grid] {
   min-width: 0;
   grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
 }
 
-body[data-site-page="work"] [data-yukuaidi-copy],
-body[data-site-page="work"] [data-work-preview] {
+body[data-site-page="other"] [data-earlier-copy],
+body[data-site-page="other"] [data-earlier-preview] {
   min-width: 0;
 }
 
-body[data-site-page="work"] [data-work-preview] {
+body[data-site-page="other"] [data-earlier-preview] {
   justify-content: center;
 }
 
-body[data-site-page="work"] [data-work-scroll] img {
+body[data-site-page="other"] [data-earlier-scroll] img {
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
 }
 
-@media (max-width: 767px) {
-  body[data-site-page="work"] [data-work-header] {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
 @media (max-width: 1023px) {
-  body[data-site-page="work"] [data-work-scroll] {
+  body[data-site-page="other"] [data-earlier-scroll] {
     box-sizing: border-box;
     width: min(100%, 280px);
     max-width: 100%;
@@ -256,24 +244,24 @@ body[data-site-page="work"] [data-work-scroll] img {
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
-  body[data-site-page="work"] [data-yukuaidi-grid] {
+  body[data-site-page="other"] [data-earlier-grid] {
     grid-template-columns: repeat(2, minmax(0, 280px));
     justify-content: center;
     gap: 0.75rem;
   }
 
-  body[data-site-page="work"] [data-yukuaidi-copy] {
+  body[data-site-page="other"] [data-earlier-copy] {
     grid-column: 1 / -1;
   }
 }
 
 @media (min-width: 1024px) {
-  body[data-site-page="work"] [data-yukuaidi-grid] {
+  body[data-site-page="other"] [data-earlier-grid] {
     grid-template-columns: minmax(0, 1fr) repeat(2, minmax(0, 280px));
     gap: 8px;
   }
 
-  body[data-site-page="work"] [data-work-preview] {
+  body[data-site-page="other"] [data-earlier-preview] {
     justify-content: flex-end;
   }
 }
@@ -341,7 +329,7 @@ body[data-site-page="other"] [data-writing-list] li::marker {
 
 @media (hover: none) {
   body[data-site-page="cv"] [data-cv-preview],
-  body[data-site-page="work"] [data-work-scroll],
+  body[data-site-page="other"] [data-earlier-scroll],
   body[data-site-page="other"] [data-carousel-frame],
   body[data-site-page="projects"] .project-preview {
     transform: none !important;
