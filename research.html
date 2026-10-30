@@ -87,6 +87,122 @@ body {
       
       <div class="space-y-16 mb-20 max-w-[100%]">
 
+        <!-- PRPO: Structural Priors for Tabular Prediction -->
+        <div id="prpo" class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div data-research-paper-header class="flex items-center justify-between mb-8">
+            <div class="flex items-center space-x-4">
+              <div>
+                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Strengthening LLMs for Tabular Prediction with Structural Priors</h2>
+                <p class="text-sm font-light text-neutral-600 mt-1">Teaching language models the structural rules of tables through permutation-aware reinforcement learning</p>
+                <p class="text-sm font-light text-neutral-600 mt-1">Pengxiang Cai, Zihao Gao, <strong class="font-medium">Wanchen Lian</strong>, Guocong Li, Jintai Chen</p>
+              </div>
+            </div>
+            <div class="text-right min-w-0 flex-shrink-0">
+              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">Co-first Author</p>
+              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">NeurIPS 2026</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <div class="space-y-6 pr-2">
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    Language models offer transferable reasoning, yet struggle to match specialized tabular predictors. Sparse outcome rewards and sensitivity to column order make reinforcement learning inefficient, even though reordering a table's columns should preserve its meaning.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    <span class="font-medium">Status:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">Accepted &middot; NeurIPS 2026 Main Track Poster</span> | <a href="https://arxiv.org/pdf/2510.17385" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Research Paper (PDF)</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Approach</h3>
+                <ul class="mt-2 space-y-1 list-disc pl-4">
+                  <li class="text-base font-light text-neutral-700">Serialize feature names and values into prediction prompts; create column permutations that retain the original label.</li>
+                  <li class="text-base font-light text-neutral-700">Develop Permutation Relative Policy Optimization (PRPO), combining advantages within and across permutations to strengthen verifiable reward signals.</li>
+                  <li class="text-base font-light text-neutral-700">Post-train an 8B language model and evaluate fully supervised prediction, zero-shot transfer, and few-shot generalization.</li>
+                </ul>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Measurable Impact</h3>
+                <p class="text-base font-light text-neutral-700">
+                  Evaluated across 139 OpenML datasets. The 8B model achieves competitive fully supervised performance against specialized tabular baselines, while its zero-shot results approach the 32-shot performance of XGBoost and TabPFN-v2.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex justify-end items-center h-full">
+              <figure data-research-preview class="relative w-[260px] rounded-[16px] overflow-hidden bg-white border border-gray-200 shadow-sm transform group-hover:scale-[1.02] transition-all duration-500">
+                <a href="assets/images/research/prpo-architecture.png" target="_blank" rel="noopener noreferrer" aria-label="View full PRPO architecture diagram">
+                  <img src="assets/images/research/prpo-architecture.png" alt="PRPO architecture: label-preserving column permutations, language-model rollouts, and advantage estimation within and across permutations" width="1188" height="564" loading="lazy" class="w-full h-auto object-contain">
+                </a>
+                <figcaption class="text-xs font-light text-neutral-600 p-3">PRPO architecture &middot; Figure 2 from the paper. <a href="assets/images/research/prpo-architecture.png" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View full figure</a></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- PATH: Hierarchical Interval Prediction -->
+        <div id="path" class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div data-research-paper-header class="flex items-center justify-between mb-8">
+            <div class="flex items-center space-x-4">
+              <div>
+                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">PATH: Next-Interval Prediction via Autoregressive Tree Hierarchy on Tabular Data</h2>
+                <p class="text-sm font-light text-neutral-600 mt-1">Learning uncertainty from coarse to fine to produce compact prediction intervals for tabular data</p>
+                <p class="text-sm font-light text-neutral-600 mt-1">Pengxiang Cai, <strong class="font-medium">Wanchen Lian</strong>, Chenyang Liu, Xiaohan Li, Qingyuan Zeng, Jinhong Wang, Jintai Chen</p>
+              </div>
+            </div>
+            <div class="text-right min-w-0 flex-shrink-0">
+              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">Co-first Author</p>
+              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">AAAI 2027</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <div class="space-y-6 pr-2">
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    Reliable regression needs informative uncertainty ranges as well as point predictions. Many approaches learn an uncertainty surrogate and construct intervals afterward; PATH instead learns the nested structure of intervals to make the output distribution support compact interval selection.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    <span class="font-medium">Status:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-neutral-700">Under Review at AAAI 2027</span> | <a href="https://arxiv.org/pdf/2608.08078" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Research Paper (PDF)</a> | <a href="https://openreview.net/forum?id=CXOzJx6c4f" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">OpenReview</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Approach</h3>
+                <ul class="mt-2 space-y-1 list-disc pl-4">
+                  <li class="text-base font-light text-neutral-700">Partition the continuous target range into a binary interval tree with ordered leaves.</li>
+                  <li class="text-base font-light text-neutral-700">Use an FT-Transformer encoder and an autoregressive decoder to refine branch probabilities from coarse to fine.</li>
+                  <li class="text-base font-light text-neutral-700">Accumulate probability over adjacent leaves and select the shortest contiguous interval reaching the chosen predictive mass.</li>
+                </ul>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Measurable Impact</h3>
+                <p class="text-base font-light text-neutral-700">
+                  On PATHBench's 56 OpenML regression datasets, a 10-seed comparison with 24 baselines reports mean normalized interval length of 0.1473 and mean empirical coverage of 0.9144 at a nominal 90% coverage target.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex justify-end items-center h-full">
+              <figure data-research-preview class="relative w-[260px] rounded-[16px] overflow-hidden bg-white border border-gray-200 shadow-sm transform group-hover:scale-[1.02] transition-all duration-500">
+                <a href="assets/images/research/path-architecture.png" target="_blank" rel="noopener noreferrer" aria-label="View full PATH architecture diagram">
+                  <img src="assets/images/research/path-architecture.png" alt="PATH architecture: a binary interval tree, FT-Transformer encoder, autoregressive probability refinement, and shortest-mass interval selection" width="1506" height="723" loading="lazy" class="w-full h-auto object-contain">
+                </a>
+                <figcaption class="text-xs font-light text-neutral-600 p-3">PATH architecture &middot; Figure 2 from the paper. <a href="assets/images/research/path-architecture.png" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View full figure</a></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
         <!-- OmniBio-KG Project -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <div class="flex items-center justify-between mb-8">
