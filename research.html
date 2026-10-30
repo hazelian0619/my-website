@@ -204,321 +204,6 @@ body {
           </div>
         </div>
 
-        <!-- OmniBio-KG Project -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex items-center justify-between mb-8">
-            <div class="flex items-center space-x-4">
-              <div>
-                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">OmniBio-KG: Unified Multimodal Knowledge Graph for Intelligent Biomedical Reasoning</h2>
-                <p class="text-sm font-light text-neutral-600 mt-1">Bridging fragmented biomedical data silos with semantically-enriched, multimodal knowledge integration</p>
-              </div>
-            </div>
-            <div class="text-right min-w-0 flex-shrink-0">
-              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">First Author</p>
-              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.9-now</p>
-            </div>
-          </div>
-
-          <div class="space-y-6 pr-2">
-            <div class="space-y-3">
-              <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
-              <div class="space-y-4">
-                <p class="text-base font-light leading-relaxed text-neutral-700">
-                  Fragmented identifiers, hidden relations, and brittle inference block discovery; a unified biomedical knowledge graph can integrate heterogeneous entities and relations with semantics to support robust reasoning and discovery.
-                </p>
-                <p class="text-base font-light leading-relaxed text-neutral-700">
-                  <span class="font-medium">Status:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">In Progress</span> | <span class="text-neutral-600">Code available upon request</span>
-                </p>
-              </div>
-            </div>
-
-            <div class="space-y-4">
-              <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Approach</h3>
-              <div class="grid grid-cols-1 gap-4">
-                <div>
-                  <ul class="mt-2 space-y-1 list-disc pl-4">
-                    <li class="text-base font-light text-neutral-700">Build a heterogeneous KG with multimodal node attributes</li>
-                    <li class="text-base font-light text-neutral-700">Integrate PPI/PSI/RPI edges with provenance and calibrated confidence</li>
-                    <li class="text-base font-light text-neutral-700">Align to GO/KEGG/ChEBI ontologies</li>
-                    <li class="text-base font-light text-neutral-700">Deliver L1–L6 pipeline: from normalization and evidence scoring to path queries, link prediction, and function inference</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="space-y-2">
-              <h3 class="text-lg font-light text-emerald-600 tracking-wide">Clinical Impact</h3>
-              <p class="text-base font-light text-neutral-700">
-                Evidence-ranked, ontology-aware queries and actionable subgraph explanations accelerate target discovery and mechanism elucidation while improving trust and reproducibility.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Care-Centered HRI Project -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex items-center justify-between mb-8">
-            <div class="flex items-center space-x-4">
-              <div>
-                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Care-Centered HRI: Belief-Aware, Humanistic Emotion Computing for Home Robots</h2>
-                <p class="text-sm font-light text-neutral-600 mt-1">When social robots enter family spaces, care requires trust, dignity, and cultural sensitivity</p>
-              </div>
-            </div>
-            <div class="text-right min-w-0 flex-shrink-0">
-              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">First Author</p>
-              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.9-now</p>
-            </div>
-          </div>
-
-          <!-- Two-column layout with image on the right (mirrors sections below) -->
-          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
-            <!-- Left: content -->
-            <div class="space-y-6 pr-2">
-              <div class="space-y-3">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
-                <div class="space-y-4">
-                  <p class="text-base font-light leading-relaxed text-neutral-700">
-                    Home companion robots must understand people, not just tasks. We model belief-aware user state and adopt privacy-first sensing to learn long-horizon emotional patterns and care preferences through daily, consented interactions—aligning robot behavior via IRL rather than one-shot supervision to match the long-term nature of personality formation.
-                  </p>
-                  <p class="text-base font-light leading-relaxed text-neutral-700">
-                    <span class="font-medium">Status:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">In Progress</span> | <span class="text-neutral-600">Code available upon request</span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="space-y-4">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Execution</h3>
-                <div class="grid grid-cols-1 gap-4">
-                  <div>
-                    <ul class="mt-2 space-y-1 list-disc pl-4">
-                      <li class="text-base font-light text-neutral-700">Synthetic-to-real pipeline: Smallville (23 agents + 1 human + 1 robot) generates 60–100 days of nightly interactions (“How was your day?” + free dialog); Big Five (BFI-44) for pre/post ground truth</li>
-                      <li class="text-base font-light text-neutral-700">Multimodal affect pipeline across text/actions/facial cues/prosody with correlation-weighted late fusion for daily labels</li>
-                      <li class="text-base font-light text-neutral-700">Temporal representation via weekly sliding windows + EWMA baseline; BiLSTM+attention builds 54×1024 state embeddings</li>
-                      <li class="text-base font-light text-neutral-700">Value alignment with IRL to infer user reward and robot persona; consent-aware policies and edge-first privacy</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="space-y-2">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Validation and Impact</h3>
-                <p class="text-base font-light text-neutral-700">
-                  Targeted alignment checks with BFI correlations (pre r&gt;0.75; post r&gt;0.85), ablations showing &gt;5% over text-only baselines; Wizard-of-Oz and home-like pilots to assess trust, dignity, and safe handovers; commercialization path scoped for home, eldercare, and education.
-                </p>
-              </div>
-            </div>
-
-            <!-- Right: image (kept narrow like sections below) -->
-            <div class="flex justify-end items-center h-full">
-              <div data-research-preview class="relative w-[260px] rounded-[16px] overflow-hidden bg-white border border-gray-200 shadow-sm transform group-hover:scale-[1.02] transition-all duration-500">
-                <img src="assets/images/6241239c-5883-436f-bfc7-e1d07a073de6.png" alt="Care-Centered HRI schematic" class="w-full h-auto object-cover">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Ambiguity-Driven Guidance Project -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex items-center justify-between mb-8">
-            <div class="flex items-center space-x-4">
-              <div>
-                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Ambiguity-Driven Guidance: How Designing for Productive Confusion Reactivates Teacher Value</h2>
-                <p class="text-sm font-light text-neutral-600 mt-1">When ChatGPT writes essays in seconds, language teachers face extinction—unless AI becomes their ally, not replacement</p>
-              </div>
-            </div>
-            <div class="text-right min-w-0 flex-shrink-0">
-              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">First Author</p>
-              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.5-2025.9</p>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
-            <div class="space-y-6 pr-2">
-              <div class="space-y-3">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
-                <div class="space-y-4">
-                  <p class="text-base font-light leading-relaxed text-neutral-700">
-                    Identified fundamental mismatch between generative AI's efficiency-driven design and teaching's essence of guided inquiry; developed "ambiguity-driven guidance" principle transforming AI from answer-machine to cognitive catalyst.
-                  </p>
-                  <p class="text-base font-light leading-relaxed text-neutral-700">
-                    <span class="font-medium">Status:</span> Under Review at CHI 2026 Workshop | <a href="files/academic/AI%20%26Chinese%20Liberal%20Arts%20Women.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Research Paper (PDF)</a>
-                  </p>
-                </div>
-              </div>
-
-              <div class="space-y-4">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Execution</h3>
-                <div class="grid grid-cols-1 gap-4">
-                  <div>
-                    <ul class="mt-2 space-y-1 list-disc pl-4">
-                      <li class="text-base font-light text-neutral-700">Built BGE-M3+ GAT architecture generating dynamic concept networks</li>
-                      <li class="text-base font-light text-neutral-700">Programmed progressive questioning interfaces for cognitive scaffolding</li>
-                      <li class="text-base font-light text-neutral-700">Executed 5-week controlled study with 18 participants across multiple institutions</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="space-y-2">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Measurable Impact</h3>
-                <p class="text-base font-light text-neutral-700">
-                  Achieved statistically significant professional identity shifts; documented sustained engagement with 122.8 concept-construction steps per session, validating AI's potential as teaching enhancer rather than replacement.
-                </p>
-              </div>
-
-              <div class="space-y-4">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Interactive Product Study: Concept Emergence Through Ambiguity</h3>
-                <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
-                  <p class="text-sm text-neutral-600 mb-3">
-                    Watch ideas emerge from semantic fog: this generative wordcloud visualizes how strategic ambiguity triggers conceptual discovery. Built with <a href="https://github.com/timdream/wordcloud2.js" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">wordcloud2.js</a> + custom emergence algorithms.
-                  </p>
-                  <div class="relative w-full h-96 rounded-lg overflow-hidden border border-emerald-200">
-                    <iframe
-                      src="https://wordcloud2tester.vercel.app/"
-                      loading="lazy"
-                      width="100%"
-                      height="100%"
-                      frameborder="0"
-                      class="rounded-lg"
-                      title="Interactive Wordcloud for Ambiguity-Driven Guidance Research">
-                    </iframe>
-                  </div>
-                  <p class="text-sm mt-3">
-                    <a href="https://wordcloud2tester.vercel.app/" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">Open the interactive wordcloud in a new tab</a>
-                  </p>
-                  <p class="text-xs text-neutral-500 mt-2">
-                    <a href="https://github.com/hazelian0619/wordcloud2tester" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">
-                      <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z"/>
-                      </svg>
-                      Remix this on GitHub
-                    </a>
-                    · Play with semantic density, rotation chaos, and color emergence to design your own ambiguity landscapes
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex justify-end items-center h-full">
-              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height data-research-pdf-card data-research-pdf-state="idle">
-                <div data-research-pdf-scroll class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-ai-women">
-                  <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
-                    <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    <span>PDF Preview Loading...</span>
-                  </div>
-                  <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-ai-women"></div>
-                  <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-ai-women">
-                    <p class="text-sm text-gray-600 mb-2">You can also view the full PDF directly:</p>
-                    <a href="files/academic/AI%20%26Chinese%20Liberal%20Arts%20Women.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
-                      Open PDF
-                    </a>
-                  </div>
-                </div>
-
-                <div id="pdf-hover-preview-ai-women" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200 transform transition-all duration-300 origin-center" style="width: 500px; height: auto;">
-                  <div class="w-full flex flex-col">
-                    <div class="mb-2 flex justify-between items-center">
-                      <span class="text-xs text-emerald-700 font-medium" id="hover-preview-title-ai-women">Page Preview</span>
-                      <span class="text-xs text-gray-500">Click to view the full PDF</span>
-                    </div>
-                    <div class="w-full flex justify-center items-center bg-gray-50 rounded p-2">
-                      <img src="" alt="PDF page preview" id="hover-preview-img-ai-women" class="max-w-full max-h-[600px] object-contain" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Generative AI Technical Identity Project -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex items-center justify-between mb-8">
-            <div class="flex items-center space-x-4">
-              <div>
-                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Generative AI Reshaping Technical Identity: A Study of Digital Career Transition Practices Among Chinese Liberal Arts Women</h2>
-                <p class="text-sm font-light text-neutral-600 mt-1">Transforming "non-technical" outsiders into innovative collaborators who infuse humanism into code</p>
-              </div>
-            </div>
-            <div class="text-right min-w-0 flex-shrink-0">
-              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">First Author</p>
-              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.5-2025.9</p>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
-            <div class="space-y-6 pr-2">
-              <div class="space-y-3">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Innovation</h3>
-                <div class="space-y-4">
-                  <p class="text-base font-light leading-relaxed text-neutral-700">
-                    Investigated how generative AI transforms technical identity among Chinese liberal arts women through a comprehensive mixed-method qualitative study, revealing unprecedented patterns of career transition and identity negotiation.
-                  </p>
-                  <p class="text-base font-light leading-relaxed text-neutral-700">
-                    <span class="font-medium">Status:</span> Under Review at ICWSM 2026 | <a href="files/academic/Graphcloud.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Research Paper (PDF)</a>
-                  </p>
-                </div>
-              </div>
-
-              <div class="space-y-4">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Methodology</h3>
-                <div class="grid grid-cols-1 gap-4">
-                  <div>
-                    <ul class="mt-2 space-y-1 list-disc pl-4">
-                      <li class="text-base font-light text-neutral-700">Conducted multi-source qualitative study with 10 participants through 1.5-2 hour in-depth interviews</li>
-                      <li class="text-base font-light text-neutral-700">Executed digital ethnography across Douban & Xiaohongshu platforms</li>
-                      <li class="text-base font-light text-neutral-700">Achieved high reliability through dual researcher thematic analysis</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <div class="space-y-2">
-                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Findings</h3>
-                <p class="text-base font-light text-neutral-700">
-                  Discovered a multi-level identity negotiation model and "cautious activism" strategy facilitating career transitions and inclusive AI tool design; documented systematic identity transformation from "learner" to "technical person".
-                </p>
-              </div>
-            </div>
-
-            <div class="flex justify-end items-center h-full">
-              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height data-research-pdf-card data-research-pdf-state="idle">
-                <div data-research-pdf-scroll class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-graphcloud">
-                  <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
-                    <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    <span>PDF Preview Loading...</span>
-                  </div>
-                  <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-graphcloud"></div>
-                  <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-graphcloud">
-                    <p class="text-sm text-gray-600 mb-2">You can also view the full PDF directly:</p>
-                    <a href="files/academic/Graphcloud.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
-                      Open PDF
-                    </a>
-                  </div>
-                </div>
-
-                <div id="pdf-hover-preview-graphcloud" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200 transform transition-all duration-300 origin-center" style="width: 500px; height: auto;">
-                  <div class="w-full flex flex-col">
-                    <div class="mb-2 flex justify-between items-center">
-                      <span class="text-xs text-emerald-700 font-medium" id="hover-preview-title-graphcloud">Page Preview</span>
-                      <span class="text-xs text-gray-500">Click to view the full PDF</span>
-                    </div>
-                    <div class="w-full flex justify-center items-center bg-gray-50 rounded p-2">
-                      <img src="" alt="PDF page preview" id="hover-preview-img-graphcloud" class="max-w-full max-h-[600px] object-contain" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- TBC-DDH Project -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <div class="flex items-center justify-between mb-8">
@@ -689,10 +374,331 @@ body {
           </div>
         </div>
 
+      </div>
+
+      <section aria-labelledby="more-research-heading" class="research-project-list">
+        <h2 id="more-research-heading" class="text-2xl font-extralight tracking-wide">More Research &amp; Projects</h2>
+        <p class="text-sm font-light text-neutral-600 mt-1">Explore other research and projects.</p>
+        <div class="research-project-stack">
+        <!-- OmniBio-KG Project -->
+        <details class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <summary class="research-project-summary">
+            <div class="flex items-center space-x-4">
+              <div>
+                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">OmniBio-KG: Unified Multimodal Knowledge Graph for Intelligent Biomedical Reasoning</h2>
+                <p class="text-sm font-light text-neutral-600 mt-1">Bridging fragmented biomedical data silos with semantically-enriched, multimodal knowledge integration</p>
+              </div>
+            </div>
+            <div class="text-right min-w-0 flex-shrink-0">
+              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">First Author</p>
+              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.9-now</p>
+            </div>
+          </summary>
+
+          <div class="space-y-6 pr-2">
+            <div class="space-y-3">
+              <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
+              <div class="space-y-4">
+                <p class="text-base font-light leading-relaxed text-neutral-700">
+                  Fragmented identifiers, hidden relations, and brittle inference block discovery; a unified biomedical knowledge graph can integrate heterogeneous entities and relations with semantics to support robust reasoning and discovery.
+                </p>
+                <p class="text-base font-light leading-relaxed text-neutral-700">
+                  <span class="font-medium">Status:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">In Progress</span> | <span class="text-neutral-600">Code available upon request</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Approach</h3>
+              <div class="grid grid-cols-1 gap-4">
+                <div>
+                  <ul class="mt-2 space-y-1 list-disc pl-4">
+                    <li class="text-base font-light text-neutral-700">Build a heterogeneous KG with multimodal node attributes</li>
+                    <li class="text-base font-light text-neutral-700">Integrate PPI/PSI/RPI edges with provenance and calibrated confidence</li>
+                    <li class="text-base font-light text-neutral-700">Align to GO/KEGG/ChEBI ontologies</li>
+                    <li class="text-base font-light text-neutral-700">Deliver L1–L6 pipeline: from normalization and evidence scoring to path queries, link prediction, and function inference</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-lg font-light text-emerald-600 tracking-wide">Clinical Impact</h3>
+              <p class="text-base font-light text-neutral-700">
+                Evidence-ranked, ontology-aware queries and actionable subgraph explanations accelerate target discovery and mechanism elucidation while improving trust and reproducibility.
+              </p>
+            </div>
+          </div>
+        </details>
+
+        <!-- Care-Centered HRI Project -->
+        <details class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <summary class="research-project-summary">
+            <div class="flex items-center space-x-4">
+              <div>
+                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Care-Centered HRI: Belief-Aware, Humanistic Emotion Computing for Home Robots</h2>
+                <p class="text-sm font-light text-neutral-600 mt-1">When social robots enter family spaces, care requires trust, dignity, and cultural sensitivity</p>
+              </div>
+            </div>
+            <div class="text-right min-w-0 flex-shrink-0">
+              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">First Author</p>
+              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.9-now</p>
+            </div>
+          </summary>
+
+          <!-- Two-column layout with image on the right (mirrors sections below) -->
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <!-- Left: content -->
+            <div class="space-y-6 pr-2">
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    Home companion robots must understand people, not just tasks. We model belief-aware user state and adopt privacy-first sensing to learn long-horizon emotional patterns and care preferences through daily, consented interactions—aligning robot behavior via IRL rather than one-shot supervision to match the long-term nature of personality formation.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    <span class="font-medium">Status:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">In Progress</span> | <span class="text-neutral-600">Code available upon request</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Execution</h3>
+                <div class="grid grid-cols-1 gap-4">
+                  <div>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Synthetic-to-real pipeline: Smallville (23 agents + 1 human + 1 robot) generates 60–100 days of nightly interactions (“How was your day?” + free dialog); Big Five (BFI-44) for pre/post ground truth</li>
+                      <li class="text-base font-light text-neutral-700">Multimodal affect pipeline across text/actions/facial cues/prosody with correlation-weighted late fusion for daily labels</li>
+                      <li class="text-base font-light text-neutral-700">Temporal representation via weekly sliding windows + EWMA baseline; BiLSTM+attention builds 54×1024 state embeddings</li>
+                      <li class="text-base font-light text-neutral-700">Value alignment with IRL to infer user reward and robot persona; consent-aware policies and edge-first privacy</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Validation and Impact</h3>
+                <p class="text-base font-light text-neutral-700">
+                  Targeted alignment checks with BFI correlations (pre r&gt;0.75; post r&gt;0.85), ablations showing &gt;5% over text-only baselines; Wizard-of-Oz and home-like pilots to assess trust, dignity, and safe handovers; commercialization path scoped for home, eldercare, and education.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right: image (kept narrow like sections below) -->
+            <div class="flex justify-end items-center h-full">
+              <div data-research-preview class="relative w-[260px] rounded-[16px] overflow-hidden bg-white border border-gray-200 shadow-sm transform group-hover:scale-[1.02] transition-all duration-500">
+                <img src="assets/images/6241239c-5883-436f-bfc7-e1d07a073de6.png" alt="Care-Centered HRI schematic" class="w-full h-auto object-cover">
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Ambiguity-Driven Guidance Project -->
+        <details class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <summary class="research-project-summary">
+            <div class="flex items-center space-x-4">
+              <div>
+                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Ambiguity-Driven Guidance: How Designing for Productive Confusion Reactivates Teacher Value</h2>
+                <p class="text-sm font-light text-neutral-600 mt-1">When ChatGPT writes essays in seconds, language teachers face extinction—unless AI becomes their ally, not replacement</p>
+              </div>
+            </div>
+            <div class="text-right min-w-0 flex-shrink-0">
+              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">First Author</p>
+              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.5-2025.9</p>
+            </div>
+          </summary>
+
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <div class="space-y-6 pr-2">
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    Identified fundamental mismatch between generative AI's efficiency-driven design and teaching's essence of guided inquiry; developed "ambiguity-driven guidance" principle transforming AI from answer-machine to cognitive catalyst.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    <span class="font-medium">Status:</span> Under Review at CHI 2026 Workshop | <a href="files/academic/AI%20%26Chinese%20Liberal%20Arts%20Women.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Research Paper (PDF)</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Execution</h3>
+                <div class="grid grid-cols-1 gap-4">
+                  <div>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Built BGE-M3+ GAT architecture generating dynamic concept networks</li>
+                      <li class="text-base font-light text-neutral-700">Programmed progressive questioning interfaces for cognitive scaffolding</li>
+                      <li class="text-base font-light text-neutral-700">Executed 5-week controlled study with 18 participants across multiple institutions</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Measurable Impact</h3>
+                <p class="text-base font-light text-neutral-700">
+                  Achieved statistically significant professional identity shifts; documented sustained engagement with 122.8 concept-construction steps per session, validating AI's potential as teaching enhancer rather than replacement.
+                </p>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Interactive Product Study: Concept Emergence Through Ambiguity</h3>
+                <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                  <p class="text-sm text-neutral-600 mb-3">
+                    Watch ideas emerge from semantic fog: this generative wordcloud visualizes how strategic ambiguity triggers conceptual discovery. Built with <a href="https://github.com/timdream/wordcloud2.js" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">wordcloud2.js</a> + custom emergence algorithms.
+                  </p>
+                  <div class="relative w-full h-96 rounded-lg overflow-hidden border border-emerald-200">
+                    <iframe
+                      src="https://wordcloud2tester.vercel.app/"
+                      loading="lazy"
+                      width="100%"
+                      height="100%"
+                      frameborder="0"
+                      class="rounded-lg"
+                      title="Interactive Wordcloud for Ambiguity-Driven Guidance Research">
+                    </iframe>
+                  </div>
+                  <p class="text-sm mt-3">
+                    <a href="https://wordcloud2tester.vercel.app/" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">Open the interactive wordcloud in a new tab</a>
+                  </p>
+                  <p class="text-xs text-neutral-500 mt-2">
+                    <a href="https://github.com/hazelian0619/wordcloud2tester" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline inline-flex items-center" target="_blank" rel="noopener noreferrer">
+                      <svg class="w-3.5 h-3.5 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.163 20 14.418 20 10c0-5.523-4.477-10-10-10z"/>
+                      </svg>
+                      Remix this on GitHub
+                    </a>
+                    · Play with semantic density, rotation chaos, and color emergence to design your own ambiguity landscapes
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-end items-center h-full">
+              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height data-research-pdf-card data-research-pdf-state="idle">
+                <div data-research-pdf-scroll class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-ai-women">
+                  <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
+                    <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>PDF Preview Loading...</span>
+                  </div>
+                  <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-ai-women"></div>
+                  <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-ai-women">
+                    <p class="text-sm text-gray-600 mb-2">You can also view the full PDF directly:</p>
+                    <a href="files/academic/AI%20%26Chinese%20Liberal%20Arts%20Women.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                      Open PDF
+                    </a>
+                  </div>
+                </div>
+
+                <div id="pdf-hover-preview-ai-women" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200 transform transition-all duration-300 origin-center" style="width: 500px; height: auto;">
+                  <div class="w-full flex flex-col">
+                    <div class="mb-2 flex justify-between items-center">
+                      <span class="text-xs text-emerald-700 font-medium" id="hover-preview-title-ai-women">Page Preview</span>
+                      <span class="text-xs text-gray-500">Click to view the full PDF</span>
+                    </div>
+                    <div class="w-full flex justify-center items-center bg-gray-50 rounded p-2">
+                      <img src="" alt="PDF page preview" id="hover-preview-img-ai-women" class="max-w-full max-h-[600px] object-contain" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Generative AI Technical Identity Project -->
+        <details class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <summary class="research-project-summary">
+            <div class="flex items-center space-x-4">
+              <div>
+                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Generative AI Reshaping Technical Identity: A Study of Digital Career Transition Practices Among Chinese Liberal Arts Women</h2>
+                <p class="text-sm font-light text-neutral-600 mt-1">Transforming "non-technical" outsiders into innovative collaborators who infuse humanism into code</p>
+              </div>
+            </div>
+            <div class="text-right min-w-0 flex-shrink-0">
+              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">First Author</p>
+              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">2025.5-2025.9</p>
+            </div>
+          </summary>
+
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <div class="space-y-6 pr-2">
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Innovation</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    Investigated how generative AI transforms technical identity among Chinese liberal arts women through a comprehensive mixed-method qualitative study, revealing unprecedented patterns of career transition and identity negotiation.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    <span class="font-medium">Status:</span> Under Review at ICWSM 2026 | <a href="files/academic/Graphcloud.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Research Paper (PDF)</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Methodology</h3>
+                <div class="grid grid-cols-1 gap-4">
+                  <div>
+                    <ul class="mt-2 space-y-1 list-disc pl-4">
+                      <li class="text-base font-light text-neutral-700">Conducted multi-source qualitative study with 10 participants through 1.5-2 hour in-depth interviews</li>
+                      <li class="text-base font-light text-neutral-700">Executed digital ethnography across Douban & Xiaohongshu platforms</li>
+                      <li class="text-base font-light text-neutral-700">Achieved high reliability through dual researcher thematic analysis</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Findings</h3>
+                <p class="text-base font-light text-neutral-700">
+                  Discovered a multi-level identity negotiation model and "cautious activism" strategy facilitating career transitions and inclusive AI tool design; documented systematic identity transformation from "learner" to "technical person".
+                </p>
+              </div>
+            </div>
+
+            <div class="flex justify-end items-center h-full">
+              <div data-research-preview class="relative w-[260px] h-[520px] rounded-[16px] overflow-hidden bg-white shadow-lg transform group-hover:scale-[1.02] transition-all duration-500" data-research-fixed-height data-research-pdf-card data-research-pdf-state="idle">
+                <div data-research-pdf-scroll class="pdf-preview w-full h-full overflow-y-auto overflow-x-hidden p-2 bg-gray-50" id="pdf-container-graphcloud">
+                  <div class="text-sm text-center text-gray-500 py-4 flex items-center justify-center space-x-2">
+                    <svg class="animate-spin h-4 w-4 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>PDF Preview Loading...</span>
+                  </div>
+                  <div class="flex flex-col space-y-4 w-full items-center pb-4" id="pdf-thumbnails-graphcloud"></div>
+                  <div class="text-center py-4 border-t border-gray-200 mt-4 hidden" id="pdf-fallback-graphcloud">
+                    <p class="text-sm text-gray-600 mb-2">You can also view the full PDF directly:</p>
+                    <a href="files/academic/Graphcloud.pdf" target="_blank" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-emerald-600 rounded-md hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500">
+                      Open PDF
+                    </a>
+                  </div>
+                </div>
+
+                <div id="pdf-hover-preview-graphcloud" class="fixed hidden bg-white rounded-lg shadow-2xl z-50 p-3 border border-gray-200 transform transition-all duration-300 origin-center" style="width: 500px; height: auto;">
+                  <div class="w-full flex flex-col">
+                    <div class="mb-2 flex justify-between items-center">
+                      <span class="text-xs text-emerald-700 font-medium" id="hover-preview-title-graphcloud">Page Preview</span>
+                      <span class="text-xs text-gray-500">Click to view the full PDF</span>
+                    </div>
+                    <div class="w-full flex justify-center items-center bg-gray-50 rounded p-2">
+                      <img src="" alt="PDF page preview" id="hover-preview-img-graphcloud" class="max-w-full max-h-[600px] object-contain" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
         <!-- Metapher Project -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+        <details class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <!-- 标题和Logo部分 -->
-          <div class="flex items-center justify-between mb-8">
+          <summary class="research-project-summary">
             <div class="flex items-center space-x-4">
               <img 
                 src="images/metapher/logo.png" 
@@ -708,7 +714,7 @@ body {
               <p class="text-sm font-light text-emerald-600 mb-1">Project Lead & Algorithm Architect</p>
               <span class="text-sm font-light text-neutral-500">2025.1-2025.4</span>
             </div>
-          </div>
+          </summary>
 
           <!-- 内容和轮播的两列布局 -->
           <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
@@ -811,12 +817,12 @@ body {
               </div>
             </div>
           </div>
-        </div>
+        </details>
       
         <!-- HipGo Project -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+        <details class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <!-- 标题和Logo部分 -->
-          <div class="flex items-center justify-between mb-8">
+          <summary class="research-project-summary">
             <div class="flex items-center space-x-4">
               <img 
                 src="images/hipgo/logo.png" 
@@ -832,7 +838,7 @@ body {
               <p class="text-sm font-light text-emerald-600 mb-1">Full-stack Developer</p>
               <span class="text-sm font-light text-neutral-500">2024.12-now</span>
             </div>
-          </div>
+          </summary>
 
           <!-- 两列布局 -->
           <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
@@ -903,11 +909,11 @@ body {
               </div>
             </div>
           </div>
-        </div>
+        </details>
 
         <!-- BookDone Project -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-          <div class="flex items-center justify-between mb-8">
+        <details class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <summary class="research-project-summary">
             <div class="flex items-center space-x-4">
               <!-- Logo 可后续补充 -->
               <div>
@@ -919,7 +925,7 @@ body {
               <p class="text-sm font-light text-emerald-600 mb-1">Business Analyst & Product Manager</p>
               <span class="text-sm font-light text-neutral-500">2024.3 – 2024.7</span>
             </div>
-          </div>
+          </summary>
 
           <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
             <!-- 左侧内容 -->
@@ -985,12 +991,12 @@ body {
               </div>
             </div>
           </div>
-                </div>
+                </details>
 
         <!-- Chinese in the Third World Project -->
-        <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+        <details class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <!-- 标题部分 -->
-          <div class="flex items-center justify-between mb-8">
+          <summary class="research-project-summary">
             <div class="flex items-center space-x-4">
               <!-- Logo is omitted -->
               <div>
@@ -1002,7 +1008,7 @@ body {
               <p class="text-sm font-light text-emerald-600 mb-1">Cultural Researcher</p>
               <span class="text-sm font-light text-neutral-500">2023.10 - 2023.12</span>
             </div>
-          </div>
+          </summary>
 
           <!-- 内容和PDF预览的两列布局 -->
           <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
@@ -1092,7 +1098,9 @@ body {
             </div>
           </div>
         </div>
-      </div>
+      </details>
+        </div>
+      </section>
     </div>
   </div>
 </main>

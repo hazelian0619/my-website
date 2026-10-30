@@ -254,6 +254,7 @@
     const checkNearbyCards = () => {
       checkQueued = false;
       cardsByViewer.forEach((viewer, card) => {
+        if (!card.getClientRects().length) return;
         const rect = card.getBoundingClientRect();
         if (rect.top <= window.innerHeight + 400 && rect.bottom >= -400) {
           setupPdfViewer(viewer.options, card);
@@ -268,6 +269,7 @@
     };
     window.addEventListener('scroll', queueCheck, { passive: true });
     window.addEventListener('resize', queueCheck);
+    document.addEventListener('toggle', queueCheck, true);
     checkNearbyCards();
   }
 
