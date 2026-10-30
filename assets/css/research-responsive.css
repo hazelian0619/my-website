@@ -41,3 +41,41 @@
     display: none !important;
   }
 }
+
+/* Compact project stack; native details keeps every project keyboard accessible. */
+.research-project-stack {
+  margin-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.research-project-stack > details {
+  margin: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.research-project-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.research-project-summary::-webkit-details-marker { display: none; }
+.research-project-summary::after {
+  content: '+';
+  flex: none;
+  color: #059669;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.research-project-stack details[open] > summary { margin-bottom: 2rem; }
+.research-project-stack details[open] > summary::after { content: '−'; }
+.research-project-summary:focus-visible { outline: 2px solid #047857; outline-offset: 4px; }
+
+@media (max-width: 767px) {
+  .research-project-summary { flex-wrap: wrap; }
+  .research-project-summary > .text-right { text-align: left; }
+  .research-project-summary > :first-child { flex: 1 1 calc(100% - 3rem); min-width: 0; }
+}
