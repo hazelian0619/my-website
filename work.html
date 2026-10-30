@@ -85,15 +85,33 @@ body {
             <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.9 - Present</span>
           </div>
           <p class="text-sm font-light text-neutral-600 italic mb-6">AI Agent Engineer</p>
-          <p class="text-base font-light text-neutral-700 leading-relaxed mb-6">Owned the agent runtime architecture for a sleep-health IoT product from day one: conversational workflows, task orchestration, device control, persistence, and memory.</p>
-          <ul class="space-y-1.5 list-disc pl-4 text-neutral-700">
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Unified analysis, reporting, and deterministic business commands into a single conversational workflow architecture with resumable execution, consolidating previously fragmented pipelines.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Designed a versioned task lifecycle and a two-phase device-control protocol (prepare, confirm, execute): hardware actions stay user-confirmed, conflict-checked, and recoverable when a device call fails mid-flight.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Closed the end-to-end hardware control loop through a public Task API (intent validation, device-capability checks, bounded outbound calls with rate-limit classification), letting the agent safely operate physical sleep devices.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Built the persistence and long-term memory layer (task state, control plans, audit evidence, conversation memory) that survives restarts, with memory reads that degrade gracefully instead of blocking users.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Delivered incremental answer streaming with an explicit failure contract, so chat responses appear as they are produced instead of in one blocking wait.</li>
-            <li class="text-base font-light text-neutral-700 leading-relaxed">Hardening the three production analysis flows (health advice, sleep recommendation, and metric advice) for real health-database and LLM integration, grounding every output in cited evidence.</li>
-          </ul>
+          <p class="text-base font-light text-neutral-700 leading-relaxed mb-6">Designed and built core agent workflows, persistent memory, and device control services for a sleep-health IoT product, linking conversations and health data to analysis, business operations, and hardware execution.</p>
+          <div class="space-y-5 text-neutral-700">
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Agent backend architecture and workflow orchestration</h3>
+              <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Built a FastAPI and LangGraph orchestration layer, consolidating intelligent analysis and deterministic business commands into a single conversational entry point with explicit boundaries between agent reasoning, workflow orchestration, and business execution.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Designed task state models and APIs spanning creation, plan confirmation, execution, feedback, and reassessment. Added durable checkpoints for long waits, interruption recovery, and cross-process resumption without replaying completed nodes.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Connected model deltas directly to SSE responses, standardized content, terminal status, error mapping, and redacted traces, and validated client-server behavior through contract and scenario regression tests.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Persistence and agent memory infrastructure</h3>
+              <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Implemented async ORM persistence for task state, execution events, feedback, and memory, separating conversation context, cross-session records, and health profiles with explicit lifecycle, access, and resource ownership boundaries.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Moved memory archival and summarization behind a durable outbox and background workers, with job claiming, idempotent writes, retries, and restart recovery. Added controlled prefetch and graceful read degradation to reduce coupling to the main request path.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Established consistency controls for conversation deletion, profile corrections, and reassessment, using version checks, source invalidation, and write barriers to prevent writes after deletion, stale overwrites, and stale model context.</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Tool execution and hardware integration</h3>
+              <ul class="mt-2 space-y-1.5 list-disc pl-4">
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Integrated MCP device services with authentication, discovery, capability checks, and parameter validation, connecting user intent to plan preparation, user confirmation, device execution, and result feedback.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Added subject authorization, idempotency controls, device-level serialization, outbound throttling, and bounded retries. Distinguished accepted requests, execution failures, and unknown outcomes to support diagnosis and safe replay.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Validated direct API and agent-driven control for three device types in QA, using state readbacks, on-site feedback, and restoration records. Isolated gateway wiring, command consumption, and error-handling issues through matched test scenarios across the app, agent, platform, and devices.</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Baidu AI Cloud -->
