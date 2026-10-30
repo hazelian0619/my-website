@@ -155,6 +155,29 @@ body {
 .preview-interactive-product {
   aspect-ratio: 16 / 10;
 }
+.orient-gallery {
+  display: flex;
+  gap: 0.75rem;
+  align-items: start;
+  justify-content: center;
+  padding: 1rem;
+  background: #f8faf9;
+}
+.orient-gallery figure {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+}
+.orient-gallery img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+}
+.orient-gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: #6b7280;
+}
 .workspace-preview {
   min-height: 310px;
   background:
@@ -221,6 +244,48 @@ body {
       <div class="mb-14"></div>
 
       <div class="mb-20">
+
+        <article class="case-card group py-12">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
+            <h2 class="text-2xl font-light tracking-wide group-hover:text-emerald-700 transition-colors">Orient Feeling Sleep-Health Agent</h2>
+            <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.9 - Present</span>
+          </div>
+          <p class="text-sm font-light text-neutral-600 italic mb-8">Agent orchestration, knowledge grounding, and confirmed plan workflows · In progress</p>
+          <div class="case-grid">
+            <div class="space-y-5 text-neutral-700">
+              <p class="text-base font-light leading-relaxed">Contributed to the architecture and backend development of a sleep-health agent, connecting personal context, domain knowledge, and user-confirmed plans through the app and service layer.</p>
+              <div class="evidence-grid">
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Agent Orchestration</p>
+                  <p class="text-sm font-light leading-relaxed">Coordinated user intent, specialist tasks, context, and tool access across multi-turn health workflows.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Context &amp; Knowledge</p>
+                  <p class="text-sm font-light leading-relaxed">Connected health data and knowledge retrieval to agent responses, examining evidence relevance and coverage.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Plan State &amp; Confirmation</p>
+                  <p class="text-sm font-light leading-relaxed">Designed draft, modification, and confirmation flows, with business writes handled by authorized services.</p>
+                </div>
+                <div class="evidence-item">
+                  <p class="text-xs font-medium tracking-wide text-emerald-600 uppercase mb-1">Integration &amp; Validation</p>
+                  <p class="text-sm font-light leading-relaxed">Traced app, service, and agent interactions using case-level checks, execution records, and readback.</p>
+                </div>
+              </div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Agent Systems</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">RAG &amp; Context</span>
+                <span class="px-3 py-1 text-xs font-light bg-neutral-100 text-neutral-600 rounded-full">Backend Integration</span>
+              </div>
+              <p class="text-xs font-light text-neutral-500">App screenshots from a local test in October 2026. Select an image to view it in full.</p>
+            </div>
+            <div class="project-preview orient-gallery rounded-[10px]">
+              <figure><a href="images/projects/orient-sleep-agent/01-draft.jpg" target="_blank" rel="noopener noreferrer" aria-label="View full screenshot of a draft health plan"><img src="images/projects/orient-sleep-agent/01-draft.jpg" alt="A draft sleep relaxation plan awaiting confirmation" loading="lazy"></a><figcaption>Draft plan</figcaption></figure>
+              <figure><a href="images/projects/orient-sleep-agent/02-confirm.jpg" target="_blank" rel="noopener noreferrer" aria-label="View full screenshot of a plan confirmation"><img src="images/projects/orient-sleep-agent/02-confirm.jpg" alt="A plan confirmation and calendar creation response" loading="lazy"></a><figcaption>Confirm plan</figcaption></figure>
+              <figure><a href="images/projects/orient-sleep-agent/03-calendar.jpg" target="_blank" rel="noopener noreferrer" aria-label="View full screenshot of the calendar"><img src="images/projects/orient-sleep-agent/03-calendar.jpg" alt="The app calendar showing scheduled plans" loading="lazy"></a><figcaption>Calendar view</figcaption></figure>
+            </div>
+          </div>
+        </article>
 
         <article class="case-card group py-12">
           <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2 mb-2">
