@@ -85,30 +85,30 @@ body {
             <span class="text-sm font-light text-neutral-500 whitespace-nowrap">2026.9 - Present</span>
           </div>
           <p class="text-sm font-light text-neutral-600 italic mb-6">AI Agent Engineer</p>
-          <p class="text-base font-light text-neutral-700 leading-relaxed mb-6">Designed and built core agent workflows, persistent memory, and device control services for a sleep-health IoT product, linking conversations and health data to analysis, business operations, and hardware execution.</p>
+          <p class="text-base font-light text-neutral-700 leading-relaxed mb-6">Contributed to the architecture and backend development of a sleep-health agent system, bringing together multi-agent coordination, knowledge retrieval, and device services to support health questions, personalized guidance, and sleep-environment adjustments.</p>
           <div class="space-y-5 text-neutral-700">
             <div>
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Agent backend architecture and workflow orchestration</h3>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Multi-agent architecture and health-service orchestration</h3>
               <ul class="mt-2 space-y-1.5 list-disc pl-4">
-                <li class="text-base font-light text-neutral-700 leading-relaxed">Built a FastAPI and LangGraph orchestration layer, consolidating intelligent analysis and deterministic business commands into a single conversational entry point with explicit boundaries between agent reasoning, workflow orchestration, and business execution.</li>
-                <li class="text-base font-light text-neutral-700 leading-relaxed">Designed task state models and APIs spanning creation, plan confirmation, execution, feedback, and reassessment. Added durable checkpoints for long waits, interruption recovery, and cross-process resumption without replaying completed nodes.</li>
-                <li class="text-base font-light text-neutral-700 leading-relaxed">Connected model deltas directly to SSE responses, standardized content, terminal status, error mapping, and redacted traces, and validated client-server behavior through contract and scenario regression tests.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Helped design a main-agent and specialist-agent architecture for users moving from understanding their sleep to receiving advice and making plans. The main agent interprets intent, coordinates tasks, and brings results together; specialists handle domain-specific analysis and guidance.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Built task orchestration and context management that provides user goals, health data, conversation history, and relevant tools according to each task, supporting multi-turn interaction and personalization while respecting subject and access permissions.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Designed task states, user confirmation, and feedback flows, separating agent analysis from deterministic business operations to support plan creation, confirmation, execution, and subsequent adjustments.</li>
               </ul>
             </div>
             <div>
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Persistence and agent memory infrastructure</h3>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">RAG knowledge retrieval and answer quality</h3>
               <ul class="mt-2 space-y-1.5 list-disc pl-4">
-                <li class="text-base font-light text-neutral-700 leading-relaxed">Implemented async ORM persistence for task state, execution events, feedback, and memory, separating conversation context, cross-session records, and health profiles with explicit lifecycle, access, and resource ownership boundaries.</li>
-                <li class="text-base font-light text-neutral-700 leading-relaxed">Moved memory archival and summarization behind a durable outbox and background workers, with job claiming, idempotent writes, retries, and restart recovery. Added controlled prefetch and graceful read degradation to reduce coupling to the main request path.</li>
-                <li class="text-base font-light text-neutral-700 leading-relaxed">Established consistency controls for conversation deletion, profile corrections, and reassessment, using version checks, source invalidation, and write barriers to prevent writes after deletion, stale overwrites, and stale model context.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Contributed to the agent-to-knowledge-base retrieval flow for sleep and health questions, connecting user intent, candidate evidence, and answer generation so that domain knowledge can be used alongside personal health context.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Analyzed recall, ranking, filtering, and evidence transfer using representative health-question cases, distinguishing missing retrieval results, insufficient evidence, and answers that extend beyond their sources to identify targeted improvements.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Established a layered evaluation approach for retrieval and agent responses, reviewing relevance, coverage of required evidence, and alignment between claims and sources. Used fixed test conditions and case-level diagnosis to guide optimization and regression checks.</li>
               </ul>
             </div>
             <div>
-              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">Tool execution and hardware integration</h3>
+              <h3 class="text-base font-light text-neutral-700 group-hover:text-emerald-600 transition-colors">IoT integration and sleep-environment coordination</h3>
               <ul class="mt-2 space-y-1.5 list-disc pl-4">
-                <li class="text-base font-light text-neutral-700 leading-relaxed">Integrated MCP device services with authentication, discovery, capability checks, and parameter validation, connecting user intent to plan preparation, user confirmation, device execution, and result feedback.</li>
-                <li class="text-base font-light text-neutral-700 leading-relaxed">Added subject authorization, idempotency controls, device-level serialization, outbound throttling, and bounded retries. Distinguished accepted requests, execution failures, and unknown outcomes to support diagnosis and safe replay.</li>
-                <li class="text-base font-light text-neutral-700 leading-relaxed">Validated direct API and agent-driven control for three device types in QA, using state readbacks, on-site feedback, and restoration records. Isolated gateway wiring, command consumption, and error-handling issues through matched test scenarios across the app, agent, platform, and devices.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Designed the agent-to-device service flow for sleep-environment adjustments, translating user requests into understandable control plans that require confirmation before execution and return the result to the conversation.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Integrated device-platform capabilities and control interfaces, handling discovery, capability constraints, user authorization, confirmation, and execution states so natural-language interactions can lead to physical device actions.</li>
+                <li class="text-base font-light text-neutral-700 leading-relaxed">Coordinated testing across the app, agent, device platform, and physical devices. Compared direct API calls with agent-driven control to diagnose interruptions and feedback issues, validating single-action control for three device types in QA using state readbacks and on-site observations.</li>
               </ul>
             </div>
           </div>
