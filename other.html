@@ -10,7 +10,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/tailwind.local.css">
-<link rel="stylesheet" href="assets/css/site-responsive.css">
+<link rel="stylesheet" href="assets/css/site-responsive.css?v=douban-collapse-1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
@@ -78,10 +78,103 @@
       <div class="max-w-6xl mx-auto">
         <h1 class="text-3xl font-extralight tracking-wide mb-16">Other Experiences</h1>
 
-        <!-- 黑客松经历 -->
+        <!-- Featured: Douban writing -->
+        <div id="douban-writing" class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div class="flex items-center justify-between mb-8" data-other-content-meta>
+            <div>
+              <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Douban Writing</h2>
+              <p class="text-sm font-light text-neutral-600 mt-1">Career transitions, technical learning, and the choices between them</p>
+            </div>
+            <div class="text-right">
+              <p class="text-sm font-light text-emerald-600 mb-1">Douban Writer</p>
+              <span class="text-sm font-light text-neutral-500">2023-Present</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-8 items-start">
+            <div class="space-y-6">
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">What I Write</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    I write on Douban about career transitions, technical learning, and the often-hidden choices between the humanities and technology.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    My notes start with first-hand experience, check personal observations against interviews and public information, and turn them into practical lessons for readers making similar moves&mdash;without assuming there is one right path.
+                  </p>
+                  <div class="border-l-2 border-emerald-200 pl-4">
+                    <p class="text-sm font-light leading-relaxed text-neutral-600">
+                      This work contributed to an offer of admission to Carnegie Mellon University's 2026 Computational Cultural Studies program. I chose not to enroll and continued my current AI research path.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-gray-200">
+                  <h4 class="text-base font-medium text-neutral-700 mb-4 tracking-wide">Selected Writing</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-3">
+                      <div>
+                        <a href="https://www.douban.com/note/873701128/?_dtcc=1&_i=90152937TvyBHf" target="_blank" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors leading-tight block">
+                          "Seeking Liberal Arts Women in the AI Era: Constructing New Identity Positions Through Sociological Interviews"
+                        </a>
+                        <p class="text-xs text-neutral-500 mt-1">Identity construction research recruitment</p>
+                      </div>
+                      <div>
+                        <a href="https://www.douban.com/group/topic/336014467/?_spm_id=MjU1NDM5MjAw&type=rec#sep&_i=90173007TvyBHf" target="_blank" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors leading-tight block">
+                          "The More You Do, the More You Demystify 'Talent'"
+                        </a>
+                        <p class="text-xs text-neutral-500 mt-1">Experience-based career reflection</p>
+                      </div>
+                    </div>
+                    <div class="space-y-3">
+                      <div>
+                        <a href="https://www.douban.com/group/topic/315019707/?start=0#5836265788&_i=90173377TvyBHf" target="_blank" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors leading-tight block">
+                          "Career Reflections of Liberal Arts Women Transitioning to Tech"
+                        </a>
+                        <p class="text-xs text-neutral-500 mt-1">Career transition analysis</p>
+                      </div>
+                      <div>
+                        <a href="https://www.douban.com/group/topic/307152360/?_i=18019970c1274b4,90174447TvyBHf&dt_dapp=1" target="_blank" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors leading-tight block">
+                          "Liberal Arts/Business Position Analysis: Salary & Growth Dimensions"
+                        </a>
+                        <p class="text-xs text-neutral-500 mt-1">Labor market analysis by salary & growth</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-4">
+              <h4 class="text-base font-medium text-neutral-700 mb-4 tracking-wide">At a Glance</h4>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <span class="text-neutral-600">Followers</span>
+                  <span class="font-medium text-neutral-700">2.4K+</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-neutral-600">Total reads</span>
+                  <span class="font-medium text-neutral-700">400K+</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-neutral-600">Writing since</span>
+                  <span class="font-medium text-neutral-700">2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="other-archive" aria-labelledby="more-experiences-heading">
+          <h2 id="more-experiences-heading" class="text-2xl font-extralight tracking-wide">More Experiences</h2>
+          <p class="text-sm font-light text-neutral-600 mt-1">Hackathons, academic writing, community work, and earlier roles.</p>
+
         <div class="space-y-16 mb-20">
-          <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-            <div class="flex items-center justify-between mb-8">
+
+        <!-- 黑客松经历 -->
+        <div class="other-section-stack">
+          <details class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+            <summary class="other-section-summary">
               <div class="flex items-center space-x-4">
                 <i class="ri-code-box-line text-2xl text-emerald-600"></i>
                 <div>
@@ -89,7 +182,7 @@
                   <p class="text-sm font-light text-neutral-600 mt-1">Rapid Prototyping & Innovation</p>
                 </div>
               </div>
-            </div>
+            </summary>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
               <div class="space-y-4">
@@ -155,127 +248,11 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Douban Cultural Commentary -->
-          <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-            <div class="flex items-center justify-between mb-8" data-other-content-meta>
-              <div class="flex items-center space-x-4">
-                <img
-                  src="images/douban/profile-screenshot.jpg"
-                  alt="Douban Profile"
-                  class="w-8 h-8 rounded-full object-cover"
-                >
-                <div>
-                  <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Cultural Content Creator</h2>
-                  <p class="text-sm font-light text-neutral-600 mt-1">Social Media Influence & Deep Content Creation</p>
-                </div>
-              </div>
-              <div class="text-right">
-                <p class="text-sm font-light text-emerald-600 mb-1">Content Creator</p>
-                <span class="text-sm font-light text-neutral-500">2023-Present</span>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-[2fr,1fr] gap-8 items-start">
-              <!-- Left: Core Content -->
-              <div class="space-y-6">
-                <!-- Platform Impact -->
-                <div class="space-y-3">
-                  <h3 class="text-lg font-light text-emerald-600 tracking-wide">Platform Impact</h3>
-                  <p class="text-base font-light leading-relaxed text-neutral-700">
-                    Creating content on Douban that explores the lived experiences of career transitions, particularly for women navigating the shift from liberal arts to technology. Through honest reflection and research-driven analysis, I aim to contribute meaningful perspectives to conversations about identity, work, and belonging in contemporary professional landscapes.
-                  </p>
-                </div>
-
-                <!-- Content Approach -->
-                <div class="space-y-4">
-                  <h3 class="text-lg font-light text-emerald-600 tracking-wide">Content Approach</h3>
-                  <ul class="space-y-2 list-disc pl-4 mb-4">
-                    <li class="text-base font-light text-neutral-700">
-                      <strong>Research-driven:</strong> Grounding personal observations in broader sociological patterns
-                    </li>
-                    <li class="text-base font-light text-neutral-700">
-                      <strong>Experience-based:</strong> Drawing from genuine transition experiences rather than theoretical frameworks
-                    </li>
-                    <li class="text-base font-light text-neutral-700">
-                      <strong>Community-focused:</strong> Fostering supportive spaces for shared learning and growth
-                    </li>
-                  </ul>
-
-                  <!-- Selected Articles - moved here -->
-                  <div class="mt-6 pt-4 border-t border-gray-200">
-                    <h4 class="text-base font-medium text-neutral-700 mb-4 tracking-wide">Featured Articles</h4>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div class="space-y-3">
-                        <div>
-                          <a href="https://www.douban.com/note/873701128/?_dtcc=1&_i=90152937TvyBHf" target="_blank" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors leading-tight block">
-                            "Seeking Liberal Arts Women in the AI Era: Constructing New Identity Positions Through Sociological Interviews"
-                          </a>
-                          <p class="text-xs text-neutral-500 mt-1">Identity construction research recruitment</p>
-                        </div>
-                        <div>
-                          <a href="https://www.douban.com/group/topic/336014467/?_spm_id=MjU1NDM5MjAw&type=rec#sep&_i=90173007TvyBHf" target="_blank" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors leading-tight block">
-                            "The More You Do, the More You Demystify 'Talent'"
-                          </a>
-                          <p class="text-xs text-neutral-500 mt-1">Experience-based career reflection</p>
-                        </div>
-                      </div>
-                      <div class="space-y-3">
-                        <div>
-                          <a href="https://www.douban.com/group/topic/315019707/?start=0#5836265788&_i=90173377TvyBHf" target="_blank" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors leading-tight block">
-                            "Career Reflections of Liberal Arts Women Transitioning to Tech"
-                          </a>
-                          <p class="text-xs text-neutral-500 mt-1">Career transition analysis</p>
-                        </div>
-                        <div>
-                          <a href="https://www.douban.com/group/topic/307152360/?_i=18019970c1274b4,90174447TvyBHf&dt_dapp=1" target="_blank" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors leading-tight block">
-                            "Liberal Arts/Business Position Analysis: Salary & Growth Dimensions"
-                          </a>
-                          <p class="text-xs text-neutral-500 mt-1">Labor market analysis by salary & growth</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right: Profile & Metrics (simplified) -->
-              <div class="space-y-6">
-                <!-- Profile Preview -->
-                <div class="bg-white rounded-lg p-3 border border-gray-200 shadow-sm">
-                  <img
-                    src="images/douban/profile-screenshot.jpg"
-                    alt="Douban Profile Screenshot"
-                    class="w-full rounded-lg"
-                  />
-                </div>
-
-                <!-- Key Metrics (simplified) -->
-                <div class="bg-gray-50 rounded-lg p-4">
-                  <h4 class="text-base font-medium text-neutral-700 mb-4 tracking-wide">Impact Summary</h4>
-                  <div class="space-y-2 text-sm">
-                    <div class="flex justify-between">
-                      <span class="text-neutral-600">Peak reach</span>
-                      <span class="font-medium text-neutral-700">250K</span>
-                    </div>
-                    <div class="flex justify-between">
-                      <span class="text-neutral-600">Following</span>
-                      <span class="font-medium text-neutral-700">1.5K+</span>
-                    </div>
-                    <div class="flex justify-between">
-                      <span class="text-neutral-600">Total views</span>
-                      <span class="font-medium text-neutral-700">400K+</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          </details>
 
           <!-- Academic & Technical Writing -->
-          <div class="group hover:bg-neutral-50 -mx-4 px-4 sm:px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600" data-writing-section>
-            <div class="flex items-start justify-between mb-6 sm:mb-8" data-writing-header>
+          <details class="group hover:bg-neutral-50 -mx-4 px-4 sm:px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600" data-writing-section>
+            <summary class="other-section-summary" data-writing-header>
               <div class="flex min-w-0 items-start gap-3 sm:items-center sm:gap-4">
                 <i class="ri-creative-commons-line mt-1 shrink-0 text-2xl text-emerald-600 sm:mt-0" aria-hidden="true"></i>
                 <div class="min-w-0" data-writing-heading>
@@ -283,7 +260,7 @@
                   <p class="text-sm font-light text-neutral-600 mt-1">Research Publications & Technical Documentation</p>
                 </div>
               </div>
-            </div>
+            </summary>
 
             <div class="space-y-5 sm:space-y-6" data-writing-groups>
               <div class="space-y-3 sm:space-y-4" data-writing-group>
@@ -303,11 +280,11 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </details>
 
           <!-- Community Engagement -->
-          <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-            <div class="flex items-center justify-between mb-8">
+          <details class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+            <summary class="other-section-summary">
               <div class="flex items-center space-x-4">
                 <i class="ri-women-line text-2xl text-emerald-600"></i>
                 <div>
@@ -315,7 +292,7 @@
                   <p class="text-sm font-light text-neutral-600 mt-1">Technology Mentorship & Support</p>
                 </div>
               </div>
-            </div>
+            </summary>
             <div class="space-y-4">
               <p class="text-base font-light leading-relaxed text-neutral-700">
                 • Provided pro-bono technology consultations to 100+ young women through Douban and social media platforms
@@ -323,11 +300,11 @@
                 • Facilitated peer support networks and mentorship connections in technology and digital creation
               </p>
             </div>
-          </div>
+          </details>
 
           <!-- Earlier internships (moved from the Work page) -->
-          <div class="group hover:bg-neutral-50 -mx-4 px-4 sm:px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
-            <div class="flex items-center justify-between mb-8">
+          <details class="group hover:bg-neutral-50 -mx-4 px-4 sm:px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+            <summary class="other-section-summary">
               <div class="flex items-center space-x-4">
                 <i class="ri-briefcase-line text-2xl text-emerald-600"></i>
                 <div>
@@ -335,7 +312,7 @@
                   <p class="text-sm font-light text-neutral-600 mt-1">Brand, Operations & Industry Research</p>
                 </div>
               </div>
-            </div>
+            </summary>
 
             <div class="space-y-12">
               <!-- Yukuaidi -->
@@ -452,8 +429,10 @@
                 </ul>
               </div>
             </div>
-          </div>
+          </details>
         </div>
+        </div>
+        </section>
       </div>
     </div>
   </main>

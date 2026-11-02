@@ -152,6 +152,51 @@ body[data-site-page="bio"] .about-meta {
   grid-template-columns: minmax(0, 7rem) minmax(0, 1fr);
 }
 
+/* Keep the featured Other story open and collapse the archive below it. */
+.other-section-stack {
+  margin-top: 0.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.other-section-stack > details {
+  margin: 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.other-section-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.other-section-summary::-webkit-details-marker {
+  display: none;
+}
+
+.other-section-summary::after {
+  content: '+';
+  flex: none;
+  color: #059669;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.other-section-stack details[open] > summary {
+  margin-bottom: 2rem;
+}
+
+.other-section-stack details[open] > summary::after {
+  content: '−';
+}
+
+.other-section-summary:focus-visible {
+  outline: 2px solid #047857;
+  outline-offset: 4px;
+}
+
 @media (max-width: 640px) {
   body[data-site-page="bio"] .about-meta {
     grid-template-columns: minmax(0, 1fr);
@@ -165,6 +210,16 @@ body[data-site-page="bio"] .about-meta {
 
   body[data-site-page="other"] [data-other-content-meta] > .text-right {
     text-align: left;
+  }
+
+  .other-section-summary {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .other-section-summary > :first-child {
+    flex: 1 1 calc(100% - 2.5rem);
+    min-width: 0;
   }
 }
 
