@@ -204,6 +204,64 @@ body {
           </div>
         </div>
 
+        <!-- Nef-Net v2: Electrocardio Panorama -->
+        <div id="nef-net-v2" class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
+          <div data-research-paper-header class="flex items-center justify-between mb-8">
+            <div class="flex items-center space-x-4">
+              <div>
+                <h2 class="text-xl font-extralight tracking-wide group-hover:text-emerald-700 transition-colors">Nef-Net v2: Adapting Electrocardio Panorama in the wild</h2>
+                <p class="text-sm font-light text-neutral-600 mt-1">Synthesizing ECG signals from new viewpoints across real-world devices and patients</p>
+                <p class="text-sm font-light text-neutral-600 mt-1">Zehui Zhan, Yaojun Hu, Jiajing Zhang, <strong class="font-medium">Wanchen Lian</strong>, Wanqing Wu, Jintai Chen</p>
+              </div>
+            </div>
+            <div class="text-right min-w-0 flex-shrink-0">
+              <p class="text-sm font-light text-emerald-600 mb-1 whitespace-nowrap">Fourth Author</p>
+              <p class="text-sm font-light text-neutral-500 whitespace-nowrap">ICLR 2026</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-[1fr,280px] gap-[8px] items-start">
+            <div class="space-y-6 pr-2">
+              <div class="space-y-3">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Research Problem</h3>
+                <div class="space-y-4">
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    Standard ECG leads capture only a limited set of views, potentially missing patterns visible from other positions. Generating new views in practice also requires handling long recordings, differences between devices, and variations in electrode placement.
+                  </p>
+                  <p class="text-base font-light leading-relaxed text-neutral-700">
+                    <span class="font-medium">Status:</span> <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">Published &middot; ICLR 2026</span> | <a href="https://proceedings.iclr.cc/paper_files/paper/2026/file/3f0739410e1c9c5da04fa10c1f3f86b6-Paper-Conference.pdf" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View Research Paper (PDF)</a> | <a href="https://openreview.net/forum?id=JzZhhhxniR" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">OpenReview</a> | <a href="https://github.com/HKUSTGZ-ML4Health-Lab/NEFNET-v2" class="text-emerald-600 hover:text-emerald-700 transition-colors underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">Code</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Technical Approach</h3>
+                <ul class="mt-2 space-y-1 list-disc pl-4">
+                  <li class="text-base font-light text-neutral-700">Encode recorded ECG signals together with their positions and a requested target view.</li>
+                  <li class="text-base font-light text-neutral-700">Use a geometric view transformer to combine view-relevant features and synthesize the target ECG signal.</li>
+                  <li class="text-base font-light text-neutral-700">Combine offline pretraining with device calibration and on-the-fly patient-specific adaptation.</li>
+                </ul>
+              </div>
+
+              <div class="space-y-2">
+                <h3 class="text-lg font-light text-emerald-600 tracking-wide">Measurable Impact</h3>
+                <p class="text-base font-light text-neutral-700">
+                  The paper introduces Panobench, with 4,470 recordings and 48 views per subject, and reports an approximately 6 dB PSNR improvement over Nef-Net in real-world settings.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex justify-end items-center h-full">
+              <figure data-research-preview class="relative w-[260px] rounded-[16px] overflow-hidden bg-white border border-gray-200 shadow-sm transform group-hover:scale-[1.02] transition-all duration-500">
+                <a href="assets/images/research/nef-net-v2-architecture.png" target="_blank" rel="noopener noreferrer" aria-label="View full Nef-Net v2 architecture diagram">
+                  <img src="assets/images/research/nef-net-v2-architecture.png" alt="Nef-Net v2 architecture: recorded ECG views and angles are encoded, fused using geometric attention, and reconstructed as requested ECG views" width="1620" height="576" loading="lazy" class="w-full h-auto object-contain">
+                </a>
+                <figcaption class="text-xs font-light text-neutral-600 p-3">Nef-Net v2 architecture &middot; Figure 2 from the paper. <a href="assets/images/research/nef-net-v2-architecture.png" class="text-emerald-600 hover:text-emerald-700 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">View full figure</a></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
         <!-- TBC-DDH Project -->
         <div class="group hover:bg-neutral-50 -mx-4 px-8 py-6 transition-all duration-300 border-l-2 border-transparent hover:border-emerald-600">
           <div class="flex items-center justify-between mb-8">
